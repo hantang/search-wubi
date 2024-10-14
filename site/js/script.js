@@ -1,4 +1,4 @@
-function renderFanningStrokes(target, strokes, unitData) {
+function renderFanningStrokes(target, strokes, unitData, plot) {
   // refer: https://hanziwriter.org/docs.html#raw-character-svg
   const url = "http://www.w3.org/2000/svg";
   var svg = document.createElementNS(url, "svg");
@@ -13,7 +13,7 @@ function renderFanningStrokes(target, strokes, unitData) {
   var transformData = HanziWriter.getScalingTransform(75, 75);
   group.setAttributeNS(null, "transform", transformData.transform);
   svg.appendChild(group);
-
+  if (!plot) return;
   strokes.forEach((strokePath, index) => {
     var path = document.createElementNS(url, "path");
     path.setAttributeNS(null, "d", strokePath);
@@ -26,12 +26,14 @@ function renderFanningStrokes(target, strokes, unitData) {
 function plotWubiSegments(target, charData, segments) {
   // var target = document.createElement("td");
   const unitData = segments;
-  if (Array.isArray(unitData) && unitData.length > 0) {
+  const unitCount = Array.isArray(unitData) ? unitData.length : 0;
+  if (unitCount > 0) {
     unitData.forEach((root) => {
-      renderFanningStrokes(target, charData.strokes, root);
+      renderFanningStrokes(target, charData.strokes, root, true);
     });
-  } else {
-    renderFanningStrokes(target, charData.strokes, []);
+  }
+  for (let i = unitCount; i < 4; i += 1) {
+    renderFanningStrokes(target, charData.strokes, [], i === 0);
   }
 }
 
