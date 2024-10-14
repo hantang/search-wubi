@@ -4,6 +4,8 @@
 
 提供更加直观的五笔拆字图解。
 
+![](images/snapshot.png)
+
 ## 数据相关
 
 - 五笔编码，来自王码五笔，以及[rime/rime-wubi](https://github.com/rime/rime-wubi)、[KyleBing/rime-wubi86-jidian](https://github.com/KyleBing/rime-wubi86-jidian)、微软五笔等。

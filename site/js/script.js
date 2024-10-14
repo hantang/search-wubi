@@ -94,7 +94,7 @@ function getHanziList(sources) {
     通用字: "《现代汉语通用字表》（1988年）常用字",
     其他: "其他常用汉字",
   };
-  console.log(sources);
+  // console.log(sources);
   const values = sources.split("/");
   values.forEach((item) => {
     const name = item.charAt(0);
