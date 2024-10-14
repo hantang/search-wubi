@@ -230,6 +230,12 @@ code {
   font-size: larger;
   border: 1px solid #ddd;
   line-height: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+code span {
+  font-weight: bold;
+  color: var(--secondary-color);
 }
 
 #note-area {

@@ -61,7 +61,7 @@ function getListData(keys, values) {
         listItem.append(tip);
         listItem.append(container);
       } else {
-        let val = item.trim() ? `&nbsp;&nbsp;<code>${item}</code>` : "";
+        let val = "";
         if (item.trim() && item.includes("/")) {
           val =
             "<br>" +
@@ -70,12 +70,14 @@ function getListData(keys, values) {
               .split("/")
               .map((item) => `&nbsp;&nbsp;<code>${item}</code>`)
               .join("<br>");
+        } else {
+          val = item.replace(/;(.+)/, "<span>$1</span>");
+          val = `&nbsp;&nbsp;<code>${val}</code>`;
         }
         if (item.startsWith("*")) {
           val = `&nbsp;⚠️${val}`;
         }
         if (val) {
-          val = val.replace(/※/g, " ");
           listItem.innerHTML = `<strong>${keys[index]}</strong>:${val}`;
         }
       }

@@ -7,11 +7,11 @@ from pathlib import Path
 
 RENAMED_COLS = {
     "Unicode": "unicode",
-    "全码": "fullCode",
+    # "全码": "fullCode",
     "简码": "shortCode",
     "容错码": "faultCode",
     "拼音": "pinyin",
-    "字根拆解": "units",
+    # "字根拆解": "units",
     "字表来源": "source",
     "识别码": "flag",
 }
@@ -26,7 +26,7 @@ OUTPUT_COLS = [
     "faultCode",
     "units",
     "segments",
-    "flag"
+    "flag",
 ]
 
 
@@ -66,6 +66,10 @@ def tsv_to_json(data_dir: str, save_dir: str) -> None:
 
     df.index = df["汉字"]
     df = df.rename(columns=RENAMED_COLS)
+    df["fullCode"] = df[["全码", "flag"]].apply(
+        lambda x: "{};{}".format(x["全码"][:-1], x["全码"][-1]) if x["flag"] else x["全码"]
+    , axis=1)
+    df["units"] = df["字根拆解"].apply(lambda x: " ".join(x.split("※")))
     df["segments"] = df["笔画拆解"].apply(_to_int_array)
 
     keys = ["现代汉语语料库字频（%）", "刑红兵25亿字语料字频（百万）"]
