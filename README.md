@@ -9,10 +9,14 @@
 ## 数据相关
 
 - 汉字：以《通用规范汉字表》（2012 年发布，共 8105 字，分三级）为基本，合并《现代汉语通用字表》（1988 年，共 7000 字）《信息交换用汉字编码字符集》（GB/T 2312-1980，汉字及偏旁部首共 6763 字），以及数字`〇`，共收 8246 个字。
-- 五笔编码，参考王码五笔、[rime/rime-wubi](https://github.com/rime/rime-wubi)、[KyleBing/rime-wubi86-jidian](https://github.com/KyleBing/rime-wubi86-jidian)、微软五笔等聚合。
-- 字根拆解和对应字体来自 [:link: 86wb.ysepan.com](http://86wb.ysepan.com)
-- 汉字图形来自 [chanind/hanzi-writer](https://github.com/chanind/hanzi-writer)
-- :construction: WIP: 结合汉字图形和字根拆解得到笔画拆解示意图来自本仓库作者。
+- 五笔编码：参考王码五笔、[rime/rime-wubi](https://github.com/rime/rime-wubi)、[KyleBing/rime-wubi86-jidian](https://github.com/KyleBing/rime-wubi86-jidian)、微软五笔等方案聚合。
+- 字频统计来自：
+  - 现代汉语语料库字频表（2000 万字语料）: [:link: zhonghuayuwen.org](https://www.zhonghuayuwen.org/#/ylkzx/zyxz)
+  - 北京语言大学刑红兵字频表（25 亿字语料）: [:link: blcu.edu.cn](https://faculty.blcu.edu.cn/xinghb/zh_CN/article/167473/content/1437.htm)
+  - 常用 1500 字：来自打字网站，缺少字频。
+- 字根拆解和对应字体来自: [:link: 86wb.ysepan.com](http://86wb.ysepan.com)
+- 汉字图形来自: [chanind/hanzi-writer](https://github.com/chanind/hanzi-writer)
+- :construction: WIP: 结合汉字图形和字根拆解得到笔画拆解示意图，来自本仓库作者。
 
 ## 补充资料
 
