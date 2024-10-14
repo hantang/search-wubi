@@ -46,8 +46,8 @@ body {
 }
 
 body {
-  font-family: "PingFang SC", Helvetica Neue, Helvetica, "Hiragino Sans GB",
-    "Microsoft YaHei", "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-family: "PingFang SC", "Helvetica Neue", Helvetica, "Hiragino Sans GB",
+    "Microsoft YaHei", "Open Sans", Arial, sans-serif;
   /* font-size: 100%; */
   color: var(--text-color);
   background-color: var(--background-color);
@@ -225,8 +225,7 @@ code {
   color: var(--text-color);
   padding: 2px 3px;
   border-radius: 4px;
-  font-family: "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas,
-    "Liberation Mono", Monaco, "Lucida Console", monospace, "Wubi Units";
+  font-family: "Fira Mono", "DejaVu Sans Mono", Consolas, Monaco, "Wubi Units", monospace;
   font-size: larger;
   border: 1px solid #ddd;
   line-height: 2rem;
