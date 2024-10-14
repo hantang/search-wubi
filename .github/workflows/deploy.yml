@@ -17,6 +17,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     runs-on: ubuntu-latest
+    env:
+      OUT: site
     steps:
       - uses: actions/checkout@v4
         # with:
@@ -26,13 +28,13 @@ jobs:
           python-version: "3.x"
       - run: pip install -r requirements.txt
       - name: Build Data
-        run: python src/parse.py data site/data
+        run: python src/parse.py data ${{ env.OUT }}/data
       - name: Setup pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./site
+          path: ${{ env.OUT }}
       - name: Deploy to GitHub pages
         id: deployment
         uses: actions/deploy-pages@v4
