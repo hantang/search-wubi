@@ -8,12 +8,35 @@
 
 ## 数据相关
 
-- 五笔编码，来自王码五笔，以及[rime/rime-wubi](https://github.com/rime/rime-wubi)、[KyleBing/rime-wubi86-jidian](https://github.com/KyleBing/rime-wubi86-jidian)、微软五笔等。
+- 汉字：以《通用规范汉字表》（2012 年发布，共 8105 字，分三级）为基本，合并《现代汉语通用字表》（1988 年，共 7000 字）《信息交换用汉字编码字符集》（GB/T 2312-1980，汉字及偏旁部首共 6763 字），以及数字`〇`，共收 8246 个字。
+- 五笔编码，参考王码五笔、[rime/rime-wubi](https://github.com/rime/rime-wubi)、[KyleBing/rime-wubi86-jidian](https://github.com/KyleBing/rime-wubi86-jidian)、微软五笔等聚合。
 - 字根拆解和对应字体来自 [:link: 86wb.ysepan.com](http://86wb.ysepan.com)
 - 汉字图形来自 [chanind/hanzi-writer](https://github.com/chanind/hanzi-writer)
-- WIP: 结合汉字图形和字根拆解得到笔画拆解示意图来自本仓库作者。
+- :construction: WIP: 结合汉字图形和字根拆解得到笔画拆解示意图来自本仓库作者。
 
-## 其他
+## 补充资料
+
+### 非规范汉字
+
+| 汉字 | Unicode | 拼音    | 规范字           |
+| ---- | ------- | ------- | ---------------- |
+| 勩   | `52E9`  | `yì`    | 简化为“勚”       |
+| 後   | `5F8C`  | `hòu`   | 简化为“后”       |
+| 摺   | `647A`  | `zhé`   | 简化为“折”       |
+| 鍾   | `937E`  | `zhōng` | 简化为“锺”或“钟” |
+| 鬹   | `9B39`  | `guī`   | 简化为“鬶”       |
+| 麴   | `9EB4`  | `qū`    | 简化为“麹”或“曲” |
+| 卻   | `537B`  | `què`   | “却”的异体字     |
+| 榘   | `6998`  | `jǔ`    | “矩”的异体字     |
+| 疋   | `758B`  | `pǐ`    | “匹”的异体字     |
+| 砦   | `7826`  | `zhài`  | “寨”的异体字     |
+| 菸   | `83F8`  | `yān`   | “烟”的异体字     |
+
+### 86 版五笔字根表
+
+![](./images/wubi86.png)
+
+### 打字相关
 
 - 汉字跟打：
   - 玫枫跟打器 [KyleBing/typepad](https://github.com/KyleBing/typepad) / [:link: kylebing.cn/tools/typepad/](http://kylebing.cn/tools/typepad/)

@@ -28,7 +28,7 @@ jobs:
           python-version: "3.x"
       - run: pip install -r requirements.txt
       - name: Build Data
-        run: python src/parse.py data ${{ env.OUT }}/data
+        run: python scripts/parse.py data ${{ env.OUT }}/data
       - name: Setup pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
