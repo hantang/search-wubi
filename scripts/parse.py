@@ -42,7 +42,7 @@ def read_source(data_dir: str):
 
 
 def _to_int_array(x: str) -> list:
-    return [[int(u) for u in v.split(",") if u] for v in x.split("/")]
+    return [[int(u) for u in v.split(",") if u] for v in x.strip("*").split("/")]
 
 
 def tsv_to_json(data_dir: str, save_dir: str) -> None:
