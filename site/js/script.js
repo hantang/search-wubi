@@ -33,7 +33,6 @@ function plotWubiSegments(target, charData, segments) {
   } else {
     renderFanningStrokes(target, charData.strokes, []);
   }
-  // return target;
 }
 
 function getListData(keys, values) {
@@ -75,9 +74,14 @@ function getListData(keys, values) {
         if (item.startsWith("*")) {
           val = `&nbsp;⚠️${val}`;
         }
-        listItem.innerHTML = `<strong>${keys[index]}</strong>:${val}`;
+        if (val) {
+          val = val.replace(/※/g, " ");
+          listItem.innerHTML = `<strong>${keys[index]}</strong>:${val}`;
+        }
       }
-      itemList.appendChild(listItem);
+      if (item.trim()) {
+        itemList.appendChild(listItem);
+      }
     });
   }
   return itemList;
@@ -137,7 +141,10 @@ function createTableRow(index, data, char) {
     )
   );
   codeCell.appendChild(
-    getListData(["全码", "拆解"], [charInfo.fullCode, charInfo.units])
+    getListData(
+      ["全码", "拆解", "识别"],
+      [charInfo.fullCode, charInfo.units, charInfo.flag]
+    )
   );
   extraCell.appendChild(
     getListData(["简码", "容错"], [charInfo.shortCode, charInfo.faultCode])

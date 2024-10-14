@@ -13,6 +13,7 @@ RENAMED_COLS = {
     "拼音": "pinyin",
     "字根拆解": "units",
     "字表来源": "source",
+    "识别码": "flag",
 }
 
 OUTPUT_COLS = [
@@ -25,6 +26,7 @@ OUTPUT_COLS = [
     "faultCode",
     "units",
     "segments",
+    "flag"
 ]
 
 
@@ -57,7 +59,7 @@ def tsv_to_json(data_dir: str, save_dir: str) -> None:
         return
     logging.info(f"df = {df.shape}")
 
-    for col in ["全码", "简码", "容错码", "字根拆解", "笔画拆解"]:
+    for col in ["全码", "简码", "容错码", "字根拆解", "笔画拆解", "识别码"]:
         df[col] = df[col].fillna("").astype(str)
     for col in ["现代汉语语料库字频（%）", "刑红兵25亿字语料字频（百万）"]:
         df[col] = df[col].fillna(0).astype(float)
