@@ -1,0 +1,27 @@
+# web
+
+# python
+__pycache__/
+__pypackages__/
+*.py[cod]
+.ipynb_checkpoints/
+*.ipynb
+
+#################
+# macos
+.DS_Store
+
+# linux
+*~
+
+# ide
+.vscode/
+.idea/
+
+# more
+back/
+temp/
+todo/
+trash/
+
+*.json
