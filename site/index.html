@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>五笔拆解查询</title>
+
+  <link rel="icon" type="image/png" href="icons/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.0/dist/hanzi-writer.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div>
+      <img src="icons/logo.svg" />
+    </div>
+    <h1>五笔拆解查询</h1>
+  </header>
+  <main>
+    <section class="search-container">
+      <input type="text" id="query-text" placeholder="请输入汉字..." />
+      <button type="submit" id="query-button">查询</button>
+    </section>
+    <section id="note-area">
+      <p>📝 注意这里五笔版本是<strong>1986</strong>版（王码）五笔。</p>
+      <p> <small>⚠️ 标识表示全码和容错码存在一定争议（比如起笔或末笔笔画顺序）。</small></p>
+      <p id="result"></p>
+    </section>
+
+    <section>
+      <table id="data-table">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 hantang</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/render.js"></script>
+</body>
+
+</html>
