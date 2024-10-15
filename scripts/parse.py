@@ -7,20 +7,24 @@ from pathlib import Path
 
 RENAMED_COLS = {
     "Unicode": "unicode",
-    # "全码": "fullCode",
+    "全码": "fullCode",
     "简码": "shortCode",
     "容错码": "faultCode",
     "拼音": "pinyin",
-    # "字根拆解": "units",
+    "笔画数": "stroke",
+    "字根拆解": "units",
     "字表来源": "source",
+    "笔画拆解": "segments",
     "识别码": "flag",
 }
 
 OUTPUT_COLS = [
     "unicode",
     "pinyin",
+    "stroke",
     "source",
     "freq",
+    "unitType",
     "fullCode",
     "shortCode",
     "faultCode",
@@ -28,6 +32,17 @@ OUTPUT_COLS = [
     "segments",
     "flag",
 ]
+
+CHAR_NAMES = {
+    "一级": "《通用规范汉字表》（2012年）一级汉字",
+    "二级": "《通用规范汉字表》（2012年）二级汉字",
+    "三级": "《通用规范汉字表》（2012年）三级汉字",
+    "GB2312": "《信息交换用汉字编码字符集》（GB/T 2312-1980）",
+    "常用字": "《现代汉语常用字表》（1988年）常用字",
+    "次常用字": "《现代汉语常用字表》（1988年）次常用字",
+    "通用字": "《现代汉语通用字表》（1988年）通用字",
+    "其他": "其他常用汉字",
+}
 
 
 def read_source(data_dir: str):
@@ -41,13 +56,50 @@ def read_source(data_dir: str):
     return df
 
 
+def get_stats(df, col="字表来源"):
+    col_temp = "字表分级"
+    col_out = "字表"
+    sources = [
+        v.strip()
+        for line in df[col].fillna("").tolist()
+        for v in line.strip().split("/")
+        if v.strip()
+    ]
+    df_stats = pd.Series(sources, name=col_temp).value_counts().reset_index()
+
+    names = CHAR_NAMES
+    df_stats[col_out] = df_stats[col_temp].apply(lambda x: names.get(x, x))
+    result = df_stats[[col_out, "count"]].to_dict("records")
+    out = {"names": names, "stats": result, "total": df.shape[0]}
+
+    for key in ["全码", "字根拆解", "笔画拆解"]:
+        out[RENAMED_COLS[key]] = df[df[key].fillna("") != ""].shape[0]
+    return out
+
+
 def _to_int_array(x: str) -> list:
     return [[int(u) for u in v.split(",") if u] for v in x.strip("*").split("/")]
 
 
-def tsv_to_json(data_dir: str, save_dir: str) -> None:
+def _unit_type(x):
+    keys = ["键名字根", "笔画字根", "成字字根"]
+    vals = [k[:2] if x[k] == 1 else "" for k in keys]
+    vals = [v for v in vals if v]
+    if vals:
+        return "字根（{}）".format("，".join(vals))
+    return ""
 
-    save_dir = Path(save_dir)
+
+def _full_code(x):
+    fullcode = x["全码"]
+    if x["识别码"]:
+        return "{};{}".format(fullcode[:-1], fullcode[-1])
+    else:
+        return fullcode
+
+
+def tsv_to_json(data_dir: str, save_path: str) -> None:
+    save_dir = Path(save_path)
     save_file = Path(save_dir, "data.json")
     if not save_dir.exists():
         logging.info(f"Create dir = {save_dir}")
@@ -59,31 +111,34 @@ def tsv_to_json(data_dir: str, save_dir: str) -> None:
         return
     logging.info(f"df = {df.shape}")
 
-    for col in ["全码", "简码", "容错码", "字根拆解", "笔画拆解", "识别码"]:
+    for col in ["全码", "简码", "容错码", "字根拆解", "笔画拆解", "识别码", '笔画数']:
         df[col] = df[col].fillna("").astype(str)
     for col in ["现代汉语语料库字频（%）", "刑红兵25亿字语料字频（百万）"]:
         df[col] = df[col].fillna(0).astype(float)
 
-    df.index = df["汉字"]
-    df = df.rename(columns=RENAMED_COLS)
-    df["fullCode"] = df[["全码", "flag"]].apply(
-        lambda x: "{};{}".format(x["全码"][:-1], x["全码"][-1]) if x["flag"] else x["全码"]
-    , axis=1)
+    df["fullCode"] = df.apply(_full_code, axis=1)
     df["units"] = df["字根拆解"].apply(lambda x: " ".join(x.split("※")))
     df["segments"] = df["笔画拆解"].apply(_to_int_array)
 
     keys = ["现代汉语语料库字频（%）", "刑红兵25亿字语料字频（百万）"]
     df["freq"] = df.apply(lambda x: [x[k] for k in keys], axis=1)
-    # keys = ["五笔常用前1500", "一级简码", "二级简码", "键名字根", "笔画字根", "成字字根"]
-    # df["level"] = df.apply(lambda x: [x[k] for k in keys], axis=1)
+    # "五笔常用前1500", "一级简码", "二级简码",
+    df["unitType"] = df.apply(_unit_type, axis=1)
+
+    stats = get_stats(df)
+    renames = {k: v for k, v in RENAMED_COLS.items() if v not in df.columns}
+    df = df.rename(columns=renames)
+    df = df.set_index("汉字")
 
     df2 = df[OUTPUT_COLS]
-    logging.info(f"output data = {df.shape}")
+    logging.info(f"output data = {df2.shape}")
 
     out = df2.to_dict("index")
+    result = {"stats": stats, "chars": out}
+
     logging.info(f"save to = {save_file}")
     with open(save_file, "w") as f:
-        json.dump(out, f, indent=None, ensure_ascii=False)
+        json.dump(result, f, indent=None, ensure_ascii=False)
 
 
 if __name__ == "__main__":

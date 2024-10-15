@@ -37,7 +37,7 @@ function plotWubiSegments(target, charData, segments) {
   }
 }
 
-function getListData(keys, values) {
+function getListData(keys, values, charNames) {
   const itemList = document.createElement("ul");
   if (keys === null) {
     let arr = values;
@@ -59,7 +59,7 @@ function getListData(keys, values) {
       if (keys[index] == "收录字表") {
         const tip = document.createElement("strong");
         tip.innerText = keys[index] + ":";
-        const container = getHanziList(item);
+        const container = getHanziList(item, charNames);
         listItem.append(tip);
         listItem.append(container);
       } else {
@@ -73,8 +73,13 @@ function getListData(keys, values) {
               .map((item) => `&nbsp;&nbsp;<code>${item}</code>`)
               .join("<br>");
         } else {
+          const ignores = ["笔画数量", "备注"];
           val = item.replace(/;(.+)/, "<span>$1</span>");
-          val = `&nbsp;&nbsp;<code>${val}</code>`;
+          if (ignores.includes(keys[index])) {
+            val = `&nbsp;&nbsp;${val}`;
+          } else {
+            val = `&nbsp;&nbsp;<code>${val}</code>`;
+          }
         }
         if (item.startsWith("*")) {
           val = `&nbsp;⚠️${val}`;
@@ -91,22 +96,12 @@ function getListData(keys, values) {
   return itemList;
 }
 
-function getHanziList(sources) {
-  const names = {
-    一级: "《通用规范汉字表》（2012年）一级汉字",
-    二级: "《通用规范汉字表》（2012年）二级汉字",
-    三级: "《通用规范汉字表》（2012年）三级汉字",
-    GB2312: "《信息交换用汉字编码字符集》（GB/T 2312-1980）",
-    常用字: "《现代汉语常用字表》（1988年）常用字",
-    次常用字: "《现代汉语常用字表》（1988年）次常用字",
-    通用字: "《现代汉语通用字表》（1988年）常用字",
-    其他: "其他常用汉字",
-  };
+function getHanziList(sources, charNames) {
   // console.log(sources);
   const values = sources.split("/");
   values.forEach((item) => {
     const name = item.charAt(0);
-    names[item];
+    charNames[item];
     const div = document.createElement("div");
   });
   const container = document.createElement("div");
@@ -117,7 +112,7 @@ function getHanziList(sources) {
 
     const tooltipText = document.createElement("span");
     tooltipText.className = "tooltiptext";
-    tooltipText.textContent = names[item];
+    tooltipText.textContent = charNames[item];
 
     tooltipDiv.appendChild(tooltipText);
     container.appendChild(tooltipDiv);
@@ -125,8 +120,7 @@ function getHanziList(sources) {
   return container;
 }
 
-function createTableRow(index, data, char) {
-  const charInfo = data[char];
+function createTableRow(index, char, charInfo, charNames) {
   const row = document.createElement("tr");
 
   const indexCell = document.createElement("td");
@@ -140,18 +134,20 @@ function createTableRow(index, data, char) {
   charCell.innerHTML = `<span>${char}</span>`;
   infoCell.appendChild(
     getListData(
-      ["汉语拼音", "UNICODE", "收录字表"],
-      [charInfo.pinyin, charInfo.unicode, charInfo.source]
+      ["UNICODE", "汉语拼音", "笔画数量", "收录字表"],
+      [charInfo.unicode, charInfo.pinyin, charInfo.stroke, charInfo.source],
+      charNames
     )
   );
   codeCell.appendChild(
     getListData(
-      ["全码", "拆解", "识别"],
-      [charInfo.fullCode, charInfo.units, charInfo.flag]
+      ["全码", "拆解", "识别", "备注"],
+      [charInfo.fullCode, charInfo.units, charInfo.flag, charInfo.unitType],
+      charNames
     )
   );
   extraCell.appendChild(
-    getListData(["简码", "容错"], [charInfo.shortCode, charInfo.faultCode])
+    getListData(["简码", "容错"], [charInfo.shortCode, charInfo.faultCode], charNames)
   );
 
   row.appendChild(indexCell);
@@ -195,13 +191,14 @@ function initTable(show) {
   tableHead.append(headRow);
 }
 
-function queryHanzi() {
+function queryHanzi(charData, statsData) {
   // only top 10 chars
+  const charNames = statsData.names;
   const input = document.getElementById("query-text").value.trim();
   const chars = input.replace(/[a-zA-Z\d\s]/g, "").slice(0, 10);
 
-  const result = document.getElementById("result");
-  result.innerText = "";
+  const warning = document.getElementById("note-warning");
+  warning.innerText = "";
 
   const tableBody = document.querySelector("#data-table tbody");
   tableBody.innerHTML = ""; // clean table
@@ -209,8 +206,8 @@ function queryHanzi() {
   let valid = 0;
   Array.from(chars).forEach((char, index) => {
     // console.log(char);
-    if (char in data) {
-      row = createTableRow(index, data, char);
+    if (char in charData) {
+      row = createTableRow(index, char, charData[char], charNames);
       tableBody.appendChild(row);
       valid += 1;
     }
@@ -218,11 +215,11 @@ function queryHanzi() {
   initTable(valid !== 0);
   if (valid === 0) {
     if (chars) {
-      result.innerText = "非常用汉字，请尝试其他。";
+      warning.innerText = "🚫 非规范汉字或罕用，请尝试其他。";
     } else {
-      result.innerText = "请输入常用汉字。";
+      warning.innerText = "❗ 请输入常用规范汉字。";
     }
   } else {
-    result.innerText = "";
+    warning.innerText = "";
   }
 }
