@@ -193,9 +193,10 @@ function initTable(show) {
 
 function queryHanzi(charData, statsData) {
   // only top 10 chars
+  const max_count = 50;
   const charNames = statsData.names;
   const input = document.getElementById("query-text").value.trim();
-  const chars = input.replace(/[a-zA-Z\d\s]/g, "").slice(0, 10);
+  const chars = input.replace(/[a-zA-Z\d\s]/g, "").slice(0, max_count);
 
   const warning = document.getElementById("note-warning");
   warning.innerText = "";

@@ -78,7 +78,27 @@ def get_stats(df, col="字表来源"):
 
 
 def _to_int_array(x: str) -> list:
-    return [[int(u) for u in v.split(",") if u] for v in x.strip("*").split("/")]
+    """
+    format:
+        0,1/2,3,4,5/6,7
+        0-7/8-12,15/13,14
+    """
+    out = []
+    for v in x.strip("*").split("/"):
+        v = v.strip()
+        if v == "":
+            continue
+        nums = v.split(",")
+        nums2 = []
+        for val in nums:
+            if "-" in val:
+                start, end = val.split("-")
+                nums2.extend(list(range(int(start), int(end) + 1)))
+            else:
+                nums2.append(int(val))
+        nums2 = sorted(nums2)
+        out.append(nums2)
+    return out
 
 
 def _unit_type(x):
@@ -111,7 +131,7 @@ def tsv_to_json(data_dir: str, save_path: str) -> None:
         return
     logging.info(f"df = {df.shape}")
 
-    for col in ["全码", "简码", "容错码", "字根拆解", "笔画拆解", "识别码", '笔画数']:
+    for col in ["全码", "简码", "容错码", "字根拆解", "笔画拆解", "识别码", "笔画数"]:
         df[col] = df[col].fillna("").astype(str)
     for col in ["现代汉语语料库字频（%）", "刑红兵25亿字语料字频（百万）"]:
         df[col] = df[col].fillna(0).astype(float)
