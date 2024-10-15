@@ -13,11 +13,11 @@
 儿	qtn	qt		0	1	0	0	1	※※		0,1/0/1
 匕	xtn			0	0	0	0	1	※※		0,1/0/1
 几	mtn	mt		0	1	0	0	1	※※		0,1/0/1
-九	vtn		*vt/vtn/vnt	0	1	0	0	1	※※		0,1/0/1
+九	vtn		*vtn/vt/vnt	0	1	0	0	1	※※		0,1/0/1
 刁	ngd			0	0	0	0	0	※※	一 ㊂	0/1
 了	bnh	b		1	0	0	0	1	※※		0,1/0/1
 刀	vnt	vn		0	1	0	0	1	※※		0,1/0/1
-力	ltn		*lt/ltn/lnt	0	1	0	0	1	※※		*0,1/1/0
+力	ltn		*ltn/lt/lnt	0	1	0	0	1	※※		*0,1/1/0
 乃	etn		*etn/ent	0	0	0	0	1	※※		*0,1/1/0
 又	cccc	c/ccc		0	0	1	0	0	※※※		0,1/0,1/0,1/0,1
 三	dggg		dg/dgg	0	1	0	0	1	※※※		0,1,2/0/1/2
@@ -93,7 +93,7 @@
 犬	dgty			0	0	0	0	1	※※※		0,1,2,3/0/1/3
 太	dyi	dy		0	1	0	0	0	※※	丶 ⓷	0,1,2/3
 区	aqi	aq		0	1	0	0	0	※※	丶 ⓷	0,3/1,2
-历	dlv	dl	*dle/dlv	0	1	0	0	0	※※	乛 ⑶	0,1/2,3
+历	dlv	dl	*dlv/dle	0	1	0	0	0	※※	乛 ⑶	0,1/2,3
 歹	gqi			0	0	0	0	0	※※	丶 ⓷	0/1,2,3
 友	dcu	dc		0	1	0	0	0	※※	丶 ⓶	0,1/2,3
 尤	dnv			0	0	0	0	0	※※	乛 ⑶	0,1,3/2
@@ -106,8 +106,8 @@
 比	xxn	xx		0	1	0	0	0	※※	乛 ⑴	0,1/2,3
 互	gxgd	gx/gxg		0	1	0	0	0	※※※	一 ㊂	0/1,2/3
 切	avn	av	*avn/avt	0	1	0	0	0	※※	乛 ⑴	0,1/2,3
-瓦	gnyn		*gnn/gny/gnny/gnyn	0	0	0	0	0	※※※		*0/1/3/2
-止	hhhg	hh	*hhg/hhh/hhgg/hhhg	0	1	0	0	1	※※※		*0,1,2,3/0/2/3
+瓦	gnyn		*gnyn/gnn/gny/gnny	0	0	0	0	0	※※※		*0/1/3/2
+止	hhhg	hh	*hhhg/hhg/hhh/hhgg	0	1	0	0	1	※※※		*0,1,2,3/0/2/3
 少	itr	it		0	1	0	0	0	※※	丿 ②	0,1,2/3
 曰	jhng			0	0	0	0	1	※※※		0,1,2,3/0/1/3
 日	jjjj	j		0	0	1	0	0	※※※		0,1,2,3/0,1,2,3/0,1,2,3/0,1,2,3
@@ -218,8 +218,8 @@
 右	dkf	dk		0	1	0	0	0	※※	一 ㊁	0,1/2,3,4
 布	dmhj	dmh		0	0	0	0	0	※※※	丨 ㈡	
 夯	dlb		*dlb/dlr	0	0	0	0	0	※※	乛 ⑵	
-戊	dnyt		*dnt/dny/dnty/dnyt	0	0	0	0	0	※※※		
-龙	dxv	dx	*dxe/dxv	0	1	0	0	0	※※	乛 ⑶	0,1,4/2,3
+戊	dnyt		*dnyt/dnt/dny/dnty	0	0	0	0	0	※※※		
+龙	dxv	dx	*dxv/dxe	0	1	0	0	0	※※	乛 ⑶	0,1,4/2,3
 平	guhk	gu/guh		0	1	0	0	0	※※※	丨 ㈢	0/1,2,3/4
 灭	goi			0	0	0	0	0	※※	丶 ⓷	
 轧	lnn		ln	0	0	0	0	0	※※	乛 ⑴	
@@ -258,7 +258,7 @@
 叹	kcy			0	0	0	0	0	※※	丶 ⓵	
 冉	mfd			0	0	0	0	0	※※	一 ㊂	
 皿	lhng	lhn		0	0	0	0	0	※※※		
-凹	mmgd		*mm/hnmg/mmgd	0	0	0	0	0	※※※	一 ㊂	
+凹	mmgd		*mmgd/mm/hnmg	0	0	0	0	0	※※※	一 ㊂	
 囚	lwi			0	0	0	0	0	※※	丶 ⓷	
 四	lhng	lh		0	1	0	0	1	※※※		0,1,2,3,4/0/1/4
 生	tgd	tg		0	1	0	0	0	※※	一 ㊂	0/1,2,3,4
@@ -335,7 +335,7 @@
 召	vkf			0	0	0	0	0	※※	一 ㊁	
 加	lkg	lk		0	1	0	0	0	※※	一 ㊀	0,1/2,3,4
 皮	hci	hc		0	1	0	0	0	※※	丶 ⓷	0,1,2/3,4
-边	lpv	lp	*lpe/lpv	0	1	0	0	0	※※	乛 ⑶	0,1/2,3,4
+边	lpv	lp	*lpv/lpe	0	1	0	0	0	※※	乛 ⑶	0,1/2,3,4
 孕	ebf			0	0	0	0	0	※※	一 ㊁	
 发	ntcy	v/ntc		1	0	0	0	0	※※※		0/1/2,3/4
 圣	cff			0	0	0	0	0	※※	一 ㊁	
@@ -343,7 +343,7 @@
 台	ckf	ck		0	1	0	0	0	※※	一 ㊁	0,1/2,3,4
 矛	cbtr	cbt		0	0	0	0	0	※※※	丿 ②	
 纠	xnhh	xnh		0	0	0	0	0	※※※	丨 ㈠	
-母	xgui		*xgu/xgui/xyyi	0	0	0	0	0	※※※	丶 ⓷	
+母	xgui		*xgui/xgu/xyyi	0	0	0	0	0	※※※	丶 ⓷	
 幼	xln		*xln/xlt	0	0	0	0	0	※※	乛 ⑴	
 丝	xxgf	xxg		0	0	0	0	0	※※※	一 ㊁	
 邦	dtbh	dtb		0	0	0	0	0	※※※	丨 ㈠	
@@ -651,7 +651,7 @@
 壳	fpmb	fpm		0	0	0	0	0	※※※	乛 ⑵	
 志	fnu	fn		0	1	0	0	0	※※	丶 ⓶	
 块	fnwy	fnw		0	0	0	0	0	※※※	丶 ⓵	
-扭	rnfg		*rnf/rnh/rnfg/rnhf	0	0	0	0	0	※※※	一 ㊀	
+扭	rnfg		*rnfg/rnf/rnh/rnhf	0	0	0	0	0	※※※	一 ㊀	
 声	fnr			0	0	0	0	0	※※	丿 ②	
 把	rcn			0	0	0	0	0	※※	乛 ⑴	
 报	rbcy	rb/rbc		0	1	0	0	0	※※※	丶 ⓵	
@@ -765,7 +765,7 @@
 秃	tmb			0	0	0	0	0	※※	乛 ⑵	
 秀	teb	te	*teb/ter	0	1	0	0	0	※※	乛 ⑵	
 私	tcy			0	0	0	0	0	※※	丶 ⓵	
-每	txgu		*txg/txy/txgu/txyy	0	0	0	0	0	※※※		
+每	txgu		*txgu/txg/txy/txyy	0	0	0	0	0	※※※		
 兵	rgwu	rgw		0	0	0	0	0	※※※	丶 ⓶	
 估	wdg	wd		0	1	0	0	0	※※	一 ㊀	
 体	wsgg	wsg		0	0	0	0	0	※※※	一 ㊀	
@@ -940,7 +940,7 @@
 纹	xyy			0	0	0	0	0	※※	丶 ⓵	
 纺	xyn	xy	*xyn/xyt	0	1	0	0	0	※※	乛 ⑴	
 驴	cynt	cyn		0	0	0	0	0	※※※	丿 ①	
-纽	xnfg		*xnf/xnfg/xnhf	0	0	0	0	0	※※※	一 ㊀	
+纽	xnfg		*xnfg/xnf/xnhf	0	0	0	0	0	※※※	一 ㊀	
 奉	dwfh	dwf		0	0	0	0	0	※※※		
 玩	gfqn	gfq		0	0	0	0	0	※※※	乛 ⑴	
 环	ggiy	ggi		0	0	0	0	0	※※※	丶 ⓵	
@@ -992,7 +992,7 @@
 拨	rnty	rnt		0	0	0	0	0	※※※		
 择	rcfh	rcf		0	0	0	0	0	※※※		
 抬	rckg	rck		0	0	0	0	0	※※※	一 ㊀	
-拇	rxgu		*rxg/rxy/rxgu/rxyy	0	0	0	0	0	※※※		
+拇	rxgu		*rxgu/rxg/rxy/rxyy	0	0	0	0	0	※※※		
 拗	rxln	rxl	*rxln/rxlt	0	0	0	0	0	※※※	乛 ⑴	
 其	adwu	adw		0	0	0	0	0	※※※	丶 ⓶	
 取	bcy	bc		0	1	0	0	0	※※	丶 ⓵	
@@ -1062,7 +1062,7 @@
 轮	lwxn	lwx		0	0	0	0	0	※※※	乛 ⑴	
 软	lqwy	lqw	lq	0	0	0	0	0	※※※	丶 ⓵	
 到	gcfj	gc		0	1	0	0	0	※※※		
-非	djdd		*hd/djd/hdh/djdd/hdhd	0	0	0	0	0	※※※	一 ㊂	
+非	djdd		*djdd/hd/djd/hdh/hdhd	0	0	0	0	0	※※※	一 ㊂	
 叔	hicy	hic		0	0	0	0	0	※※※	丶 ⓵	
 歧	hfcy	hfc		0	0	0	0	0	※※※	丶 ⓵	
 肯	hef	he		0	1	0	0	0	※※	一 ㊁	
@@ -1070,7 +1070,7 @@
 些	hxff	hxf		0	0	0	0	0	※※※	一 ㊁	
 卓	hjj			0	0	0	0	0	※※	丨 ㈡	
 虎	hamv	ha/ham		0	1	0	0	0	※※※	乛 ⑶	
-虏	halv		*hale/halv	0	0	0	0	0	※※※	乛 ⑶	
+虏	halv		*halv/hale	0	0	0	0	0	※※※	乛 ⑶	
 肾	jcef	jce		0	0	0	0	0	※※※	一 ㊁	
 贤	jcmu	jcm		0	0	0	0	0	※※※	丶 ⓶	
 尚	imkf			0	0	0	0	0	※※※	一 ㊁	
@@ -1123,7 +1123,7 @@
 知	tdkg	td/tdk		0	1	0	0	0	※※※	一 ㊀	
 迭	rwpi	rwp		0	0	0	0	0	※※※	丶 ⓷	
 氛	rnwv	rnw		0	0	0	0	0	※※※		
-垂	tgaf		*tfa/tga/tfag/tgaf	0	0	0	0	0	※※※		
+垂	tgaf		*tgaf/tfa/tga/tfag	0	0	0	0	0	※※※		
 牧	trty	trt		0	0	0	0	0	※※※	丶 ⓵	
 物	trqr	tr/trq		0	1	0	0	0	※※※		
 乖	tfux		tfu	0	0	0	0	0	※※※		
@@ -1205,7 +1205,7 @@
 变	yocu	yo/yoc		0	1	0	0	0	※※※	丶 ⓶	
 京	yiu			0	0	0	0	0	※※	丶 ⓶	
 享	ybf			0	0	0	0	0	※※	一 ㊁	
-庞	ydxv	ydx	*ydxe/ydxv	0	0	0	0	0	※※※	乛 ⑶	
+庞	ydxv	ydx	*ydxv/ydxe	0	0	0	0	0	※※※	乛 ⑶	
 店	yhkd	yhk		0	0	0	0	0	※※※	一 ㊂	
 夜	ywty	ywt		0	0	0	0	0	※※※		
 庙	ymd			0	0	0	0	0	※※	一 ㊂	
@@ -1279,7 +1279,7 @@
 宜	pegf	peg		0	0	0	0	0	※※※	一 ㊁	
 审	pjhj	pj/pjh		0	1	0	0	0	※※※	丨 ㈡	
 宙	pmf	pm		0	1	0	0	0	※※	一 ㊁	
-官	pnhn		*ph/pn/phn/pnh/phnn/pnhn	0	1	0	0	0	※※※		
+官	pnhn		*pnhn/ph/pn/phn/pnh/phnn	0	1	0	0	0	※※※		
 空	pwaf	pw/pwa		0	1	0	0	0	※※※	一 ㊁	
 帘	pwmh	pwm		0	0	0	0	0	※※※		
 宛	pqbb	pq/pqb		0	1	0	0	0	※※※	乛 ⑵	
@@ -1288,7 +1288,7 @@
 郎	yvcb			0	0	0	0	0	※※※		
 诗	yffy	yff		0	0	0	0	0	※※※	丶 ⓵	
 肩	yned			0	0	0	0	0	※※※	一 ㊂	
-房	ynyv	yny	*ynye/ynyv	0	0	0	0	0	※※※	乛 ⑶	
+房	ynyv	yny	*ynyv/ynye	0	0	0	0	0	※※※	乛 ⑶	
 诚	ydnt	ydn	*ydnt/ydny	0	0	0	0	0	※※※		
 衬	pufy	puf		0	0	0	0	0	※※※	丶 ⓵	
 衫	puet	pue		0	0	0	0	0	※※※	丿 ①	
@@ -1328,7 +1328,7 @@
 姓	vtgg	vtg		0	0	0	0	0	※※※	一 ㊀	
 妮	vnxn	vnx		0	0	0	0	0	※※※	乛 ⑴	
 始	vckg	vck		0	0	0	0	0	※※※	一 ㊀	
-姆	vxgu		*vx/vxg/vxy/vxgu/vxyy	0	1	0	0	0	※※※		
+姆	vxgu		*vxgu/vx/vxg/vxy/vxyy	0	1	0	0	0	※※※		
 迢	vkpd	vkp		0	0	0	0	0	※※※	一 ㊂	
 驾	lkcf	lkc		0	0	0	0	0	※※※	一 ㊁	
 叁	cddf	cdd		0	0	0	0	0	※※※	一 ㊁	
@@ -1360,7 +1360,7 @@
 玲	gwyc	gwy		0	0	0	0	0	※※※		
 珊	gmmg	gmm		0	0	0	0	0	※※※		
 玻	ghcy	ghc		0	0	0	0	0	※※※	丶 ⓵	
-毒	gxgu		*gxy/gxgu/gxyy	0	0	0	0	0	※※※		
+毒	gxgu		*gxgu/gxy/gxyy	0	0	0	0	0	※※※		
 型	gajf			0	0	0	0	0	※※※		
 拭	raag	raa		0	0	0	0	0	※※※	一 ㊀	
 挂	rffg			0	0	0	0	0	※※※	一 ㊀	
@@ -1378,14 +1378,14 @@
 赴	fhhi	fhh		0	0	0	0	0	※※※	丶 ⓷	
 赵	fhqi	fhq		0	0	0	0	0	※※※	丶 ⓷	
 挡	rivg	riv		0	0	0	0	0	※※※	一 ㊀	
-拽	rjxt		*rjn/rjx/rjnt/rjxt	0	0	0	0	0	※※※	丿 ①	
+拽	rjxt		*rjxt/rjn/rjx/rjnt	0	0	0	0	0	※※※	丿 ①	
 哉	fakd	fak		0	0	0	0	0	※※※	一 ㊂	
 挺	rtfp			0	0	0	0	0	※※※		
 括	rtdg	rtd		0	0	0	0	0	※※※	一 ㊀	
 垢	frgk	fr/frg		0	1	0	0	0	※※※		
 拴	rwgg	rwg		0	0	0	0	0	※※※	一 ㊀	
 拾	rwgk			0	0	0	0	0	※※※		
-挑	riqn		*riq/rqi/riqn/rqiy	0	0	0	0	0	※※※	乛 ⑴	
+挑	riqn		*riqn/riq/rqi/rqiy	0	0	0	0	0	※※※	乛 ⑴	
 垛	fmsy	fms		0	0	0	0	0	※※※	丶 ⓵	
 指	rxjg	rxj		0	0	0	0	0	※※※	一 ㊀	
 垫	rvyf			0	0	0	0	0	※※※		
@@ -1522,7 +1522,7 @@
 贴	mhkg			0	0	0	0	0	※※※	一 ㊀	
 贻	mckg		mck	0	0	0	0	0	※※※	一 ㊀	
 骨	mef	me		0	1	0	0	0	※※	一 ㊁	
-幽	xxmk		*mx/mxx/xxm/mxxi/xxmk	0	0	0	0	0	※※※	丨 ㈢	
+幽	xxmk		*xxmk/mx/mxx/xxm/mxxi	0	0	0	0	0	※※※	丨 ㈢	
 钙	qghn	qgh		0	0	0	0	0	※※※		
 钝	qgbn			0	0	0	0	0	※※※		
 钞	qitt	qit		0	0	0	0	0	※※※	丿 ①	
@@ -1533,7 +1533,7 @@
 钦	qqwy	qqw		0	0	0	0	0	※※※	丶 ⓵	
 钧	qqug			0	0	0	0	0	※※※	一 ㊀	
 钩	qqcy		qqc	0	0	0	0	0	※※※	丶 ⓵	
-钮	qnfg		*qnf/qnh/qnfg/qnhf	0	0	0	0	0	※※※	一 ㊀	
+钮	qnfg		*qnfg/qnf/qnh/qnhf	0	0	0	0	0	※※※	一 ㊀	
 卸	rhbh	rhb		0	0	0	0	0	※※※	丨 ㈠	
 缸	rmag	rma		0	0	0	0	0	※※※	一 ㊀	
 拜	rdfh			0	0	0	0	0	※※※	丨 ㈠	
@@ -1586,7 +1586,7 @@
 须	edmy	ed/edm		0	1	0	0	0	※※※	丶 ⓵	
 叙	wtcy	wtc		0	0	0	0	0	※※※	丶 ⓵	
 剑	wgij	wgi		0	0	0	0	0	※※※		
-逃	iqpv		*iqp/qip/iqpv/qipi	0	0	0	0	0	※※※	乛 ⑶	
+逃	iqpv		*iqpv/iqp/qip/qipi	0	0	0	0	0	※※※	乛 ⑶	
 食	wyve	wyv		0	0	0	0	0	※※※		
 盆	wvlf	wvl		0	0	0	0	0	※※※	一 ㊁	
 胚	egig	egi		0	0	0	0	0	※※※		
@@ -1738,7 +1738,7 @@
 姨	vgxw	vg/vgx		0	1	0	0	0	※※※		
 姻	vldy	vld		0	0	0	0	0	※※※	丶 ⓵	
 娇	vtdj			0	0	0	0	0	※※※		
-姚	viqn		*viq/vqi/viqn/vqiy	0	0	0	0	0	※※※	乛 ⑴	
+姚	viqn		*viqn/viq/vqi/vqiy	0	0	0	0	0	※※※	乛 ⑴	
 娜	vvfb		vvf/vnfb	0	0	0	0	0	※※※		
 怒	vcnu	vcn		0	0	0	0	0	※※※	丶 ⓶	
 架	lksu	lks		0	0	0	0	0	※※※	丶 ⓶	
@@ -1785,7 +1785,7 @@
 埂	fgjq	fgj		0	0	0	0	0	※※※		
 捂	rgkg			0	0	0	0	0	※※※	一 ㊀	
 振	rdfe	rdf		0	0	0	0	0	※※※		
-载	falk	fa/fal	*fald/falk	0	1	0	0	0	※※※	丨 ㈢	
+载	falk	fa/fal	*falk/fald	0	1	0	0	0	※※※	丨 ㈢	
 赶	fhfk			0	0	0	0	0	※※※	丨 ㈢	
 起	fhnv	fhn		0	0	0	0	0	※※※	乛 ⑶	
 盐	fhlf	fhl		0	0	0	0	0	※※※	一 ㊁	
@@ -1842,7 +1842,7 @@
 桥	stdj	std		0	0	0	0	0	※※※		
 桦	swxf		swx	0	0	0	0	0	※※※		
 栓	swgg	swg		0	0	0	0	0	※※※	一 ㊀	
-桃	siqn		*siq/sqi/siqn/sqiy	0	0	0	0	0	※※※	乛 ⑴	
+桃	siqn		*siqn/siq/sqi/sqiy	0	0	0	0	0	※※※	乛 ⑴	
 格	stkg	st/stk		0	1	0	0	0	※※※	一 ㊀	
 桩	syfg	syf		0	0	0	0	0	※※※	一 ㊀	
 校	suqy	suq		0	0	0	0	0	※※※	丶 ⓵	
@@ -1948,7 +1948,7 @@
 秩	trwy	trw		0	0	0	0	0	※※※	丶 ⓵	
 称	tqiy	tq/tqi		0	1	0	0	0	※※※	丶 ⓵	
 秘	tntt	tn/tnt		0	1	0	0	0	※※※	丿 ①	
-透	tepv	tep	*tepe/tepv	0	0	0	0	0	※※※	乛 ⑶	
+透	tepv	tep	*tepv/tepe	0	0	0	0	0	※※※	乛 ⑶	
 笔	ttfn	tt/ttf		0	1	0	0	0	※※※		
 笑	ttdu	ttd		0	0	0	0	0	※※※	丶 ⓶	
 笋	tvtr	tvt		0	0	0	0	0	※※※	丿 ②	
@@ -2112,7 +2112,7 @@
 诺	yadk	yad		0	0	0	0	0	※※※		
 读	yfnd	yfn		0	0	0	0	0	※※※		
 扇	ynnd			0	0	0	0	0	※※※	一 ㊂	
-诽	ydjd		*ydj/yhd/ydjd/yhdd	0	0	0	0	0	※※※		
+诽	ydjd		*ydjd/ydj/yhd/yhdd	0	0	0	0	0	※※※		
 袜	pugs	pug		0	0	0	0	0	※※※		
 袖	pumg	pum		0	0	0	0	0	※※※	一 ㊀	
 袍	puqn	puq		0	0	0	0	0	※※※		
@@ -2166,10 +2166,10 @@
 捺	rdfi			0	0	0	0	0	※※※		
 掩	rdjn			0	0	0	0	0	※※※		
 捷	rgvh	rgv		0	0	0	0	0	※※※		
-排	rdjd		*rdj/rhd/rdjd/rhdd	0	0	0	0	0	※※※		
+排	rdjd		*rdjd/rdj/rhd/rhdd	0	0	0	0	0	※※※		
 焉	ghgo	ghg		0	0	0	0	0	※※※		
 掉	rhjh	rhj		0	0	0	0	0	※※※	丨 ㈠	
-捶	rtgf		*rtfg/rtgf	0	0	0	0	0	※※※		
+捶	rtgf		*rtgf/rtfg	0	0	0	0	0	※※※		
 赦	foty	fot		0	0	0	0	0	※※※	丶 ⓵	
 堆	fwyg	fwy		0	0	0	0	0	※※※	一 ㊀	
 推	rwyg			0	0	0	0	0	※※※	一 ㊀	
@@ -2200,7 +2200,7 @@
 菱	afwt			0	0	0	0	0	※※※		
 勒	afln	afl	*afln/aflt	0	0	0	0	0	※※※	乛 ⑴	
 黄	amwu	amw		0	0	0	0	0	※※※	丶 ⓶	
-菲	adjd		*adj/ahd/adjd/ahdd	0	0	0	0	0	※※※		
+菲	adjd		*adjd/adj/ahd/ahdd	0	0	0	0	0	※※※		
 萌	ajef	aje		0	0	0	0	0	※※※	一 ㊁	
 萝	alqu	alq		0	0	0	0	0	※※※	丶 ⓶	
 菌	altu		alt	0	0	0	0	0	※※※	丶 ⓶	
@@ -2270,7 +2270,7 @@
 晦	jtxu	jtx	*jtxu/jtxy	0	0	0	0	0	※※※		
 晚	jqkq	jq/jqk		0	1	0	0	0	※※※		
 啄	keyy			0	0	0	0	0	※※※	丶 ⓵	
-啡	kdjd		*kdj/kdjd/khdd	0	0	0	0	0	※※※		
+啡	kdjd		*kdjd/kdj/khdd	0	0	0	0	0	※※※		
 距	khan	kha		0	0	0	0	0	※※※		
 趾	khhg	khh		0	0	0	0	0	※※※	一 ㊀	
 啃	kheg	khe		0	0	0	0	0	※※※	一 ㊀	
@@ -2285,7 +2285,7 @@
 唱	kjjg	kjj		0	0	0	0	0	※※※	一 ㊀	
 患	kkhn			0	0	0	0	0	※※※		
 啰	klqy			0	0	0	0	0	※※※	丶 ⓵	
-唾	ktgf		*ktf/ktg/ktfg/ktgf	0	0	0	0	0	※※※		
+唾	ktgf		*ktgf/ktf/ktg/ktfg	0	0	0	0	0	※※※		
 唯	kwyg			0	0	0	0	0	※※※	一 ㊀	
 啤	krtf	krt		0	0	0	0	0	※※※		
 啥	kwfk			0	0	0	0	0	※※※		
@@ -2359,7 +2359,7 @@
 豚	eey			0	0	0	0	0	※※	丶 ⓵	
 脸	ewgi	ew/ewg		0	1	0	0	0	※※※		
 脱	eukq	euk		0	0	0	0	0	※※※		
-象	qjeu		*qje/qke/qjeu/qkeu	0	0	0	0	0	※※※	丶 ⓶	
+象	qjeu		*qjeu/qje/qke/qkeu	0	0	0	0	0	※※※	丶 ⓶	
 够	qkqq			0	0	0	0	0	※※※		
 逸	qkqp			0	0	0	0	0	※※※		
 猜	qtge			0	0	0	0	0	※※※		
@@ -2575,7 +2575,7 @@
 棉	srmh	srm		0	0	0	0	0	※※※		
 棚	seeg	see		0	0	0	0	0	※※※	一 ㊀	
 棕	spfi	sp/spf		0	1	0	0	0	※※※		
-棺	spnn		*sph/spn/sphn/spnn	0	0	0	0	0	※※※		
+棺	spnn		*spnn/sph/spn/sphn	0	0	0	0	0	※※※		
 榔	syvb	syv		0	0	0	0	0	※※※		
 椭	sbde	sbd		0	0	0	0	0	※※※		
 惠	gjhn	gjh		0	0	0	0	0	※※※		
@@ -2857,7 +2857,7 @@
 蓄	ayxl	ayx		0	0	0	0	0	※※※		
 蒲	aigy			0	0	0	0	0	※※※		
 蓉	apwk	apw		0	0	0	0	0	※※※		
-蒙	apge		*apf/apg/apfe/apge	0	0	0	0	0	※※※		
+蒙	apge		*apge/apf/apg/apfe	0	0	0	0	0	※※※		
 蒸	abio		ab/abi	0	0	0	0	0	※※※		
 献	fmud			0	0	0	0	0	※※※		
 椿	sdwj			0	0	0	0	0	※※※		
@@ -2898,7 +2898,7 @@
 睦	hfwf	hf/hfw		0	1	0	0	0	※※※		
 瞄	halg	hal		0	0	0	0	0	※※※	一 ㊀	
 睫	hgvh	hgv		0	0	0	0	0	※※※		
-睡	htgf	ht	*htf/htg/htfg/htgf	0	1	0	0	0	※※※		
+睡	htgf	ht	*htgf/htf/htg/htfg	0	1	0	0	0	※※※		
 睬	hesy	hes		0	0	0	0	0	※※※	丶 ⓵	
 嗜	kftj			0	0	0	0	0	※※※		
 鄙	kflb	kfl		0	0	0	0	0	※※※		
@@ -2913,7 +2913,7 @@
 畸	ldsk	lds		0	0	0	0	0	※※※		
 跨	khdn	khd		0	0	0	0	0	※※※		
 跷	khaq			0	0	0	0	0	※※※		
-跳	khiq		*khi/khiq/khqi	0	0	0	0	0	※※※		
+跳	khiq		*khiq/khi/khqi	0	0	0	0	0	※※※		
 跺	khms	khm		0	0	0	0	0	※※※		
 跪	khqb			0	0	0	0	0	※※※		
 路	khtk	kht		0	0	0	0	0	※※※		
@@ -2930,7 +2930,7 @@
 嗓	kccs	kcc		0	0	0	0	0	※※※		
 署	lftj			0	0	0	0	0	※※※		
 置	lfhf			0	0	0	0	0	※※※	一 ㊁	
-罪	ldjd		*ldj/lhd/ldjd/lhdd	0	0	0	0	0	※※※		
+罪	ldjd		*ldjd/ldj/lhd/lhdd	0	0	0	0	0	※※※		
 罩	lhjj	lhj		0	0	0	0	0	※※※	丨 ㈡	
 蜀	lqju	lqj		0	0	0	0	0	※※※	丶 ⓶	
 幌	mhjq			0	0	0	0	0	※※※		
@@ -2938,7 +2938,7 @@
 锚	qalg	qal		0	0	0	0	0	※※※	一 ㊀	
 锡	qjqr	qjq		0	0	0	0	0	※※※		
 锣	qlqy	qlq		0	0	0	0	0	※※※	丶 ⓵	
-锤	qtgf		*qtfg/qtgf	0	0	0	0	0	※※※		
+锤	qtgf		*qtgf/qtfg	0	0	0	0	0	※※※		
 锥	qwyg	qwy		0	0	0	0	0	※※※	一 ㊀	
 锦	qrmh	qrm		0	0	0	0	0	※※※		
 键	qvfp			0	0	0	0	0	※※※		
@@ -2959,7 +2959,7 @@
 鼠	vnun	vnu		0	0	0	0	0	※※※		
 催	wmwy	wmw		0	0	0	0	0	※※※		
 傻	wtlt			0	0	0	0	0	※※※		
-像	wqje		*wqj/wqk/wqje/wqke	0	0	0	0	0	※※※		
+像	wqje		*wqje/wqj/wqk/wqke	0	0	0	0	0	※※※		
 躲	tmds			0	0	0	0	0	※※※		
 魁	rqcf			0	0	0	0	0	※※※		
 衙	tgkh	tgk		0	0	0	0	0	※※※		
@@ -3121,9 +3121,9 @@
 箕	tadw	tad		0	0	0	0	0	※※※		
 算	thaj	tha		0	0	0	0	0	※※※	丨 ㈡	
 箩	tlqu	tlq		0	0	0	0	0	※※※	丶 ⓶	
-管	tpnn	tp	*tph/tpn/tphn/tpnn	0	1	0	0	0	※※※		
+管	tpnn	tp	*tpnn/tph/tpn/tphn	0	1	0	0	0	※※※		
 箫	tvij			0	0	0	0	0	※※※		
-舆	wflw		*vlg/wfl/vlgw/wflw	0	0	0	0	0	※※※		
+舆	wflw		*wflw/vlg/wfl/vlgw	0	0	0	0	0	※※※		
 僚	wdui	wdu		0	0	0	0	0	※※※		
 僧	wulj	wul		0	0	0	0	0	※※※		
 鼻	thlj	thl		0	0	0	0	0	※※※		
@@ -3214,7 +3214,7 @@
 横	samw	sam		0	0	0	0	0	※※※		
 槽	sgmj			0	0	0	0	0	※※※		
 樱	smmv			0	0	0	0	0	※※※		
-橡	sqje		*sqj/sqje/sqke	0	0	0	0	0	※※※		
+橡	sqje		*sqje/sqj/sqke	0	0	0	0	0	※※※		
 樟	sujh	suj		0	0	0	0	0	※※※	丨 ㈠	
 橄	snbt		snb	0	0	0	0	0	※※※		
 敷	geht			0	0	0	0	0	※※※		
@@ -3317,7 +3317,7 @@
 擂	rflg	rfl		0	0	0	0	0	※※※	一 ㊀	
 操	rkks	rkk		0	0	0	0	0	※※※		
 擅	rylg	ryl		0	0	0	0	0	※※※		
-燕	auko		*au/akuo/auko	0	1	0	0	0	※※※		
+燕	auko		*auko/au/akuo	0	1	0	0	0	※※※		
 蕾	aflf			0	0	0	0	0	※※※	一 ㊁	
 薯	alfj			0	0	0	0	0	※※※		
 薛	awnu			0	0	0	0	0	※※※		
@@ -3716,7 +3716,7 @@
 岘	mmqn			0	0	0	0	0	※※※	乛 ⑴	
 岑	mwyn			0	0	0	0	0	※※※		
 岚	mmqu			0	0	0	0	0	※※※	丶 ⓶	
-兕	mmgq		*hnmq/mmgq	0	0	0	0	0	※※※		
+兕	mmgq		*mmgq/hnmq	0	0	0	0	0	※※※		
 囵	lwxv			0	0	0	0	0	※※※	乛 ⑶	
 囫	lqre		lqr	0	0	0	0	0	※※※	丿 ③	
 钊	qjh			0	0	0	0	0	※※	丨 ㈠	
@@ -3791,7 +3791,7 @@
 忪	nwcy		nwc	0	0	0	0	0	※※※	丶 ⓵	
 怆	nwbn		nwb	0	0	0	0	0	※※※	乛 ⑴	
 忭	nyhy		nyh	0	0	0	0	0	※※※	丶 ⓵	
-忸	nnfg		*nnf/nnfg/nnhf	0	0	0	0	0	※※※	一 ㊀	
+忸	nnfg		*nnfg/nnf/nnhf	0	0	0	0	0	※※※	一 ㊀	
 诂	ydg			0	0	0	0	0	※※	一 ㊀	
 诃	yskg		ysk	0	0	0	0	0	※※※	一 ㊀	
 诅	yegg	yeg		0	0	0	0	0	※※※	一 ㊀	
@@ -3811,7 +3811,7 @@
 妊	vtfg	vtf		0	0	0	0	0	※※※	一 ㊀	
 妗	vwyn		vwy	0	0	0	0	0	※※※		
 妫	vyly		vyl	0	0	0	0	0	※※※		
-妞	vnfg		*vnf/vnfg/vnhf	0	0	0	0	0	※※※	一 ㊀	
+妞	vnfg		*vnfg/vnf/vnhf	0	0	0	0	0	※※※	一 ㊀	
 姒	vnyw		vny	0	0	0	0	0	※※※		
 妤	vcbh			0	0	0	0	0	※※※	丨 ㈠	
 邵	vkbh	vkb		0	0	0	0	0	※※※	丨 ㈠	
@@ -3959,7 +3959,7 @@
 侃	wkqn		wkq	0	0	0	0	0	※※※	乛 ⑴	
 侏	wriy		wri	0	0	0	0	0	※※※	丶 ⓵	
 侩	wwfc			0	0	0	0	0	※※※		
-佻	wiqn		*wiq/wiqn/wqiy	0	0	0	0	0	※※※	乛 ⑴	
+佻	wiqn		*wiqn/wiq/wqiy	0	0	0	0	0	※※※	乛 ⑴	
 佾	wweg		wwe	0	0	0	0	0	※※※	一 ㊀	
 侪	wyjh		wyj	0	0	0	0	0	※※※	丨 ㈠	
 佼	wuqy		wuq	0	0	0	0	0	※※※	丶 ⓵	
@@ -4306,13 +4306,13 @@
 弈	yoaj		yoa	0	0	0	0	0	※※※	丨 ㈡	
 奕	yodu		yod	0	0	0	0	0	※※※	丶 ⓶	
 庥	ywsi		yws	0	0	0	0	0	※※※	丶 ⓷	
-疬	udlv	udl	*udle/udlv	0	0	0	0	0	※※※	乛 ⑶	
+疬	udlv	udl	*udlv/udle	0	0	0	0	0	※※※	乛 ⑶	
 疣	udnv			0	0	0	0	0	※※※	乛 ⑶	
 疥	uwjk	uwj		0	0	0	0	0	※※※	丨 ㈢	
 疭	uwwi			0	0	0	0	0	※※※	丶 ⓷	
 庠	yudk			0	0	0	0	0	※※※	丨 ㈢	
 竑	udcy			0	0	0	0	0	※※※	丶 ⓵	
-彦	uter		*utee/uter	0	0	0	0	0	※※※	丿 ②	
+彦	uter		*uter/utee	0	0	0	0	0	※※※	丿 ②	
 飒	umqy			0	0	0	0	0	※※※	丶 ⓵	
 闼	udpi		udp	0	0	0	0	0	※※※	丶 ⓷	
 闾	ukkd			0	0	0	0	0	※※※	一 ㊂	
@@ -4341,7 +4341,7 @@
 洎	ithg			0	0	0	0	0	※※※	一 ㊀	
 洫	itlg			0	0	0	0	0	※※※	一 ㊀	
 浍	iwfc			0	0	0	0	0	※※※		
-洮	iiqn		*iiq/iiqn/iqiy	0	0	0	0	0	※※※	乛 ⑴	
+洮	iiqn		*iiqn/iiq/iqiy	0	0	0	0	0	※※※	乛 ⑴	
 洵	iqjg		iqj	0	0	0	0	0	※※※	一 ㊀	
 浒	iytf			0	0	0	0	0	※※※		
 浔	ivfy			0	0	0	0	0	※※※	丶 ⓵	
@@ -4381,7 +4381,7 @@
 陛	bxxf	bx/bxx		0	1	0	0	0	※※※		
 陟	bhit		bhi/bhic	0	0	0	0	0	※※※	丿 ①	
 娅	vgog		vgo	0	0	0	0	0	※※※		
-姮	vgjg		*vgjf/vgjg	0	0	0	0	0	※※※		
+姮	vgjg		*vgjg/vgjf	0	0	0	0	0	※※※		
 娆	vatq		vat	0	0	0	0	0	※※※		
 姝	vriy		vr/vri	0	0	0	0	0	※※※	丶 ⓵	
 姣	vuqy		vuq	0	0	0	0	0	※※※	丶 ⓵	
@@ -4404,7 +4404,7 @@
 顼	gdmy		gdm	0	0	0	0	0	※※※	丶 ⓵	
 珰	givg			0	0	0	0	0	※※※	一 ㊀	
 珩	gtfh		gtf	0	0	0	0	0	※※※		
-珧	giqn		*giq/giqn/gqiy	0	0	0	0	0	※※※	乛 ⑴	
+珧	giqn		*giqn/giq/gqiy	0	0	0	0	0	※※※	乛 ⑴	
 珣	gqjg			0	0	0	0	0	※※※	一 ㊀	
 珞	gtkg		gtk	0	0	0	0	0	※※※	一 ㊀	
 琤	gqvh			0	0	0	0	0	※※※		
@@ -4499,7 +4499,7 @@
 哧	kfoy		kfo	0	0	0	0	0	※※※	丶 ⓵	
 哽	kgjq		kgj	0	0	0	0	0	※※※		
 唔	kgkg			0	0	0	0	0	※※※	一 ㊀	
-晁	jiqb		*jiq/jiqb/jqiu	0	0	0	0	0	※※※	乛 ⑵	
+晁	jiqb		*jiqb/jiq/jqiu	0	0	0	0	0	※※※	乛 ⑵	
 晏	jpvf		jpv	0	0	0	0	0	※※※	一 ㊁	
 鸮	kgng			0	0	0	0	0	※※※		
 趵	khqy			0	0	0	0	0	※※※		
@@ -4574,7 +4574,7 @@
 倜	wmfk		wmf	0	0	0	0	0	※※※		
 隼	wyfj		wyf	0	0	0	0	0	※※※	丨 ㈡	
 隽	wyeb		*wyeb/wyer	0	0	0	0	0	※※※	乛 ⑵	
-倌	wpnn		*wpn/wphn/wpnn	0	0	0	0	0	※※※		
+倌	wpnn		*wpnn/wpn/wphn	0	0	0	0	0	※※※		
 倥	wpwa		wpw	0	0	0	0	0	※※※		
 臬	thsu		ths	0	0	0	0	0	※※※	丶 ⓶	
 皋	rdfj			0	0	0	0	0	※※※	丨 ㈡	
@@ -4624,7 +4624,7 @@
 凋	umfk	umf		0	0	0	0	0	※※※		
 颃	ymdm			0	0	0	0	0	※※※		
 恣	uqwn		uqw	0	0	0	0	0	※※※		
-旆	ytgh		*ytg/yrmh/ytgh	0	0	0	0	0	※※※		
+旆	ytgh		*ytgh/ytg/yrmh	0	0	0	0	0	※※※		
 旄	yttn			0	0	0	0	0	※※※		
 旃	ytmy			0	0	0	0	0	※※※		
 阃	ulsi		uls	0	0	0	0	0	※※※	丶 ⓷	
@@ -4684,7 +4684,7 @@
 奘	nhdd			0	0	0	0	0	※※※		
 牂	nhdd			0	0	0	0	0	※※※		
 蚩	bhgj			0	0	0	0	0	※※※		
-陲	btgf		*btfg/btgf	0	0	0	0	0	※※※		
+陲	btgf		*btgf/btfg	0	0	0	0	0	※※※		
 姬	vahh	vah		0	0	0	0	0	※※※		
 娠	vdfe	vdf		0	0	0	0	0	※※※		
 娌	vjfg			0	0	0	0	0	※※※	一 ㊀	
@@ -4708,12 +4708,12 @@
 邕	vkcb		vkc	0	0	0	0	0	※※※	乛 ⑵	
 鸶	xxgg			0	0	0	0	0	※※※		
 彗	dhdv			0	0	0	0	0	※※※		
-耜	dinn		*din/dihn/dinn	0	0	0	0	0	※※※		
+耜	dinn		*dinn/din/dihn	0	0	0	0	0	※※※		
 焘	dtfo			0	0	0	0	0	※※※		
 舂	dwvf		dwv	0	0	0	0	0	※※※	一 ㊁	
 琏	glpy		glp	0	0	0	0	0	※※※	丶 ⓵	
 琇	gten		*gten/gtet	0	0	0	0	0	※※※	乛 ⑴	
-麸	gtfw		*gqfw/gtfw	0	0	0	0	0	※※※		
+麸	gtfw		*gtfw/gqfw	0	0	0	0	0	※※※		
 揶	rbbh		rbb	0	0	0	0	0	※※※	丨 ㈠	
 埴	ffhg			0	0	0	0	0	※※※	一 ㊀	
 埯	fdjn		fdj	0	0	0	0	0	※※※		
@@ -4721,7 +4721,7 @@
 掳	rhal	rha		0	0	0	0	0	※※※		
 掴	rlgy			0	0	0	0	0	※※※		
 埸	fjqr		fjq	0	0	0	0	0	※※※		
-埵	ftgf		*ftfg/ftgf	0	0	0	0	0	※※※		
+埵	ftgf		*ftgf/ftfg	0	0	0	0	0	※※※		
 赧	fobc			0	0	0	0	0	※※※		
 埤	frtf		frt	0	0	0	0	0	※※※		
 捭	rrtf		rrt	0	0	0	0	0	※※※		
@@ -4763,7 +4763,7 @@
 菏	aisk	ais		0	0	0	0	0	※※※		
 菹	aieg		aie	0	0	0	0	0	※※※		
 菪	apdf		apd	0	0	0	0	0	※※※	一 ㊁	
-菅	apnn		*aphn/apnn	0	0	0	0	0	※※※		
+菅	apnn		*apnn/aphn	0	0	0	0	0	※※※		
 菀	apqb			0	0	0	0	0	※※※		
 萦	apxi		apx	0	0	0	0	0	※※※		
 菰	abry		abr	0	0	0	0	0	※※※		
@@ -4812,7 +4812,7 @@
 啧	kgmy		kgm	0	0	0	0	0	※※※	丶 ⓵	
 晡	jgey			0	0	0	0	0	※※※		
 晤	jgkg	jgk		0	0	0	0	0	※※※	一 ㊀	
-眺	hiqn		*hiq/hqi/hiqn/hqiy	0	0	0	0	0	※※※	乛 ⑴	
+眺	hiqn		*hiqn/hiq/hqi/hqiy	0	0	0	0	0	※※※	乛 ⑴	
 眵	hqqy		hqq	0	0	0	0	0	※※※	丶 ⓵	
 眸	hcrh		hcr	0	0	0	0	0	※※※		
 圊	lged			0	0	0	0	0	※※※	一 ㊂	
@@ -4877,7 +4877,7 @@
 铨	qwgg		qwg	0	0	0	0	0	※※※	一 ㊀	
 铩	qqsy		qqs	0	0	0	0	0	※※※	丶 ⓵	
 铪	qwgk			0	0	0	0	0	※※※		
-铫	qiqn		*qiq/qiqn/qqiy	0	0	0	0	0	※※※	乛 ⑴	
+铫	qiqn		*qiqn/qiq/qqiy	0	0	0	0	0	※※※	乛 ⑴	
 铬	qtkg	qtk		0	0	0	0	0	※※※	一 ㊀	
 铮	qqvh		qqv	0	0	0	0	0	※※※		
 铯	qqcn			0	0	0	0	0	※※※	乛 ⑴	
@@ -4978,7 +4978,7 @@
 淬	iywf			0	0	0	0	0	※※※		
 涪	iukg	iuk		0	0	0	0	0	※※※	一 ㊀	
 淙	ipfi			0	0	0	0	0	※※※		
-涫	ipnn		*ipn/iphn/ipnn	0	0	0	0	0	※※※		
+涫	ipnn		*ipnn/ipn/iphn	0	0	0	0	0	※※※		
 渌	iviy		ivi	0	0	0	0	0	※※※	丶 ⓵	
 淄	ivlg	ivl		0	0	0	0	0	※※※	一 ㊀	
 惬	nagw		nag	0	0	0	0	0	※※※		
@@ -4991,7 +4991,7 @@
 惚	nqrn		nqr	0	0	0	0	0	※※※		
 惇	nybg			0	0	0	0	0	※※※	一 ㊀	
 惮	nujf	nuj		0	0	0	0	0	※※※		
-窕	pwiq		*pwi/pwiq/pwqi	0	0	0	0	0	※※※		
+窕	pwiq		*pwiq/pwi/pwqi	0	0	0	0	0	※※※		
 谌	yadn			0	0	0	0	0	※※※		
 谏	ygli		ygl	0	0	0	0	0	※※※		
 扈	ynkc			0	0	0	0	0	※※※		
@@ -5036,7 +5036,7 @@
 绶	xepc		xep	0	0	0	0	0	※※※		
 绺	xthk		xth	0	0	0	0	0	※※※		
 绻	xudb			0	0	0	0	0	※※※		
-绾	xpnn		*xpn/xphn/xpnn	0	0	0	0	0	※※※		
+绾	xpnn		*xpnn/xpn/xphn	0	0	0	0	0	※※※		
 骖	ccde		ccd	0	0	0	0	0	※※※		
 缁	xvlg		xvl	0	0	0	0	0	※※※	一 ㊀	
 耠	diwk		diw	0	0	0	0	0	※※※		
@@ -5051,7 +5051,7 @@
 靓	gemq		gem	0	0	0	0	0	※※※		
 琰	gooy		goo	0	0	0	0	0	※※※	丶 ⓵	
 琮	gpfi		gp/gpf	0	0	0	0	0	※※※		
-琯	gpnn		*gphn/gpnn	0	0	0	0	0	※※※		
+琯	gpnn		*gpnn/gphn	0	0	0	0	0	※※※		
 琬	gpqb		gpq	0	0	0	0	0	※※※		
 琛	gpws		gpw	0	0	0	0	0	※※※		
 琚	gndg		gnd	0	0	0	0	0	※※※	一 ㊀	
@@ -5097,7 +5097,7 @@
 椟	sfnd		sfn	0	0	0	0	0	※※※		
 棹	shjh		shj	0	0	0	0	0	※※※	丨 ㈠	
 椤	slqy		slq	0	0	0	0	0	※※※	丶 ⓵	
-棰	stgf		*stg/stfg/stgf	0	0	0	0	0	※※※		
+棰	stgf		*stgf/stg/stfg	0	0	0	0	0	※※※		
 赍	fwwm		fww	0	0	0	0	0	※※※		
 椋	syiy			0	0	0	0	0	※※※	丶 ⓵	
 椁	sybg		syb	0	0	0	0	0	※※※	一 ㊀	
@@ -5329,7 +5329,7 @@
 缂	xafh			0	0	0	0	0	※※※	丨 ㈠	
 缃	xshg		xsh	0	0	0	0	0	※※※	一 ㊀	
 缄	xdgt	xdg	*xdgt/xdgy	0	0	0	0	0	※※※		
-彘	xgxx		*xgx/xgtx/xgxx	0	0	0	0	0	※※※		
+彘	xgxx		*xgxx/xgx/xgtx	0	0	0	0	0	※※※		
 缇	xjgh		xjg	0	0	0	0	0	※※※		
 缈	xhit		xhi	0	0	0	0	0	※※※		
 缌	xlny			0	0	0	0	0	※※※	丶 ⓵	
@@ -5611,7 +5611,7 @@
 缙	xgoj			0	0	0	0	0	※※※		
 缜	xfhw		xfh	0	0	0	0	0	※※※		
 缛	xdff			0	0	0	0	0	※※※		
-辔	xlxk		*xlx/lxxk/xlxk	0	0	0	0	0	※※※		
+辔	xlxk		*xlxk/xlx/lxxk	0	0	0	0	0	※※※		
 骝	cqyl			0	0	0	0	0	※※※		
 缟	xymk		xym	0	0	0	0	0	※※※		
 缡	xybc		xyb	0	0	0	0	0	※※※		
@@ -5687,7 +5687,7 @@
 辕	lfke	lfk		0	0	0	0	0	※※※		
 蜚	djdj		*djdj/hdhj	0	0	0	0	0	※※※		
 裴	djde		*djde/hdhe	0	0	0	0	0	※※※		
-翡	djdn		*djd/djdn/hdhn	0	0	0	0	0	※※※		
+翡	djdn		*djdn/djd/hdhn	0	0	0	0	0	※※※		
 龇	hwbx			0	0	0	0	0	※※※		
 龈	hwbe			0	0	0	0	0	※※※		
 睿	hpgh			0	0	0	0	0	※※※		
@@ -6127,7 +6127,7 @@
 篦	ttlx			0	0	0	0	0	※※※		
 篪	trhm			0	0	0	0	0	※※※		
 篙	tymk		tym	0	0	0	0	0	※※※		
-盥	qgil		*qgi/qgil/vilf	0	0	0	0	0	※※※		
+盥	qgil		*qgil/qgi/vilf	0	0	0	0	0	※※※		
 劓	thlj		thl	0	0	0	0	0	※※※		
 翱	rdfn		rdf	0	0	0	0	0	※※※		
 魉	rqcw			0	0	0	0	0	※※※		
@@ -6220,7 +6220,7 @@
 鹩	dujg			0	0	0	0	0	※※※		
 龋	hwby			0	0	0	0	0	※※※		
 龌	hwbf			0	0	0	0	0	※※※		
-豳	eemk		*eem/eemk/meei	0	0	0	0	0	※※※	丨 ㈢	
+豳	eemk		*eemk/eem/meei	0	0	0	0	0	※※※	丨 ㈢	
 壑	hpgf		hpg	0	0	0	0	0	※※※		
 黻	oguc			0	0	0	0	0	※※※		
 嚏	kfph			0	0	0	0	0	※※※		
@@ -6282,7 +6282,7 @@
 鳇	qgrg		qgr	0	0	0	0	0	※※※		
 鳊	qgya			0	0	0	0	0	※※※		
 螽	tujj			0	0	0	0	0	※※※		
-燮	oyoc		*oyo/oyoc/yooc	0	0	0	0	0	※※※		
+燮	oyoc		*oyoc/oyo/yooc	0	0	0	0	0	※※※		
 鹫	yidg			0	0	0	0	0	※※※		
 襄	ykke	ykk		0	0	0	0	0	※※※		
 糜	ysso			0	0	0	0	0	※※※		
@@ -6437,7 +6437,7 @@
 镴	qvln			0	0	0	0	0	※※※		
 黧	tqto			0	0	0	0	0	※※※		
 纂	thdi			0	0	0	0	0	※※※		
-璺	wfmy		*wfm/vmgy/wfmy	0	0	0	0	0	※※※		
+璺	wfmy		*wfmy/wfm/vmgy	0	0	0	0	0	※※※		
 鼯	vnuk			0	0	0	0	0	※※※		
 臜	etfm			0	0	0	0	0	※※※		
 鳜	qgdw			0	0	0	0	0	※※※		
@@ -6455,7 +6455,7 @@
 鳢	qgmu			0	0	0	0	0	※※※		
 癫	ufhm			0	0	0	0	0	※※※		
 麝	ynjf			0	0	0	0	0	※※※		
-夔	uhtt		*uht/uhtt/utht	0	0	0	0	0	※※※		
+夔	uhtt		*uhtt/uht/utht	0	0	0	0	0	※※※		
 爝	oelf		oel	0	0	0	0	0	※※※		
 灏	ijym			0	0	0	0	0	※※※		
 禳	pyye			0	0	0	0	0	※※※		
@@ -6491,13 +6491,13 @@
 鑫	qqqf		qqq	0	0	0	0	0	※※※	一 ㊁	
 灞	ifae		ifa	0	0	0	0	0	※※※		
 襻	pusr			0	0	0	0	0	※※※		
-纛	gxfi		*gxf/gxfi/gxgi/gxyi	0	0	0	0	0	※※※		
+纛	gxfi		*gxfi/gxf/gxgi/gxyi	0	0	0	0	0	※※※		
 鬣	devn			0	0	0	0	0	※※※		
 攮	rgke			0	0	0	0	0	※※※		
 囔	kgke			0	0	0	0	0	※※※		
 馕	qnge			0	0	0	0	0	※※※		
 戆	ujtn			0	0	0	0	0	※※※		
-爨	wfmo		*vmgo/wfmo	0	0	0	0	0	※※※		0,1/2,3/4,5/28,29
+爨	wfmo		*wfmo/vmgo	0	0	0	0	0	※※※		0,1/2,3/4,5/28,29
 齉	thle			0	0	0	0	0	※※※		
 亍	fhk			0	0	0	0	0	※※	丨 ㈢	0,1/2
 尢	dnv		*dnv/copp/zzpp	0	0	0	0	0	※※	乛 ⑶	0,1/2
@@ -7015,7 +7015,7 @@
 倴	wdfa			0	0	0	0	0	※※※		
 脩	whte			0	0	0	0	0	※※※		
 倮	wjsy		wjs	0	0	0	0	0	※※※	丶 ⓵	
-倕	wtgf		*wtfg/wtgf	0	0	0	0	0	※※※		
+倕	wtgf		*wtgf/wtfg	0	0	0	0	0	※※※		
 倞	wyiy			0	0	0	0	0	※※※	丶 ⓵	
 𫢸	wujf			0	0	0	0	0			
 倓	wooy			0	0	0	0	0	※※※	丶 ⓵	
@@ -7026,7 +7026,7 @@
 舯	tekh		tek	0	0	0	0	0	※※※		
 舥	tecn			0	0	0	0	0	※※※	乛 ⑴	
 瓞	rcyw			0	0	0	0	0	※※※		
-鬯	qobx		*qob/obxb/qobx	0	0	0	0	0	※※※		
+鬯	qobx		*qobx/qob/obxb	0	0	0	0	0	※※※		
 鸰	wycg			0	0	0	0	0	※※※		
 脎	eqsy		eqs	0	0	0	0	0	※※※	丶 ⓵	
 朓	eiqn		*eiqn/eqiy	0	0	0	0	0	※※※	乛 ⑴	
@@ -7246,7 +7246,7 @@
 悰	npfi			0	0	0	0	0	※※※		
 惙	nccc			0	0	0	0	0	※※※		
 寁	pgvh			0	0	0	0	0	※※※		
-逭	pnhp		*phnp/pnhp	0	0	0	0	0	※※※		
+逭	pnhp		*pnhp/phnp	0	0	0	0	0	※※※		
 𬤇	ysfg			0	0	0	0	0			
 𫍯	ydgt			0	0	0	0	0			
 袼	putk			0	0	0	0	0	※※※		
@@ -7270,7 +7270,7 @@
 婫	vjxx			0	0	0	0	0	※※※		
 婤	vmfk			0	0	0	0	0	※※※		
 婘	vudb			0	0	0	0	0	※※※		
-婠	vpnn		*vphn/vpnn	0	0	0	0	0	※※※		
+婠	vpnn		*vpnn/vphn	0	0	0	0	0	※※※		
 𬘬	xgeg			0	0	0	0	0			
 𬘭	xssy			0	0	0	0	0			
 𬴂	cdjd			0	0	0	0	0			
@@ -7367,7 +7367,7 @@
 翙	mqng			0	0	0	0	0	※※※	一 ㊀	
 𫖮	mndm			0	0	0	0	0			
 圌	lmdj			0	0	0	0	0	※※※		
-圐	llyv		*llye/llyv	0	0	0	0	0	※※※	乛 ⑶	
+圐	llyv		*llyv/llye	0	0	0	0	0	※※※	乛 ⑶	
 赑	mmmu			0	0	0	0	0	※※※	丶 ⓶	
 淼	iiiu			0	0	0	0	0	※※※	丶 ⓶	
 赒	mmfk			0	0	0	0	0	※※※		
@@ -7746,7 +7746,7 @@
 嫪	vnwe			0	0	0	0	0	※※※		
 𬙂	xpgw			0	0	0	0	0			
 㻬	gffn			0	0	0	0	0	※※※		
-麹	gtqo		*gqqo/gtqo	0	0	0	0	0	※※※		
+麹	gtqo		*gtqo/gqqo	0	0	0	0	0	※※※		
 璆	gnwe			0	0	0	0	0	※※※		
 漦	fiti			0	0	0	0	0	※※※		
 叇	fcvp			0	0	0	0	0	※※※		
@@ -7989,7 +7989,7 @@
 藟	alll			0	0	0	0	0	※※※		
 藦	aysr			0	0	0	0	0	※※※		
 藨	ayno			0	0	0	0	0	※※※		
-鹲	apgg		*apfg/apgg	0	0	0	0	0	※※※		
+鹲	apgg		*apgg/apfg	0	0	0	0	0	※※※		
 檫	spwi			0	0	0	0	0	※※※		
 黡	ddlo			0	0	0	0	0	※※※		
 礞	dape		dap	0	0	0	0	0	※※※		
@@ -8039,7 +8039,7 @@
 鳘	txgg		*txgg/txyg	0	0	0	0	0	※※※		
 儳	wqky			0	0	0	0	0	※※※		
 儴	wyke			0	0	0	0	0	※※※		
-鼗	iqfc		*iqf/iqfc/qifc	0	0	0	0	0	※※※		
+鼗	iqfc		*iqfc/iqf/qifc	0	0	0	0	0	※※※		
 𬶭	qgwi			0	0	0	0	0			
 𩾌	qgyi			0	0	0	0	0			
 鳚	qgnf			0	0	0	0	0	※※※		
@@ -8048,7 +8048,7 @@
 麖	ynji			0	0	0	0	0	※※※		
 蠃	ynky			0	0	0	0	0	※※※		
 彟	vfac			0	0	0	0	0	※※※		
-嬿	vauo		*vako/vauo	0	0	0	0	0	※※※		
+嬿	vauo		*vauo/vako	0	0	0	0	0	※※※		
 鬒	defw			0	0	0	0	0	※※※		
 蘘	ayke			0	0	0	0	0	※※※		
 欂	saif			0	0	0	0	0	※※※		
@@ -8095,7 +8095,7 @@
 皭	relf			0	0	0	0	0	※※※		
 龢	wgkt			0	0	0	0	0	※※※		
 鳤	qgtn			0	0	0	0	0	※※※		
-亹	ywfg		*yvmg/ywfg	0	0	0	0	0	※※※		
+亹	ywfg		*ywfg/yvmg	0	0	0	0	0	※※※		
 籥	twga			0	0	0	0	0	※※※		
 鼷	vnud			0	0	0	0	0	※※※		
 𫚭	qgvn			0	0	0	0	0			
@@ -8106,10 +8106,10 @@
 蠼	jhhc			0	0	0	0	0	※※※		0,1,2,3,4,5/6,7,8,9,10/11,12,13,14,15/24,25
 〇	llll		*llll/ling/gdfk/gdll/wmlh/wmyq	0	0	0	0	0	〇※〇※〇※〇		
 丌	gjk			0	0	0	0	0	※※	丨 ㈢	0/1,2
-丨	hhll		*hhl/copp/zzpp	0	0	0	1	0	※※※		0/0
+丨	hhll		*hhll/hhl/copp/zzpp	0	0	0	1	0	※※※		0/0
 丬	uygh		uyg/copp	0	0	0	0	0	※※※		0,1,2/0/1/2
-丶	yyll		*yyl/copp/zzpp	0	0	0	1	0	※※※		0/0
-丿	ttll		*ttl/copp/zzpp	0	0	0	1	0	※※※		0/0
+丶	yyll		*yyll/yyl/copp/zzpp	0	0	0	1	0	※※※		0/0
+丿	ttll		*ttll/ttl/copp/zzpp	0	0	0	1	0	※※※		0/0
 乇	tav			0	0	0	0	0	※※	乛 ⑶	0/1,2
 亠	yyg		*yyg/copp/zzpp	0	0	0	0	0	※※		0,1/0/1
 亻	wth		*wth/copp/zzpp	0	0	0	0	0	※※		0,1/0/1
@@ -8127,29 +8127,29 @@
 厶	cny			0	0	0	0	0	※※		0,1/0/1
 咭	kfkg			0	0	0	0	0	※※※	一 ㊀	
 哜	kyjh		kyj	0	0	0	0	0	※※※	丨 ㈠	
-囗	lhng		*lhn/copp/zzpp	0	0	0	0	0	※※※		0,1,2/0/1/2
+囗	lhng		*lhng/lhn/copp/zzpp	0	0	0	0	0	※※※		0,1,2/0/1/2
 囝	lbd		lb	0	1	0	0	0	※※	一 ㊂	
-坶	fxgu		*fxg/fxgu/fxyy	0	0	0	0	0	※※※		
+坶	fxgu		*fxgu/fxg/fxyy	0	0	0	0	0	※※※		
 垅	fdxn	fdx	*fdxn/fdxt	0	0	0	0	0	※※※	乛 ⑴	
 堀	fnbm			0	0	0	0	0	※※※		
 塃	fayq			0	0	0	0	0	※※※		
 塈	vcaf			0	0	0	0	0	※※※		
 塮	ftmf			0	0	0	0	0	※※※		
-夂	ttny		*ttn/copp/zzpp	0	0	0	0	0	※※※		0,1,2/0/1/2
+夂	ttny		*ttny/ttn/copp/zzpp	0	0	0	0	0	※※※		0,1,2/0/1/2
 嬲	llvl		llv	0	0	0	0	0	※※※		
-宀	pyyn		*pyy/copp/zzpp	0	0	0	0	0	※※※		0,1,2/0/1/2
+宀	pyyn		*pyyn/pyy/copp/zzpp	0	0	0	0	0	※※※		0,1,2/0/1/2
 屮	bhk		*bhk/copp/zzpp	0	0	0	0	0	※※	丨 ㈢	0,1/2
 巛	vnnn			0	0	0	0	0	※※※		0,1,2/0/1/2
 庀	yxv			0	0	0	0	0	※※	乛 ⑶	
 廴	pny		*pny/copp/zzpp	0	0	0	0	0	※※		0,1/0/1
-廾	agth		*agt/copp/zzpp	0	0	0	0	0	※※※		0,1,2/0/1/2
+廾	agth		*agth/agt/copp/zzpp	0	0	0	0	0	※※※		0,1,2/0/1/2
 弪	xcag			0	0	0	0	0	※※※	一 ㊀	
-彐	vngg		*vng/copp/zzpp	0	0	0	0	0	※※※		0,1,2/0/1/2
-彡	ettt		*ett/copp/zzpp	0	0	0	0	0	※※※		0,1,2/0/1/2
+彐	vngg		*vngg/vng/copp/zzpp	0	0	0	0	0	※※※		0,1,2/0/1/2
+彡	ettt		*ettt/ett/copp/zzpp	0	0	0	0	0	※※※		0,1,2/0/1/2
 後	txty		txt	0	0	0	0	0	※※※	丶 ⓵	
 忄	nyhy		*nyhy/nyyh/copp/zzpp	0	0	0	0	0	※※※		*0,1,2/0/2/1
 憝	ybtn			0	0	0	0	0	※※※		
-扌	rghg		*rgh/copp/zzpp	0	0	0	0	0	※※※		0,1,2/0/1/2
+扌	rghg		*rghg/rgh/copp/zzpp	0	0	0	0	0	※※※		0,1,2/0/1/2
 拚	rcah		rca/rcaa	0	0	0	0	0	※※※	丨 ㈠	
 挢	rtdj			0	0	0	0	0	※※※		
 捱	rdff			0	0	0	0	0	※※※		
@@ -8174,7 +8174,7 @@
 泶	ipiu		ipi	0	0	0	0	0	※※※	丶 ⓶	
 渖	ipjh		ipj	0	0	0	0	0	※※※		
 湨	ihdy			0	0	0	0	0	※※※	丶 ⓵	
-灬	oyyy		*oyy/copp/zzpp	0	0	0	0	0	※※※		0,1,2,3/0/1/3
+灬	oyyy		*oyyy/oyy/copp/zzpp	0	0	0	0	0	※※※		0,1,2,3/0/1/3
 熳	ojlc		ojl	0	0	0	0	0	※※※		
 犭	qte		*qte/copp/zzpp	0	0	0	0	0	※※	丿 ③	0,1/2
 猓	qtjs			0	0	0	0	0	※※※		
@@ -8195,9 +8195,9 @@
 箝	traf			0	0	0	0	0	※※※		
 簦	twgu			0	0	0	0	0	※※※		
 糸	xiu			0	0	0	0	0	※※	丶 ⓶	
-纟	xxxx		*xxx/copp/zzpp	0	0	1	0	0	※※※		0,1,2/0,1,2/0,1,2/0,1,2
+纟	xxxx		*xxxx/xxx/copp/zzpp	0	0	1	0	0	※※※		0,1,2/0,1,2/0,1,2/0,1,2
 缋	xkhm		xkh	0	0	0	0	0	※※※		
-缍	xtgf		*xtfg/xtgf/xtg	0	0	0	0	0	※※※		
+缍	xtgf		*xtgf/xtfg/xtg	0	0	0	0	0	※※※		
 缏	xwgq			0	0	0	0	0	※※※		
 耲	diye			0	0	0	0	0	※※※		
 肀	vhk		*vhk/copp/zzpp	0	0	0	0	0	※※	丨 ㈢	0,1,2/3
