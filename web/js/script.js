@@ -91,7 +91,6 @@ function getListData(keys, values, charNames) {
         if (item.startsWith("*")) {
           val = `&nbsp;⚠️${val}`;
         }
-        console.log(item2, flag)
         if (val) {
           listItem.innerHTML = `<strong>${keys[index]}</strong>:${val}`;
         }
