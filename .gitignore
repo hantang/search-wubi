@@ -24,4 +24,6 @@ temp/
 todo/
 trash/
 
-*.json
+web/data
+web/assets
+# site/
