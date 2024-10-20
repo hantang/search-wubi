@@ -1,11 +1,11 @@
-function renderFanningStrokes(target, strokes, unitData) {
+function renderFanningStrokes(target, strokes, unitData, plot) {
   // refer: https://hanziwriter.org/docs.html#raw-character-svg
   const url = "http://www.w3.org/2000/svg";
   var svg = document.createElementNS(url, "svg");
-  svg.style.width = "75px";
-  svg.style.height = "75px";
-  svg.style.border = "1px solid #EEE";
-  svg.style.marginRight = "3px";
+  // svg.style.width = "75px";
+  // svg.style.height = "75px";
+  // svg.style.border = "1px solid #EEE";
+  // svg.style.marginRight = "3px";
   target.appendChild(svg);
   var group = document.createElementNS(url, "g");
 
@@ -13,7 +13,7 @@ function renderFanningStrokes(target, strokes, unitData) {
   var transformData = HanziWriter.getScalingTransform(75, 75);
   group.setAttributeNS(null, "transform", transformData.transform);
   svg.appendChild(group);
-
+  if (!plot) return;
   strokes.forEach((strokePath, index) => {
     var path = document.createElementNS(url, "path");
     path.setAttributeNS(null, "d", strokePath);
@@ -23,20 +23,28 @@ function renderFanningStrokes(target, strokes, unitData) {
   });
 }
 
-function plotWubiSegments(target, charData, segments) {
+function plotWubiSegments(target, charData, segments, char, flag) {
   // var target = document.createElement("td");
   const unitData = segments;
-  if (Array.isArray(unitData) && unitData.length > 0) {
+  const unitCount = Array.isArray(unitData) ? unitData.length : 0;
+  if (unitCount > 0) {
     unitData.forEach((root) => {
-      renderFanningStrokes(target, charData.strokes, root);
+      renderFanningStrokes(target, charData.strokes, root, true);
     });
-  } else {
-    renderFanningStrokes(target, charData.strokes, []);
   }
-  // return target;
+  if (unitCount == 0 && flag) {
+    const img = document.createElement("img")
+    img.src = `assets/${char}.gif`
+    img.alt = char;
+    target.appendChild(img);
+  } else {
+    for (let i = unitCount; i < 4; i += 1) {
+      renderFanningStrokes(target, charData.strokes, [], i === 0);
+    }
+  }
 }
 
-function getListData(keys, values) {
+function getListData(keys, values, charNames) {
   const itemList = document.createElement("ul");
   if (keys === null) {
     let arr = values;
@@ -55,14 +63,14 @@ function getListData(keys, values) {
   } else {
     values.forEach((item, index) => {
       const listItem = document.createElement("li");
-      if (keys[index] == "收录字表") {
+      if (keys[index] == "字表") {
         const tip = document.createElement("strong");
         tip.innerText = keys[index] + ":";
-        const container = getHanziList(item);
+        const container = getHanziList(item, charNames);
         listItem.append(tip);
         listItem.append(container);
       } else {
-        let val = item.trim() ? `&nbsp;&nbsp;<code>${item}</code>` : "";
+        let val = "";
         if (item.trim() && item.includes("/")) {
           val =
             "<br>" +
@@ -71,54 +79,52 @@ function getListData(keys, values) {
               .split("/")
               .map((item) => `&nbsp;&nbsp;<code>${item}</code>`)
               .join("<br>");
+        } else {
+          const ignores = ["笔画", "拼音", "UNICODE", "备注",];
+          val = item.replace(/;(.+)/, "<span>$1</span>");
+          if (ignores.includes(keys[index])) {
+            val = `&nbsp;&nbsp;${val}`;
+          } else {
+            val = `&nbsp;&nbsp;<code>${val}</code>`;
+          }
         }
         if (item.startsWith("*")) {
           val = `&nbsp;⚠️${val}`;
         }
-        listItem.innerHTML = `<strong>${keys[index]}</strong>:${val}`;
+        console.log(item2, flag)
+        if (val) {
+          listItem.innerHTML = `<strong>${keys[index]}</strong>:${val}`;
+        }
       }
-      itemList.appendChild(listItem);
+      if (typeof value === "string" && item.trim() || item.length > 0) {
+        itemList.appendChild(listItem);
+      }
     });
   }
   return itemList;
 }
 
-function getHanziList(sources) {
-  const names = {
-    一级: "《通用规范汉字表》（2012年）一级汉字",
-    二级: "《通用规范汉字表》（2012年）二级汉字",
-    三级: "《通用规范汉字表》（2012年）三级汉字",
-    GB2312: "《信息交换用汉字编码字符集》（GB/T 2312-1980）",
-    常用字: "《现代汉语常用字表》（1988年）常用字",
-    次常用字: "《现代汉语常用字表》（1988年）次常用字",
-    通用字: "《现代汉语通用字表》（1988年）常用字",
-    其他: "其他常用汉字",
-  };
+function getHanziList(sources, charNames) {
   // console.log(sources);
-  const values = sources.split("/");
-  values.forEach((item) => {
-    const name = item.charAt(0);
-    names[item];
-    const div = document.createElement("div");
-  });
+  const charGroups = charNames.groups;
+  const charLevels = charNames.levels;
   const container = document.createElement("div");
-  values.forEach((item) => {
+  sources.forEach((item, index) => {
+    if (item === "")
+      return
     const tooltipDiv = document.createElement("div");
     tooltipDiv.className = "tooltip";
-    tooltipDiv.textContent = item.charAt(0);
-
+    tooltipDiv.textContent = index == 0 ? charGroups[item][0] : item.substr(0, 2);
     const tooltipText = document.createElement("span");
     tooltipText.className = "tooltiptext";
-    tooltipText.textContent = names[item];
-
+    tooltipText.textContent = index == 0 ? charGroups[item][1] : charLevels[item];
     tooltipDiv.appendChild(tooltipText);
     container.appendChild(tooltipDiv);
   });
   return container;
 }
 
-function createTableRow(index, data, char) {
-  const charInfo = data[char];
+function createTableRow(index, char, charInfo, flag, charNames) {
   const row = document.createElement("tr");
 
   const indexCell = document.createElement("td");
@@ -127,20 +133,25 @@ function createTableRow(index, data, char) {
   const codeCell = document.createElement("td");
   const extraCell = document.createElement("td");
   const sliceCell = document.createElement("td");
-
+  // "分级" charInfo.groups
   indexCell.textContent = index + 1;
   charCell.innerHTML = `<span>${char}</span>`;
   infoCell.appendChild(
     getListData(
-      ["汉语拼音", "UNICODE", "收录字表"],
-      [charInfo.pinyin, charInfo.unicode, charInfo.source]
+      ["UNICODE", "IDS", "拼音", "笔画", "部首", "字表"],
+      [charInfo.unicode, charInfo.ids, charInfo.pinyin, charInfo.strokes, charInfo.radical, charInfo.groups],
+      charNames
     )
   );
   codeCell.appendChild(
-    getListData(["全码", "拆解"], [charInfo.fullCode, charInfo.units])
+    getListData(
+      ["全码", "拆解", "识别", "备注"],
+      [charInfo.code, charInfo.units, charInfo.flag, charInfo.unitType],
+      charNames
+    )
   );
   extraCell.appendChild(
-    getListData(["简码", "容错"], [charInfo.shortCode, charInfo.faultCode])
+    getListData(["简码", "容错"], [charInfo.shortCode, charInfo.faultCode], charNames)
   );
 
   row.appendChild(indexCell);
@@ -152,7 +163,10 @@ function createTableRow(index, data, char) {
 
   HanziWriter.loadCharacterData(char)
     .then((charData) => {
-      plotWubiSegments(sliceCell, charData, charInfo.segments);
+      const imgDiv = document.createElement("div");
+      imgDiv.className = "segment";
+      plotWubiSegments(imgDiv, charData, charInfo.segments, char, flag);
+      sliceCell.appendChild(imgDiv);
     })
     .catch((error) => {
       console.error("Read JSON data failed:", error);
@@ -184,13 +198,15 @@ function initTable(show) {
   tableHead.append(headRow);
 }
 
-function queryHanzi() {
+function queryHanzi(charData, statsData, validData) {
   // only top 10 chars
+  const max_count = 50;
+  const charNames = statsData;
   const input = document.getElementById("query-text").value.trim();
-  const chars = input.replace(/[a-zA-Z\d\s]/g, "").slice(0, 10);
+  const chars = input.replace(/[a-zA-Z\d\s]/g, "").slice(0, max_count);
 
-  const result = document.getElementById("result");
-  result.innerText = "";
+  const warning = document.getElementById("note-warning");
+  warning.innerText = "";
 
   const tableBody = document.querySelector("#data-table tbody");
   tableBody.innerHTML = ""; // clean table
@@ -198,8 +214,9 @@ function queryHanzi() {
   let valid = 0;
   Array.from(chars).forEach((char, index) => {
     // console.log(char);
-    if (char in data) {
-      row = createTableRow(index, data, char);
+    if (char in charData) {
+      const flag = validData["wb98com"]["keep"].includes(char)
+      row = createTableRow(index, char, charData[char], flag, charNames);
       tableBody.appendChild(row);
       valid += 1;
     }
@@ -207,11 +224,11 @@ function queryHanzi() {
   initTable(valid !== 0);
   if (valid === 0) {
     if (chars) {
-      result.innerText = "非常用汉字，请尝试其他。";
+      warning.innerText = "🚫 异体或罕用字，请尝试其他。";
     } else {
-      result.innerText = "请输入常用汉字。";
+      warning.innerText = "❗ 请输入常用汉字。";
     }
   } else {
-    result.innerText = "";
+    warning.innerText = "";
   }
 }
