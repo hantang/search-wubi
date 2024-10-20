@@ -1,4 +1,4 @@
-name: Deploy Webpage
+name: Deploy
 
 on:
   push:
@@ -26,9 +26,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-      - run: pip install -r requirements.txt
+      # - run: pip install -r requirements.txt
       - name: Build Data
-        run: python src/parse.py data ${{ env.OUT }}/data
+        run: bash deploy.sh ${{ env.OUT }}
       - name: Setup pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
