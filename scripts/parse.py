@@ -57,7 +57,7 @@ CHAR_LEVELS = {
 
 
 def read_source(data_dir: str):
-    names = ["data-char.tsv", "data-wubi-v86.tsv"]
+    names = ["data-chars.tsv", "data-wubi-v86.tsv"]
     df_list = [pd.read_csv(Path(data_dir, name), sep="\t") for name in names]
     if len(df_list) == 0:
         return None
