@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>五笔拆解查询</title>
+
+  <link rel="icon" type="image/png" href="icons/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+  <style>
+   
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="title">
+      <div>
+        <img src="icons/logo.svg" />
+      </div>
+      <h1>常用字五笔拆解列表</h1>
+    </nav>
+    <nav class="nav">
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="./list.html">List</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+
+    <section id="option-area">
+      <h3>选择参数</h3>
+      <div class="dropdown">
+        <label for="totalCount">查字总数：</label>
+        <select id="itemsTotal">
+          <option value="100">前&nbsp;100字</option>
+          <option value="500">前&nbsp;500字</option>
+          <option value="1500">前1500字</option>
+          <option value="4000">前4000字</option>
+        </select>
+      </div>
+
+      <div class="dropdown">
+        <label for="itemsPerPage">单页字数：</label>
+        <select id="itemsPerPage">
+          <option value="10">&nbsp;10</option>
+          <option value="20">&nbsp;20</option>
+          <option value="50">&nbsp;50</option>
+          <option value="100">100</option>
+        </select>
+      </div>
+
+      <div class="dropdown">
+        <label for="toggleWubi">隐藏编码：</label>
+        <input type="checkbox" id="toggleWubi" onchange="toggleWubi()">
+    </div>
+    </section>
+
+    <section>
+      <table id="data-table">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <div class="pagination" id="pagination">
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 hantang</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.7.1/dist/hanzi-writer.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/list.js"></script>
+  <script src="js/render2.js"></script>
+</body>
+
+</html>

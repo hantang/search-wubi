@@ -12,16 +12,25 @@
 
 <body>
   <header>
-    <div>
-      <img src="icons/logo.svg" />
-    </div>
-    <h1>五笔拆解查询</h1>
+    <nav class="title">
+      <div>
+        <img src="icons/logo.svg" />
+      </div>
+      <h1>五笔拆解查询</h1>
+    </nav>
+    <nav class="nav">
+      <ul>
+        <li><a href="./">Home</a></li>
+        <li><a href="./list.html">List</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
     <section class="search-container">
       <input type="text" id="query-text" placeholder="请输入汉字..." />
       <button type="submit" id="query-button">🔍️</button>
     </section>
+
     <section id="note-area">
       <p id="note-warning" class="note"></p>
     </section>

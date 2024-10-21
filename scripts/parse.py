@@ -88,6 +88,16 @@ def get_stats2(df: pd.DataFrame) -> dict:
     return out
 
 
+def get_top_chars(df, count=4000):
+    df["freq2"] = df["freq"].fillna(0).rank(ascending=False)
+    df1 = df[(df["level"] == "一级") | (df["basic"] == 1)]
+    rest = count - len(df1)
+    df2 = df[~df["char"].isin(df1["char"])].sort_values("freq2").head(rest)
+    df_top = pd.concat([df1, df2]).sort_values("freq2")
+    chars = df_top["char"].tolist()
+    return "".join(chars)
+
+
 def _to_int_array(x: str) -> list:
     """
     format:
@@ -147,6 +157,7 @@ def tsv_to_json(data_dir: str, save_path: str) -> None:
         return
     logging.info(f"df = {df.shape}")
     stats = get_stats2(df)
+    top_chars = get_top_chars(df)
 
     cols = [
         "code",
@@ -174,11 +185,11 @@ def tsv_to_json(data_dir: str, save_path: str) -> None:
 
     out = df2.to_dict("index")
     valid = get_valid(data_dir)
-    result = {"stats": stats, "valid": valid, "chars": out}
+    result = {"stats": stats, "valid": valid, "top": top_chars, "chars": out}
 
     logging.info(f"save to = {save_file}")
     with open(save_file, "w") as f:
-        json.dump(result, f, indent=2, ensure_ascii=False)
+        json.dump(result, f, indent=None, ensure_ascii=False)
 
 
 if __name__ == "__main__":
