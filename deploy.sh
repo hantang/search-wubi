@@ -5,7 +5,7 @@ TARGET="${1:-site}"
 SOURCE="${2:-web}"
 
 echo "install deps"
-pip install -r requirements.txt >/dev/null 2>&1
+pip install -r requirements.txt # >/dev/null 2>&1
 
 if [[ -d $TARGET ]]; then
     echo "clean $TARGET"
@@ -13,7 +13,7 @@ if [[ -d $TARGET ]]; then
 fi
 
 echo "Create data"
-python scripts/parse.py data $SOURCE >/dev/null 2>&1
+python scripts/parse.py --input data --out $SOURCE --version v1 # >/dev/null 2>&1
 cp -r $SOURCE $TARGET
 
 echo "Copy assets"

@@ -271,8 +271,8 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format=fmt)
 
     parser = argparse.ArgumentParser()
-    parser.add_argument("input", type=str, default="data")
-    parser.add_argument("output", type=str, default="out", help="output dir")
+    parser.add_argument("--input", type=str, default="data")
+    parser.add_argument("--output", type=str, default="out", help="output dir")
     parser.add_argument("--version", type=str, default="v1")
 
     args = parser.parse_args()
