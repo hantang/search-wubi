@@ -94,7 +94,7 @@ def get_stats2(df: pd.DataFrame) -> dict:
     }
     stats["total"] = len(df)
     result = {
-        "stats": stats,
+        "count": stats,
         "groups": CHAR_GROUPS,
         "levels": CHAR_LEVELS,
     }
@@ -250,9 +250,6 @@ def tsv_to_json(data_dir: str, save_path: str, version: str) -> None:
     if not save_dir.exists():
         logging.info(f"Create dir = {save_dir}")
         save_dir.mkdir(parents=True)
-    chars_save_dir = Path(save_dir, OUTPUT_PATHS["chars"])
-    if not chars_save_dir.exists():
-        chars_save_dir.mkdir(parents=True)
 
     df = read_source(data_dir)
     if df is None:
@@ -262,6 +259,9 @@ def tsv_to_json(data_dir: str, save_path: str, version: str) -> None:
     if version == "v1":
         save_to_json_v1(df, data_dir, save_file)
     else:
+        chars_save_dir = Path(save_dir, OUTPUT_PATHS["chars"])
+        if not chars_save_dir.exists():
+            chars_save_dir.mkdir(parents=True)
         save_conf_to_json(df, data_dir, save_file)
         save_chars_to_json(df, chars_save_dir)
 

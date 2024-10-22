@@ -13,7 +13,7 @@ if [[ -d $TARGET ]]; then
 fi
 
 echo "Create data"
-python scripts/parse.py data $SOURCE/data >/dev/null 2>&1
+python scripts/parse.py data $SOURCE >/dev/null 2>&1
 cp -r $SOURCE $TARGET
 
 echo "Copy assets"
