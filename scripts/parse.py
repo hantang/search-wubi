@@ -63,14 +63,14 @@ OUTPUT_PATHS = {
     "data": "data/data.json",
 }
 
-INPUT_APTHS = {
+INPUT_PATHS = {
     "dataframe": ["data-chars.tsv", "data-wubi-v86.tsv"],
     "valid": "valid-chars.json",
 }
 
 
 def read_source(data_dir: str):
-    names = INPUT_APTHS["dataframe"]
+    names = INPUT_PATHS["dataframe"]
     df_list = [pd.read_csv(Path(data_dir, name), sep="\t") for name in names]
     if len(df_list) == 0:
         return None
@@ -81,7 +81,7 @@ def read_source(data_dir: str):
 
 
 def get_valid(data_dir: str) -> dict:
-    data_file = Path(data_dir, INPUT_APTHS["valid"])
+    data_file = Path(data_dir, INPUT_PATHS["valid"])
     with open(data_file) as f:
         data = json.load(f)
     return data
@@ -155,11 +155,11 @@ def _unit_type(x):
 
 
 def _full_code(x):
-    fullcode = x["code"]
+    full_code = x["code"]
     if x["flag"]:  # 识别码
-        return "{};{}".format(fullcode[:-1], fullcode[-1])
+        return "{};{}".format(full_code[:-1], full_code[-1])
     else:
-        return fullcode
+        return full_code
 
 
 def _get_groups(x):
