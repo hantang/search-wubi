@@ -1,0 +1,168 @@
+# Site information
+site_name: "五笔拆解查询"
+site_url: https://hantang.github.io/search-wubi/
+# site_author: hantang
+# site_description: "all things about rime"
+copyright: Copyleft &copy; 2024
+# docs_dir: docs/
+
+# Repository
+repo_name: search-wubi
+repo_url: https://github.com/hantang/search-wubi/
+# edit_uri: tree/main
+
+# Theme
+theme:
+  name: material
+  # custom_dir: overrides
+  favicon: static/favicon.ico
+  logo: static/logo.svg
+  language: "zh"
+  icon:
+    logo: material/keyboard
+    repo: fontawesome/brands/square-github
+    admonition:
+      note: octicons/tag-16
+      abstract: octicons/checklist-16
+      info: octicons/info-16
+      tip: octicons/squirrel-16
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: octicons/beaker-16
+      quote: octicons/quote-16
+  font:
+    text: Open Sans, Helvetica Neue, Roboto, sans-serif, serif
+    code: Fira Mono, Fira Code, Roboto Mono, monospace
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: deep purple
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  features:
+    - navigation.footer
+    - navigation.path
+    - navigation.prune
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    # - navigation.indexes
+    # - navigation.instant
+    # - navigation.instant.progress
+    # - navigation.expand
+    # - navigation.sections
+    # - navigation.tabs.sticky
+    - search.highlight
+    - search.suggest
+    # - search.share
+    - toc.follow
+    # - toc.integrate
+    - content.code.copy
+    # - content.action.edit
+    # - content.action.view
+    - header.autohide
+
+markdown_extensions:
+  # Python Markdown
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+      toc_depth: 3
+  # Python Markdown Extensions
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      auto_title: true
+      line_spans: __span
+      linenums_style: pymdownx-inline
+      linenums: true
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.magiclink
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.pathconverter
+  # more
+  - mdx_truly_sane_lists
+  # - markdown_gfm_admonition
+  # - mdx_wikilink_plus
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/tablesort@5.3.0/src/tablesort.min.js
+  - https://cdn.jsdelivr.net/npm/tablesort@5.3.0/dist/sorts/tablesort.date.min.js
+  - https://cdn.jsdelivr.net/npm/tablesort@5.3.0/dist/sorts/tablesort.number.min.js
+  - static/js/tablesort.js
+
+# extra_css:
+#   - static/css/extra.css
+
+plugins:
+  - search
+    # lang:
+    #   - en
+    #   - zh
+    # separator: '[\s\-,:!=\[\]()"/\u200b]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - table-reader
+  # - awesome-pages:
+  #     collapse_single_pages: true
+  #     strict: false
+  #     # order: asc
+  #     # sort_type: natural
+  #     # order_by: title
+  - minify:
+      minify_html: true
+  # - git-revision-date-localized
+
+# exclude_docs: |
+#   /drafts/
+
+nav:
+  - 主页: index.md
+  - 字表: 
+    - list.md

@@ -1,0 +1,225 @@
+@font-face {
+  font-family: "Wubi Units";
+  src: url("../font/黑体字根.ttf");
+}
+
+@font-face {
+  font-family: "Wubi98 Units";
+  src: url("../font/98WB-0.otf") format("opentype");
+}
+
+.md-main h1 {
+  text-align: center;
+}
+
+.md-main main {
+  flex-grow: 1;
+}
+
+.md-main main section {
+  margin: 10px auto;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--code-color);
+  border-radius: 25px;
+  padding: 5px 10px;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  width: 400px;
+  margin: 2rem auto;
+}
+
+.md-main input[type="text"] {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  width: 100%;
+  flex: 1;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: larger;
+  margin-right: 5px;
+}
+
+.md-main button {
+  background-color: var(--more-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: larger;
+  margin-left: 10px;
+}
+
+.md-main button:hover {
+  background-color: var(--accent-color);
+}
+
+.md-main td>span {
+  font-size: xxx-large;
+  font-family: STKaiti, KaiTi, serif;
+}
+
+.md-main td ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.md-main td li {
+  background-color: var(--md-admonition-bg-color);
+  border-radius: 5px;
+  padding: 5px;
+  margin: 2px 0;
+  transition: background-color 0.3s;
+  font-size: smaller;
+}
+
+.md-main td li:hover {
+  /* background-color: #e0e0e0; */
+}
+
+.md-main code {
+  /* background-color: var(--background-color); */
+  /* color: var(--text-color); */
+  padding: 2px 3px;
+  border-radius: 4px;
+  font-family: "Fira Mono", "DejaVu Sans Mono", Consolas, Monaco, "Wubi Units", monospace;
+  font-size: larger;
+  /* border: 1px solid ; */
+  line-height: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+.md-main code span {
+  font-weight: bold;
+  color: var(--md-code-hl-special-color);
+}
+
+#note-area {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+#note-area .note {
+  font-size: smaller;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid var(--md-default-bg-color);
+  border-radius: 5px;
+  margin: 5px;
+  padding: 0.2rem;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltiptext {
+  font-size: small;
+  font-family: unset;
+}
+
+#option-area h3 {
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.md-main label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  width: 100px;
+}
+
+.md-main select,
+.md-main input[type="checkbox"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 120px;
+}
+
+.md-main select:focus {
+  border-color: var(--accent-color);
+  outline: none;
+}
+
+.pagination {
+  margin: 20px auto;
+  padding: 5px;
+  text-align: center;
+}
+
+.pagination a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.pagination span {
+  margin: auto 10px;
+}
+
+.segment svg {
+  width: 75px;
+  height: 75px;
+  border: 1px solid #EEE;
+  margin-right: 3px;
+}
+
+.segment img {
+  max-width: 309px;
+}
+
+.md-typeset__table {
+  margin: 2rem auto;
+  display: block;
+  width: 95%;
+}
+
+thead,
+tbody {
+  display: table;
+  width: 100%;
+}
+
+tr {
+  width: 100%;
+}
