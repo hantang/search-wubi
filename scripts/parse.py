@@ -247,9 +247,9 @@ def save_to_json_v1(df, data_dir, save_file):
 def tsv_to_json(data_dir: str, save_path: str, version: str) -> None:
     save_dir = Path(save_path)
     save_file = Path(save_dir, OUTPUT_PATHS["data"])
-    if not save_dir.exists():
+    if not save_file.parent.exists():
         logging.info(f"Create dir = {save_dir}")
-        save_dir.mkdir(parents=True)
+        save_file.parent.mkdir(parents=True)
 
     df = read_source(data_dir)
     if df is None:
