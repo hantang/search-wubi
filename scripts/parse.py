@@ -5,10 +5,7 @@ import logging
 import pandas as pd
 from pathlib import Path
 
-RENAMED_COLS = {
-    "code_short": "shortCode",
-    "code_more": "faultCode",
-}
+
 OUTPUT_COLS = [
     "unicode",
     "groups",
@@ -26,17 +23,22 @@ OUTPUT_COLS = [
     "unitType",
 ]
 
-
-CHAR_NAMES = {
-    "一级": "《通用规范汉字表》（2012年）一级汉字",
-    "二级": "《通用规范汉字表》（2012年）二级汉字",
-    "三级": "《通用规范汉字表》（2012年）三级汉字",
-    "GB2312": "《信息交换用汉字编码字符集》（GB/T 2312-1980）",
-    "常用字": "《现代汉语常用字表》（1988年）常用字",
-    "次常用字": "《现代汉语常用字表》（1988年）次常用字",
-    "通用字": "《现代汉语通用字表》（1988年）通用字",
-    "其他": "其他常用汉字",
+RENAMED_COLS = {
+    "code_short": "shortCode",
+    "code_more": "faultCode",
 }
+
+# CHAR_NAMES = {
+#     "一级": "《通用规范汉字表》（2012年）一级汉字",
+#     "二级": "《通用规范汉字表》（2012年）二级汉字",
+#     "三级": "《通用规范汉字表》（2012年）三级汉字",
+#     "GB2312": "《信息交换用汉字编码字符集》（GB/T 2312-1980）",
+#     "常用字": "《现代汉语常用字表》（1988年）常用字",
+#     "次常用字": "《现代汉语常用字表》（1988年）次常用字",
+#     "通用字": "《现代汉语通用字表》（1988年）通用字",
+#     "其他": "其他常用汉字",
+# }
+
 CHAR_GROUPS = {
     "L0": ["规范", "通用规范汉字"],
     "L1": ["繁体", "通用规范汉字的繁体"],
@@ -55,9 +57,20 @@ CHAR_LEVELS = {
     "三级〔繁〕": "通用规范汉字三级字的繁体",
 }
 
+OUTPUT_PATHS = {
+    "chars": "data/chars",  # char.json
+    "assets": "data/assets",  # char.gif
+    "data": "data/data.json",
+}
+
+INPUT_APTHS = {
+    "dataframe": ["data-chars.tsv", "data-wubi-v86.tsv"],
+    "valid": "valid-chars.json",
+}
+
 
 def read_source(data_dir: str):
-    names = ["data-chars.tsv", "data-wubi-v86.tsv"]
+    names = INPUT_APTHS["dataframe"]
     df_list = [pd.read_csv(Path(data_dir, name), sep="\t") for name in names]
     if len(df_list) == 0:
         return None
@@ -68,24 +81,33 @@ def read_source(data_dir: str):
 
 
 def get_valid(data_dir: str) -> dict:
-    data_file = Path(data_dir, "valid-chars.json")
+    data_file = Path(data_dir, INPUT_APTHS["valid"])
     with open(data_file) as f:
         data = json.load(f)
     return data
 
 
 def get_stats2(df: pd.DataFrame) -> dict:
-    counts = {
+    stats = {
         key: df[df[key].fillna("") != ""].shape[0]
         for key in ["code", "units", "segments"]
     }
-    counts["total"] = len(df)
-    out = {
-        "count": counts,
+    stats["total"] = len(df)
+    result = {
+        "stats": stats,
         "groups": CHAR_GROUPS,
         "levels": CHAR_LEVELS,
     }
-    return out
+    return result
+
+
+def get_stats3(df: pd.DataFrame) -> dict:
+    stats = {
+        key: df[df[key].fillna("") != ""].shape[0]
+        for key in ["code", "units", "segments"]
+    }
+    stats["total"] = len(df)
+    return stats
 
 
 def get_top_chars(df, count=4000):
@@ -144,21 +166,7 @@ def _get_groups(x):
     return ["L" + str(x["group"]), x["level"]]
 
 
-def tsv_to_json(data_dir: str, save_path: str) -> None:
-    save_dir = Path(save_path)
-    save_file = Path(save_dir, "data.json")
-    if not save_dir.exists():
-        logging.info(f"Create dir = {save_dir}")
-        save_dir.mkdir(parents=True)
-
-    df = read_source(data_dir)
-    if df is None:
-        logging.warning(f"Error no tsv in {data_dir}")
-        return
-    logging.info(f"df = {df.shape}")
-    stats = get_stats2(df)
-    top_chars = get_top_chars(df)
-
+def save_chars_to_json(df, save_dir=None):
     cols = [
         "code",
         "code_short",
@@ -181,15 +189,81 @@ def tsv_to_json(data_dir: str, save_path: str) -> None:
     renames = {k: v for k, v in RENAMED_COLS.items() if v not in df.columns}
     df = df.rename(columns=renames)
     df2 = df[OUTPUT_COLS]
+
     logging.info(f"output data = {df2.shape}")
 
-    out = df2.to_dict("index")
+    char_dict = df2.to_dict("index")
+
+    if save_dir:
+        logging.info(f"Save to {save_dir}")
+        for char, char_info in char_dict.items():
+            with open(f"{save_dir}/{char}.json", "w") as f:
+                json.dump(char_info, f, indent=None, ensure_ascii=False)
+    return char_dict
+
+
+def save_conf_to_json(df, data_dir, save_file):
     valid = get_valid(data_dir)
-    result = {"stats": stats, "valid": valid, "top": top_chars, "chars": out}
+    stats = get_stats3(df)
+    top_chars = get_top_chars(df)
+    all_chars = "".join(df["char"].tolist())
+
+    result = {
+        "stats": stats,
+        "chars": {
+            "all": all_chars,
+            "top": top_chars,
+            "wb98com": valid["wb98com"]["keep"],
+            "hanzi-writer": valid["hanzi-writer"]["keep"],
+        },
+        "config": {
+            "path": OUTPUT_PATHS,
+            "groups": CHAR_GROUPS,
+            "levels": CHAR_LEVELS,
+        },
+    }
 
     logging.info(f"save to = {save_file}")
     with open(save_file, "w") as f:
         json.dump(result, f, indent=None, ensure_ascii=False)
+
+
+def save_to_json_v1(df, data_dir, save_file):
+    valid = get_valid(data_dir)
+    stats = get_stats2(df)
+    top_chars = get_top_chars(df)
+    chars_dict = save_chars_to_json(df, None)
+    result = {
+        "stats": stats,
+        "valid": valid,
+        "top": top_chars,
+        "chars": chars_dict,
+    }
+    logging.info(f"save to = {save_file}")
+    with open(save_file, "w") as f:
+        json.dump(result, f, indent=None, ensure_ascii=False)
+
+
+def tsv_to_json(data_dir: str, save_path: str, version: str) -> None:
+    save_dir = Path(save_path)
+    save_file = Path(save_dir, OUTPUT_PATHS["data"])
+    if not save_dir.exists():
+        logging.info(f"Create dir = {save_dir}")
+        save_dir.mkdir(parents=True)
+    chars_save_dir = Path(save_dir, OUTPUT_PATHS["chars"])
+    if not chars_save_dir.exists():
+        chars_save_dir.mkdir(parents=True)
+
+    df = read_source(data_dir)
+    if df is None:
+        logging.warning(f"Error no tsv in {data_dir}")
+        return
+    logging.info(f"df = {df.shape}")
+    if version == "v1":
+        save_to_json_v1(df, data_dir, save_file)
+    else:
+        save_conf_to_json(df, data_dir, save_file)
+        save_chars_to_json(df, chars_save_dir)
 
 
 if __name__ == "__main__":
@@ -199,7 +273,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("input", type=str, default="data")
     parser.add_argument("output", type=str, default="out", help="output dir")
+    parser.add_argument("--version", type=str, default="v1")
 
     args = parser.parse_args()
     logging.info(f"args = {args}")
-    tsv_to_json(args.input, args.output)
+    tsv_to_json(args.input, args.output, args.version)
