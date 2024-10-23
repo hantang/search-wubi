@@ -103,36 +103,33 @@ const queryHanzi = async (charData, configData, basedir, maxCount = 50) => {
   const filteredChars = [...inputChars].filter(char => allChars.includes(char));
   const valid = filteredChars.length;
   if (valid === 0) {
-    if (inputChars) {
-      warningDiv.innerText = "🚫 异体或罕用字，请尝试其他。";
-    } else {
-      warningDiv.innerText = "❗ 请输入常用汉字。";
-    }
-  } else {
-    warningDiv.innerText = "";
-    initTable(valid !== 0);
+    warningDiv.innerText = inputChars.length > 0 ? "🚫 异体或罕用字，请尝试其他。": "❗ 请输入常用汉字。";
+    return
+  }
 
-    try {
-      const charFiles = [...filteredChars].map(char => `${charsDir}/${char}.json`);
-      const dataPromises = charFiles.map(fetchCharData);
-      const results = await Promise.all(dataPromises);
+  warningDiv.innerText = "";
+  initTable(valid !== 0);
 
-      results.forEach((charInfo, index) => {
-        const char = filteredChars[index];
-        const imgPath = validChars.includes(char) ? `${imgDir}/${char}.gif` : "";
-        const row = createTableRow(index, char, charInfo, configData, imgPath);
-        tableBody.appendChild(row);
-      });
+  try {
+    const charFiles = [...filteredChars].map(char => `${charsDir}/${char}.json`);
+    const dataPromises = charFiles.map(fetchCharData);
+    const results = await Promise.all(dataPromises);
 
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
+    results.forEach((charInfo, index) => {
+      const char = filteredChars[index];
+      const imgPath = validChars.includes(char) ? `${imgDir}/${char}.gif` : "";
+      const row = createTableRow(index, char, charInfo, configData, imgPath);
+      tableBody.appendChild(row);
+    });
+
+  } catch (error) {
+    console.error('Error fetching data:', error);
   }
 };
 
 document.addEventListener("DOMContentLoaded", async () => {
   const maxCount = 50;
-  const basedir = "./";
+  const basedir = ".";
   const datafile = `${basedir}/data/data.json`;
 
   try {

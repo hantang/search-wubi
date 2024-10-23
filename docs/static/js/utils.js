@@ -110,6 +110,20 @@ function getListData(keys, values, config) {
   return itemList;
 }
 
+function getListData2(value) {
+  const itemList = document.createElement("ul");
+  const arr = value.replace(/^\*/, "").split("/");
+  arr.forEach((item) => {
+    if (item.trim()) {
+      const listItem = document.createElement("li");
+      listItem.innerHTML = item;
+      itemList.appendChild(listItem);
+    }
+  });
+  return itemList;
+}
+
+
 function getHanziList(sources, config) {
   // console.log(sources);
   const charGroups = config.groups;

@@ -1,17 +1,15 @@
 ---
 icon: material/card-search
-title: ""
+title: "五笔拆解查询"
 hide:
   - navigation
   - toc
-  # - footer
+  - footer
 search:
   exclude: true
 ---
 
 <link rel="stylesheet" type="text/css" href="static/css/styles2.css" />
-
-# 五笔拆解查询
 
 <main>
   <section class="search-container">

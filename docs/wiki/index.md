@@ -1,4 +1,7 @@
-# 五笔概述
+---
+icon: material/note-multiple
+title: "五笔概述"
+---
 
 ## 简介
 
