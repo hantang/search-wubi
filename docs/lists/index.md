@@ -40,6 +40,7 @@ search:
       <label for="toggleWubi">隐藏编码：</label>
       <input type="checkbox" id="toggleWubi" onchange="toggleWubiTags()" />
     </div>
+
   </section>
 
   <section>
@@ -56,4 +57,3 @@ search:
 <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.7.1/dist/hanzi-writer.min.js"></script>
 <script src="../static/js/utils.js"></script>
 <script src="../static/js/list.js"></script>
-<script src="../static/js/render-list.js"></script>

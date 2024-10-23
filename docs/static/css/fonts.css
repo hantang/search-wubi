@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Wubi Units";
+  src: url("../font/黑体字根.ttf");
+}
+
+@font-face {
+  font-family: "Wubi98 Units";
+  src: url("../font/98WB-0.otf") format("opentype");
+}
+
+.md-main code {
+  /* padding: 2px 3px; */
+  /* border-radius: 4px; */
+  font-family: "Fira Mono", "DejaVu Sans Mono", Consolas, Monaco, "Wubi Units", monospace;
+  font-size: larger;
+  /* border: 1px solid ; */
+  /* line-height: 2rem; */
+  letter-spacing: 0.2rem;
+}
