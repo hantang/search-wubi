@@ -165,4 +165,17 @@ plugins:
 nav:
   - 主页: index.md
   - 字表: 
-    - list.md
+    - lists/index.md
+  - 反查:
+    - code.md
+  - 文档:
+    - wiki/index.md
+    - wiki/roots.md
+    - wiki/tutorial.md
+    - wiki/advanced.md
+    - wiki/shortcodes.md
+    - wiki/example.md
+    - wiki/radical.md
+    - wiki/strokes.md
+  - 打字:
+    - type/index.md
