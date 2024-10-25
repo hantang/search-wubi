@@ -24,8 +24,11 @@ temp/
 todo/
 trash/
 
+# mkdocs
+site/
+
+# site/docs
 web/data
 web/assets
-web/images
-site/
 docs/data
+docs/test
