@@ -52,10 +52,8 @@ CHAR_LEVELS = {
 OUTPUT_PATHS = {
     "chars": "data/chars",  # char.json
     "assets": "data/assets",  # char.gif
-    "data": "data/data.json",
-    "code2chars": "data/code/chars.json",
-    "code2words": "data/code/words.json",
-    "code2words2": "data/code/words2.json",
+    "codes": "data/code",
+    "datafile": "data/data.json",
 }
 
 INPUT_PATHS = {
