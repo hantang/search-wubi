@@ -6,7 +6,7 @@ title: 商相之后：86 版五笔之知其所以然
 > 
 > 商相之后 商相之后 2016 年 06 月 07 日 11:25
 > 
-> [:link： 原文 微信公众号](https://mp.weixin.qq.com/s/H-oZolXMnMhcYAUmruwEjQ)
+> [:link: 原文 微信公众号](https://mp.weixin.qq.com/s/H-oZolXMnMhcYAUmruwEjQ)
 
 **86 版五笔之知其所以然**
 
