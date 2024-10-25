@@ -168,12 +168,15 @@ nav:
   - 反查: code/index.md
   - 打字: type/index.md
   - 文档:
-    - wiki/index.md
-    - wiki/roots.md
-    - wiki/tutorial.md
-    - wiki/advanced.md
-    - wiki/shortcodes.md
-    - wiki/example.md
+    - 概述: wiki/index.md
+    - 教程:
+      - wiki/tutorial.md
+      - wiki/advanced.md
+    - 字根:
+      - wiki/roots.md
+      - wiki/roots-example.md
+    - 码表:
+      - wiki/shortcodes.md
     - 补充:
       - wiki/radical.md
       - wiki/strokes.md
