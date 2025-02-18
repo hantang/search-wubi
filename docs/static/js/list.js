@@ -37,11 +37,7 @@ function createListTableRow(index, char, charInfo, configData, imgPath) {
   wubiDiv.className = "wubiCode";
   codeCell.appendChild(wubiDiv);
   extraCell.appendChild(
-    getListData(
-      ["拆解", "备注"],
-      [charInfo.units, charInfo.unitType],
-      configData
-    )
+    getListData(["拆解", "备注"], [charInfo.units, charInfo.unitType], configData)
   );
 
   row.appendChild(indexCell);
@@ -74,7 +70,7 @@ async function updateListTableRows(start, inputChars, charData, configData, base
 
   const filteredChars = inputChars;
   try {
-    const charFiles = [...filteredChars].map(char => `${charsDir}/${char}.json`);
+    const charFiles = [...filteredChars].map((char) => `${charsDir}/${char}.json`);
     const dataPromises = charFiles.map(fetchCharData);
     const results = await Promise.all(dataPromises);
 
@@ -85,23 +81,22 @@ async function updateListTableRows(start, inputChars, charData, configData, base
       tableBody.appendChild(row);
     });
     toggleWubiTags();
-
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error("Error fetching data:", error);
   }
 }
 
 function toggleWubiTags() {
-  const wubiElements = document.querySelectorAll('.wubiCode');
-  const isChecked = document.getElementById('toggleWubi').checked;
-  console.log(isChecked)
-  wubiElements.forEach(el => {
-    el.style.visibility = isChecked ? 'hidden' : '';
+  const wubiElements = document.querySelectorAll(".wubiCode");
+  const isChecked = document.getElementById("toggleWubi").checked;
+  console.log(isChecked);
+  wubiElements.forEach((el) => {
+    el.style.visibility = isChecked ? "hidden" : "";
   });
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const basedir = ".."
+  const basedir = "..";
   const datafile = `${basedir}/data/data.json`;
 
   try {
@@ -115,31 +110,48 @@ document.addEventListener("DOMContentLoaded", async () => {
     const charData = data.chars;
     const configData = data.config;
     const topData = data.chars.top;
+    const level1Data = data.chars.level1;
+    const level2Data = data.chars.level2;
+    const level3Data = data.chars.level3;
 
     let currentPage = 1;
     let totalPages = 1;
-    document.getElementById('itemsTotal').addEventListener('change', updateData);
-    document.getElementById('itemsPerPage').addEventListener('change', updateData);
+    document.getElementById("itemsTotal").addEventListener("change", updateData);
+    document.getElementById("itemsPerPage").addEventListener("change", updateData);
 
     function updateData() {
-      const totalCount = parseInt(document.getElementById('itemsTotal').value);
-      const itemsPerPage = parseInt(document.getElementById('itemsPerPage').value);
-      const totalCharCount = Math.min(topData.length, totalCount);
+      const totalCount = document.getElementById("itemsTotal").value;
+      const itemsPerPage = parseInt(document.getElementById("itemsPerPage").value);
+      var totalCharCount = 0;
+      var resultData = topData;
+      if (totalCount === "level1") {
+        resultData = level1Data;
+        totalCharCount = level1Data.length;
+      } else if (totalCount === "level2") {
+        resultData = level2Data;
+        totalCharCount = level2Data.length;
+      } else if (totalCount === "level3") {
+        resultData = level3Data;
+        totalCharCount = level3Data.length;
+      } else {
+        totalCharCount = Math.min(topData.length, parseInt(totalCount));
+      }
+
       totalPages = Math.ceil(totalCharCount / itemsPerPage);
-      currentPage = Math.min(currentPage, totalPages)
+      currentPage = Math.min(currentPage, totalPages);
       const startIndex = (currentPage - 1) * itemsPerPage;
       // const endIndex = Math.min(startIndex + itemsPerPage, totalCharCount);
-      const inputChars = topData.substr(startIndex, itemsPerPage);
+      const inputChars = resultData.substr(startIndex, itemsPerPage);
       updateListTableRows(startIndex, inputChars, charData, configData, basedir);
       updatePagination();
     }
 
     function updatePagination(showCount = 4) {
-      const paginationDiv = document.getElementById('pagination');
-      paginationDiv.innerHTML = '';
+      const paginationDiv = document.getElementById("pagination");
+      paginationDiv.innerHTML = "";
 
       const createPageLink = (page, name = null) => {
-        const link = document.createElement('a');
+        const link = document.createElement("a");
         link.textContent = name ? name : page;
         link.href = `?page=${page}`;
         link.onclick = (e) => {
@@ -153,8 +165,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       // previous page
       if (currentPage > 1) {
         const divPrev = document.createElement("span");
-        divPrev.className = "prev"
-        divPrev.appendChild(createPageLink(currentPage - 1, '<前页'))
+        divPrev.className = "prev";
+        divPrev.appendChild(createPageLink(currentPage - 1, "<前页"));
         paginationDiv.appendChild(divPrev);
       }
 
@@ -164,12 +176,16 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (currentPage - showCount > 1) {
         const breakSpan = document.createElement("span");
         breakSpan.className = "break";
-        breakSpan.textContent = "…"
-        divPages.appendChild(createPageLink(1, '首页'));
+        breakSpan.textContent = "…";
+        divPages.appendChild(createPageLink(1, "首页"));
         divPages.appendChild(breakSpan);
       }
 
-      for (let page = Math.max(1, currentPage - showCount); page <= Math.min(totalPages, currentPage + showCount); page++) {
+      for (
+        let page = Math.max(1, currentPage - showCount);
+        page <= Math.min(totalPages, currentPage + showCount);
+        page++
+      ) {
         if (page === currentPage) {
           const thisPageSpan = document.createElement("span");
           thisPageSpan.className = "current";
@@ -184,25 +200,24 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (currentPage < totalPages - showCount) {
         const breakSpan = document.createElement("span");
         breakSpan.className = "break";
-        breakSpan.textContent = "…"
+        breakSpan.textContent = "…";
         divPages.appendChild(breakSpan);
-        divPages.appendChild(createPageLink(totalPages, '末页'));
+        divPages.appendChild(createPageLink(totalPages, "末页"));
       }
       paginationDiv.appendChild(divPages);
 
       // next page
       if (currentPage < totalPages) {
         const divNext = document.createElement("span");
-        divNext.className = "next"
-        divNext.appendChild(createPageLink(currentPage + 1, '后页>'))
+        divNext.className = "next";
+        divNext.appendChild(createPageLink(currentPage + 1, "后页>"));
         paginationDiv.appendChild(divNext);
       }
     }
 
     initListTable();
     updateData();
-
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error("Error fetching data:", error);
   }
 });

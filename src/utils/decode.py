@@ -18,12 +18,14 @@ def _filter_df(df, code_col, word_col, out_cols):
 def get_word_df(datafile, out_cols, tags):
     word_col = "word"
     code_col = "code"
-    version_col = "version"
+    version_col = "tags"
 
     logging.info(f"Read file from {datafile}")
     df = pd.read_csv(datafile, sep="\t")
-    df1a = df[df[version_col] > 0]
-    df1b = df[df[version_col] == 0]
+    # tags: ★/➆/ⓦ/ⓣ
+    df[version_col] = df[version_col].fillna("").astype(str)
+    df1a = df[df[version_col].str.contains("[★➆]")]
+    df1b = df[~df[version_col].str.contains("[★➆]")]
 
     df2a = _filter_df(df1a, code_col, word_col, out_cols)
     df2b = _filter_df(df1b, code_col, word_col, out_cols)

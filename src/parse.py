@@ -7,7 +7,7 @@ from pathlib import Path
 
 from utils.decode import get_char_df, get_word_df
 from utils.encode import df2dict, read_json_data, read_df_data
-from utils.stats import get_stats3, get_stats2, get_top_chars
+from utils.stats import get_stats3, get_stats2, get_top_chars, get_level_chars
 
 from utils.config import CHAR_GROUPS, CHAR_LEVELS
 from utils.config import INPUT_PATHS, OUTPUT_PATHS
@@ -33,12 +33,18 @@ def save_all_to_json_v2(df, valid, chars_dict, data_dir, save_file, save_dir):
     stats = get_stats3(df)
     top_chars = get_top_chars(df)
     all_chars = "".join(df["char"].tolist())
+    level1_chars = get_level_chars(df, 1)
+    level2_chars = get_level_chars(df, 2)
+    level3_chars = get_level_chars(df, 3)
 
     result = {
         "stats": stats,
         "chars": {
             "all": all_chars,
             "top": top_chars,
+            "level1": level1_chars,
+            "level2": level2_chars,
+            "level3": level3_chars,
             "wb98com": valid["wb98com"]["keep"],
             "hanzi-writer": valid["hanzi-writer"]["keep"],
         },
