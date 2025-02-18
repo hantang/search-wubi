@@ -70,7 +70,19 @@ def _full_code(x):
 
 
 def _get_groups(x):
-    return ["L" + str(x["group"]), x["level"]]
+    # return ["L" + str(x["group"]), x["level"]]
+    new_group = {
+        "A1a": "L0",
+        "A1b": "L0",
+        "A2": "L0",
+        "A3": "L0",
+        "A4": "L1",
+        "B1": "L2",
+        "B2": "L3",
+        "B3": "L3",
+        "B4": "L3",
+    }
+    return [new_group.get(x["group"], ""), x["level"]]
 
 
 def df2dict(df, renamed_cols, output_cols):
@@ -95,7 +107,7 @@ def df2dict(df, renamed_cols, output_cols):
     df = df.set_index("char")
     renames = {k: v for k, v in renamed_cols.items() if v not in df.columns}
     df = df.rename(columns=renames)
-    df2 = df[output_cols]
+    df2 = df[output_cols].fillna("")
 
     logging.info(f"output data = {df2.shape}")
     char_dict = df2.to_dict("index")
