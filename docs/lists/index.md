@@ -21,6 +21,9 @@ search:
         <option value="500">前&nbsp;500字</option>
         <option value="1500">前1500字</option>
         <option value="4000">前4000字</option>
+        <option value="level1">一级字</option>
+        <option value="level2">二级字</option>
+        <option value="level3">三级字</option>
       </select>
     </div>
 
