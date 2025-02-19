@@ -25,7 +25,7 @@ search:
         <option value="level1b">规范一级字㊦</option>
         <option value="level2">规范二级字</option>
         <option value="level3">规范三级字</option>
-        <option value="fanti">常见繁体字</option>
+        <option value="fanti">常见繁/异体字</option>
         <option value="more">更多表外字</option>
       </select>
     </div>
