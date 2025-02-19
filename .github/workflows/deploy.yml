@@ -5,9 +5,11 @@ on:
     branches:
       - main
     paths:
-      - 'docs/'
-      - 'data/'
+      - 'docs'
+      - 'data'
+      - 'src'
       - mkdocs.yml
+      - .github/workflows/deploy.yml
   # schedule:
   #   - cron: "0 15 * * 1"
 
@@ -32,7 +34,7 @@ jobs:
           python-version: "3.x"
       # - run: pip install -r requirements.txt
       - name: Build Data
-        run: bash deploy2.sh ${{ env.OUT }}
+        run: bash deploy2.sh ${{ env.y }}
       - name: Setup pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
