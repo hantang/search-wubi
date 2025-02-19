@@ -5,7 +5,8 @@ from .config import CHAR_GROUPS, CHAR_LEVELS
 
 
 def get_stats3(df: pd.DataFrame) -> dict:
-    stats = {key: df[df[key].fillna("") != ""].shape[0] for key in ["code", "units", "segments"]}
+    stats = {key: df[df[key].fillna("") != ""].shape[0] for key in ["code", "units"]}
+    stats["segments"] = len(df[df["segments"].apply(lambda x: len(x)>0)])
     stats["total"] = len(df)
     return stats
 
