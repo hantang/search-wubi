@@ -163,10 +163,10 @@ plugins:
 #   /drafts/
 
 nav:
-  - 主页: index.md
+  - 搜码: index.md
   - 字表: lists/index.md
   - 反查: code/index.md
-  - 打字: type/index.md
+  # - 打字: type/index.md
   - 文档:
       - 概述: wiki/index.md
       - 教程:
