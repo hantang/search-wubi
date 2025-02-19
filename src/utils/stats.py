@@ -20,7 +20,7 @@ def get_stats2(df: pd.DataFrame) -> dict:
     return result
 
 
-def get_top_chars(df, count=4000):
+def get_top_chars(df, start=0, count=1500):
     df["freq2"] = df["freq"].fillna(0).rank(ascending=False)
     df["basic"] = df["basic"].fillna(0).astype(int)
     levels = ["一级", "二级"]
@@ -30,7 +30,7 @@ def get_top_chars(df, count=4000):
     # df2 = df[~df["char"].isin(df1["char"])].sort_values("freq2").head(rest)
 
     df_top = df1.sort_values("freq2")
-    chars = df_top["char"].head(count).tolist()
+    chars = df_top["char"].iloc[start : start + count].tolist()
 
     logging.info(f"top chars = {len(chars)}")
     return "".join(chars)

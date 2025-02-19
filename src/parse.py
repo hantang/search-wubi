@@ -31,8 +31,10 @@ def save_all_to_json_v1(df, valid, chars_dict, data_dir, save_file):
 
 def save_all_to_json_v2(df, data_valid, data_svg, chars_dict, save_file, save_dir):
     stats = get_stats3(df)
-    top_chars = get_top_chars(df)
     all_chars = "".join(df["char"].tolist())
+
+    top_chars = get_top_chars(df, 0, 1500)
+    medium_chars = get_top_chars(df, 1500, 3000)
     level1a_chars = get_level_chars(df, 0)
     level1b_chars = get_level_chars(df, 1)
     level2_chars = get_level_chars(df, 2)
@@ -45,6 +47,7 @@ def save_all_to_json_v2(df, data_valid, data_svg, chars_dict, save_file, save_di
         "chars": {
             "all": all_chars,
             "top": top_chars,
+            "medium": medium_chars,
             "level1a": level1a_chars,
             "level1b": level1b_chars,
             "level2": level2_chars,

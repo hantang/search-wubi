@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const inputChars = resultData.slice(startIndex, startIndex + itemsPerPage);
 
       const warningDiv = document.getElementById("note-warning");
-      warningDiv.innerText = `共${totalCharCount}个汉字`;
+      warningDiv.innerText = `🗃️ 共${totalCharCount}个汉字`;
   
       updateListTableRows(startIndex, inputChars, charData, configData, basedir);
       updatePagination();

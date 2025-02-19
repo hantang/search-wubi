@@ -17,10 +17,10 @@ search:
     <div class="dropdown">
       <label for="totalCount">查字总数：</label>
       <select id="itemsTotal">
-        <option value="100">高频 100字</option>
-        <option value="500">高频 500字</option>
+        <option value="100">高频&nbsp;&nbsp;100字</option>
+        <option value="500">高频&nbsp;&nbsp;500字</option>
         <option value="1500">高频1500字</option>
-        <option value="4000">高频4000字</option>
+        <option value="medium">中频3000字</option>
         <option value="level1a">规范一级字㊤</option>
         <option value="level1b">规范一级字㊦</option>
         <option value="level2">规范二级字</option>
