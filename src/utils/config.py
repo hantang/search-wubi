@@ -60,10 +60,12 @@ OUTPUT_PATHS = {
     "assets": "data/assets",  # char.gif
     "codes": "data/code",
     "datafile": "data/data.json",
+    "svgs": "data/svgs",
 }
 
 INPUT_PATHS = {
     "dataframe": ["data-chars.tsv", "data-wubi-v86.tsv"],
     "dataframe-word": "words-wubi-v86.tsv",
     "valid": "valid-chars.json",
+    "svg": "data-svg.json",
 }

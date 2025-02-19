@@ -29,7 +29,7 @@ def save_all_to_json_v1(df, valid, chars_dict, data_dir, save_file):
         json.dump(result, f, indent=None, ensure_ascii=False)
 
 
-def save_all_to_json_v2(df, valid, chars_dict, data_dir, save_file, save_dir):
+def save_all_to_json_v2(df, data_valid, data_svg, chars_dict, save_file, save_dir):
     stats = get_stats3(df)
     top_chars = get_top_chars(df)
     all_chars = "".join(df["char"].tolist())
@@ -49,8 +49,9 @@ def save_all_to_json_v2(df, valid, chars_dict, data_dir, save_file, save_dir):
             "level3": level3_chars,
             "fanti": fanti_chars,
             "more": more_chars,
-            "wb98com": valid["wb98com"]["keep"],
-            "hanzi-writer": valid["hanzi-writer"]["keep"],
+            "wb98com": data_valid["wb98com"]["keep"],
+            "hanzi-writer": data_valid["hanzi-writer"]["keep"],
+            "svg": "".join(data_svg["char"]),
         },
         "config": {
             "path": OUTPUT_PATHS,
@@ -117,6 +118,23 @@ def save_decode_to_json(data_dir: str, save_path: str) -> None:
             json.dump(v, f, indent=None, ensure_ascii=False)
 
 
+def save_svg_to_json(data_svg: dict, save_path: str) -> None:
+    fontData = data_svg["font"]
+    save_dir = Path(save_path, OUTPUT_PATHS["svgs"])
+    logging.info(f"Font data = {len(fontData)}, save to {save_dir}")
+
+    if not save_dir.exists():
+        logging.info(f"Create dir={save_dir}")
+        save_dir.mkdir(parents=True)
+
+    for k, v in fontData.items():
+        save_file = Path(save_dir, f"{k}.json")
+        logging.debug(f"Save to {save_file}, data={len(v)}")
+        with open(save_file, "w") as f:
+            v2 = {"path": v}
+            json.dump(v2, f, indent=None, ensure_ascii=False)
+
+
 def run(data_dir: str, save_path: str, version: str, decode=None) -> None:
     save_dir = Path(save_path)
     save_file = Path(save_dir, OUTPUT_PATHS["datafile"])
@@ -125,7 +143,8 @@ def run(data_dir: str, save_path: str, version: str, decode=None) -> None:
         save_file.parent.mkdir(parents=True)
 
     df = read_df_data(data_dir, INPUT_PATHS["dataframe"])
-    valid = read_json_data(data_dir, INPUT_PATHS["valid"])
+    data_valid = read_json_data(data_dir, INPUT_PATHS["valid"])
+    data_svg = read_json_data(data_dir, INPUT_PATHS["svg"])
     if df is None:
         logging.warning(f"Error no tsv in {data_dir}")
         return
@@ -133,14 +152,17 @@ def run(data_dir: str, save_path: str, version: str, decode=None) -> None:
 
     chars_dict = df2dict(df, RENAMED_COLS, OUTPUT_COLS)
     if version == "v1":
-        save_all_to_json_v1(df, valid, chars_dict, data_dir, save_file)
+        save_all_to_json_v1(df, data_valid, chars_dict, data_dir, save_file)
     else:
         chars_save_dir = Path(save_dir, OUTPUT_PATHS["chars"])
         if not chars_save_dir.exists():
             chars_save_dir.mkdir(parents=True)
-        save_all_to_json_v2(df, valid, chars_dict, data_dir, save_file, chars_save_dir)
+        save_all_to_json_v2(df, data_valid, data_svg, chars_dict, save_file, chars_save_dir)
         if decode:
             save_decode_to_json(data_dir, save_path)
+
+        # save svg info
+        save_svg_to_json(data_svg, save_path)
 
 
 if __name__ == "__main__":

@@ -30,6 +30,24 @@ function renderFanningStrokes(target, strokes, unitData, plot) {
   });
 }
 
+function renderFontSVG(char, svgPathData) {
+  // <svg><path fill="currentColor" style="transform: scale(0.462, 0.462); --darkreader-inline-fill: currentColor;" d=""></path></svg>
+  // const svgPathData = fetchCharData(`${svgDir}/${char}.json`).then(data => data.path);
+  const url = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(url, "svg");
+  svg.setAttribute("width", "92.4");
+  svg.setAttribute("height", "110.88");
+  // svg.setAttribute('style', 'position:absolute;left:0;top:0;');
+  // svg.setAttribute('viewBox', '0 0 100 100');
+
+  const path = document.createElementNS(url, "path");
+  path.setAttribute("d", svgPathData);
+  path.setAttribute("fill", "currentColor");
+  path.style = "transform: scale(0.462, 0.462); --darkreader-inline-fill: currentColor;";
+  svg.appendChild(path);
+  return svg;
+}
+
 function plotWubiSegments(target, charData, segments, imgPath) {
   const unitData = segments;
   const unitCount = Array.isArray(unitData) ? unitData.length : 0;
@@ -146,4 +164,67 @@ function char2hex(char) {
   const length = 2;
   const hex = char.codePointAt(0).toString(16);
   return hex.substr(hex.length - length, length).toLowerCase();
+}
+
+function toggleWubiTags() {
+  const wubiElements = document.querySelectorAll(".wubiCode");
+  const isChecked = document.getElementById("toggleWubi").checked;
+  // console.log(isChecked);
+  wubiElements.forEach((el) => {
+    el.style.visibility = isChecked ? "hidden" : "";
+  });
+}
+
+async function renderCharList(
+  filteredChars,
+  start,
+  toggle,
+  basedir,
+  charData,
+  configData,
+  tableBody,
+  createFunc
+) {
+  // createFunc 渲染表格数据
+  const validChars = charData.wb98com;
+  const hanziWriterChars = charData["hanzi-writer"];
+  const svgChars = charData.svg;
+
+  const charsDir = `${basedir}/${configData.path.chars}`;
+  const imgDir = `${basedir}/${configData.path.assets}`;
+  const svgDir = `${basedir}/${configData.path.svgs}`;
+
+  try {
+    const filteredSvgChars = [...filteredChars].filter((char) => svgChars.includes(char));
+    const filteredSvgFiles = filteredSvgChars.map((char) => `${svgDir}/${char}.json`);
+
+    const charFiles = [...filteredChars].map(
+      (char) => `${charsDir}/${char2hex(char)}/${char}.json`
+    );
+
+    const svgDataPromises = filteredSvgFiles.map(fetchCharData);
+    const svgResults = await Promise.all(svgDataPromises);
+    const svgResultMap = svgResults.reduce((acc, data, index) => {
+      acc[filteredSvgChars[index]] = data;
+      return acc;
+    }, {});
+
+    const dataPromises = charFiles.map(fetchCharData);
+    const results = await Promise.all(dataPromises);
+
+    results.forEach((charInfo, index) => {
+      const char = filteredChars[index];
+      const imgPath = validChars.includes(char) ? `${imgDir}/${char}.gif` : "";
+      const svgData = svgResultMap[char];
+      const available = hanziWriterChars.includes(char);
+      const index2 = index + start;
+      const row = createFunc(index2, char, charInfo, configData, imgPath, svgData, available);
+      tableBody.appendChild(row);
+    });
+    if (toggle) {
+      toggleWubiTags();
+    }
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
 }

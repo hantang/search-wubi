@@ -14,7 +14,7 @@ function initTable(show) {
   tableHead.append(headRow);
 }
 
-function createTableRow(index, char, charInfo, configData, imgPath) {
+function createTableRow(index, char, charInfo, configData, imgPath, svgData, available) {
   const row = document.createElement("tr");
 
   const indexCell = document.createElement("td");
@@ -25,7 +25,15 @@ function createTableRow(index, char, charInfo, configData, imgPath) {
   const sliceCell = document.createElement("td");
 
   indexCell.textContent = index + 1;
-  charCell.innerHTML = `<span>${char}</span>`;
+  // charCell.innerHTML = `<span>${char}</span>`;
+  if (svgData !== null && svgData !== undefined) {
+    const svgCell = renderFontSVG(char, svgData.path);
+    charCell.append(svgCell);
+  }
+  const charSpan = document.createElement("span");
+  charSpan.textContent = char;
+  charCell.append(charSpan);
+
   infoCell.appendChild(
     getListData(
       ["UNICODE", "IDS", "拼音", "笔画", "部首", "字表"],
@@ -59,25 +67,24 @@ function createTableRow(index, char, charInfo, configData, imgPath) {
   row.appendChild(sliceCell);
 
   // console.log(imgPath)
-  HanziWriter.loadCharacterData(char)
-    .then((charData) => {
-      const imgDiv = document.createElement("div");
-      imgDiv.className = "segment";
-      plotWubiSegments(imgDiv, charData, charInfo.segments, imgPath);
-      sliceCell.appendChild(imgDiv);
-    })
-    .catch((error) => {
-      console.error("Read JSON data failed:", error);
-    });
+  if (available) {
+    HanziWriter.loadCharacterData(char)
+      .then((charData) => {
+        const imgDiv = document.createElement("div");
+        imgDiv.className = "segment";
+        plotWubiSegments(imgDiv, charData, charInfo.segments, imgPath);
+        sliceCell.appendChild(imgDiv);
+      })
+      .catch((error) => {
+        console.error("Read JSON data failed:", error);
+      });
+  }
 
   return row;
 }
 
 const queryHanzi = async (charData, configData, basedir, maxCount = 50) => {
   const allChars = charData.all;
-  const validChars = charData.wb98com;
-  const charsDir = `${basedir}/${configData.path.chars}`;
-  const imgDir = `${basedir}/${configData.path.assets}`;
 
   // only top N chars
   const input = document.getElementById("query-text").value.trim();
@@ -100,22 +107,7 @@ const queryHanzi = async (charData, configData, basedir, maxCount = 50) => {
   warningDiv.innerText = "";
   initTable(valid !== 0);
 
-  try {
-    const charFiles = [...filteredChars].map(
-      (char) => `${charsDir}/${char2hex(char)}/${char}.json`
-    );
-    const dataPromises = charFiles.map(fetchCharData);
-    const results = await Promise.all(dataPromises);
-
-    results.forEach((charInfo, index) => {
-      const char = filteredChars[index];
-      const imgPath = validChars.includes(char) ? `${imgDir}/${char}.gif` : "";
-      const row = createTableRow(index, char, charInfo, configData, imgPath);
-      tableBody.appendChild(row);
-    });
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
+  renderCharList(filteredChars, 0, false, basedir, charData, configData, tableBody, createTableRow);
 };
 
 document.addEventListener("DOMContentLoaded", async () => {

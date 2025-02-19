@@ -18,7 +18,7 @@ function initListTable() {
   tableHead.append(headRow);
 }
 
-function createListTableRow(index, char, charInfo, configData, imgPath) {
+function createListTableRow(index, char, charInfo, configData, imgPath, svgData, available) {
   const row = document.createElement("tr");
 
   const indexCell = document.createElement("td");
@@ -28,7 +28,16 @@ function createListTableRow(index, char, charInfo, configData, imgPath) {
   const sliceCell = document.createElement("td");
 
   indexCell.textContent = index + 1;
-  charCell.innerHTML = `<span>${char}</span>`;
+
+  // charCell.innerHTML = `<span>${char}</span>`;
+  if (svgData !== null && svgData !== undefined) {
+    const svgCell = renderFontSVG(char, svgData.path);
+    charCell.append(svgCell);
+  }
+  const charSpan = document.createElement("span");
+  charSpan.textContent = char;
+  charCell.append(charSpan);
+
   const wubiDiv = getListData(
     ["全码", "简码", "容错"],
     [charInfo.code, charInfo.shortCode, charInfo.faultCode],
@@ -46,55 +55,28 @@ function createListTableRow(index, char, charInfo, configData, imgPath) {
   row.appendChild(extraCell);
   row.appendChild(sliceCell);
 
-  HanziWriter.loadCharacterData(char)
-    .then((charData) => {
-      const imgDiv = document.createElement("div");
-      imgDiv.className = "segment";
-      plotWubiSegments(imgDiv, charData, charInfo.segments, imgPath);
-      sliceCell.appendChild(imgDiv);
-    })
-    .catch((error) => {
-      console.error("Read JSON data failed:", error);
-    });
+  if (available) {
+    HanziWriter.loadCharacterData(char)
+      .then((charData) => {
+        const imgDiv = document.createElement("div");
+        imgDiv.className = "segment";
+        plotWubiSegments(imgDiv, charData, charInfo.segments, imgPath);
+        sliceCell.appendChild(imgDiv);
+      })
+      .catch((error) => {
+        console.error("Read JSON data failed:", error);
+      });
+  }
 
   return row;
 }
 
 async function updateListTableRows(start, inputChars, charData, configData, basedir) {
-  const validChars = charData.wb98com;
-  const charsDir = `${basedir}/${configData.path.chars}`;
-  const imgDir = `${basedir}/${configData.path.assets}`;
-
   const tableBody = document.querySelector("#data-table tbody");
   tableBody.innerHTML = ""; // clean table
 
-  const filteredChars = inputChars;
-  try {
-    const charFiles = [...filteredChars].map(
-      (char) => `${charsDir}/${char2hex(char)}/${char}.json`
-    );
-    const dataPromises = charFiles.map(fetchCharData);
-    const results = await Promise.all(dataPromises);
-
-    results.forEach((charInfo, index) => {
-      const char = filteredChars[index];
-      const imgPath = validChars.includes(char) ? `${imgDir}/${char}.gif` : "";
-      const row = createListTableRow(index + start, char, charInfo, configData, imgPath);
-      tableBody.appendChild(row);
-    });
-    toggleWubiTags();
-  } catch (error) {
-    console.error("Error fetching data:", error);
-  }
-}
-
-function toggleWubiTags() {
-  const wubiElements = document.querySelectorAll(".wubiCode");
-  const isChecked = document.getElementById("toggleWubi").checked;
-  console.log(isChecked);
-  wubiElements.forEach((el) => {
-    el.style.visibility = isChecked ? "hidden" : "";
-  });
+  // const filteredChars = inputChars;
+  renderCharList(inputChars, start, true, basedir, charData, configData, tableBody, createListTableRow);
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
