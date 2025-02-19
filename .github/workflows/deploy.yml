@@ -5,9 +5,9 @@ on:
     branches:
       - main
     paths:
-      - 'docs'
-      - 'data'
-      - 'src'
+      - data/**
+      - docs/**
+      - src/**
       - mkdocs.yml
       - .github/workflows/deploy.yml
   # schedule:

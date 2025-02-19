@@ -176,7 +176,7 @@ function toggleWubiTags() {
 }
 
 async function renderCharList(
-  filteredChars,
+  filteredCharList,
   start,
   toggle,
   basedir,
@@ -195,10 +195,10 @@ async function renderCharList(
   const svgDir = `${basedir}/${configData.path.svgs}`;
 
   try {
-    const filteredSvgChars = [...filteredChars].filter((char) => svgChars.includes(char));
+    const filteredSvgChars = filteredCharList.filter((char) => svgChars.includes(char));
     const filteredSvgFiles = filteredSvgChars.map((char) => `${svgDir}/${char}.json`);
 
-    const charFiles = [...filteredChars].map(
+    const charFiles = filteredCharList.map(
       (char) => `${charsDir}/${char2hex(char)}/${char}.json`
     );
 
@@ -213,7 +213,7 @@ async function renderCharList(
     const results = await Promise.all(dataPromises);
 
     results.forEach((charInfo, index) => {
-      const char = filteredChars[index];
+      const char = filteredCharList[index];
       const imgPath = validChars.includes(char) ? `${imgDir}/${char}.gif` : "";
       const svgData = svgResultMap[char];
       const available = hanziWriterChars.includes(char);

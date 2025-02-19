@@ -115,11 +115,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       const totalCount = document.getElementById("itemsTotal").value;
       const itemsPerPage = parseInt(document.getElementById("itemsPerPage").value);
       var totalCharCount = 0;
-      var resultData = topData;
+      var resultData = Array.from(topData);
       if (/^\d+$/.test(totalCount)) {
         totalCharCount = Math.min(topData.length, parseInt(totalCount));
       } else {
-        resultData = data.chars[totalCount];
+        resultData = Array.from(data.chars[totalCount]);
         totalCharCount = resultData.length;
       }
 
@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       currentPage = Math.min(currentPage, totalPages);
       const startIndex = (currentPage - 1) * itemsPerPage;
       // const endIndex = Math.min(startIndex + itemsPerPage, totalCharCount);
-      const inputChars = resultData.substr(startIndex, itemsPerPage);
+      const inputChars = resultData.slice(startIndex, startIndex + itemsPerPage);
 
       const warningDiv = document.getElementById("note-warning");
       warningDiv.innerText = `共${totalCharCount}个汉字`;

@@ -88,7 +88,7 @@ const queryHanzi = async (charData, configData, basedir, maxCount = 50) => {
 
   // only top N chars
   const input = document.getElementById("query-text").value.trim();
-  const inputChars = input.replace(/[a-zA-Z\d\s]/g, "").slice(0, maxCount);
+  const inputChars = Array.from(input.replace(/[a-zA-Z\d\s]/g, "").slice(0, maxCount));
 
   const warningDiv = document.getElementById("note-warning");
   warningDiv.innerText = "";
@@ -96,7 +96,7 @@ const queryHanzi = async (charData, configData, basedir, maxCount = 50) => {
   const tableBody = document.querySelector("#data-table tbody");
   tableBody.innerHTML = ""; // clean table
 
-  const filteredChars = [...inputChars].filter((char) => allChars.includes(char));
+  const filteredChars = inputChars.filter((char) => allChars.includes(char));
   const valid = filteredChars.length;
   if (valid === 0) {
     warningDiv.innerText =
