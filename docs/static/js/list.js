@@ -70,7 +70,9 @@ async function updateListTableRows(start, inputChars, charData, configData, base
 
   const filteredChars = inputChars;
   try {
-    const charFiles = [...filteredChars].map((char) => `${charsDir}/${char}.json`);
+    const charFiles = [...filteredChars].map(
+      (char) => `${charsDir}/${char2hex(char)}/${char}.json`
+    );
     const dataPromises = charFiles.map(fetchCharData);
     const results = await Promise.all(dataPromises);
 
@@ -110,9 +112,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const charData = data.chars;
     const configData = data.config;
     const topData = data.chars.top;
-    const level1Data = data.chars.level1;
-    const level2Data = data.chars.level2;
-    const level3Data = data.chars.level3;
 
     let currentPage = 1;
     let totalPages = 1;
@@ -124,17 +123,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       const itemsPerPage = parseInt(document.getElementById("itemsPerPage").value);
       var totalCharCount = 0;
       var resultData = topData;
-      if (totalCount === "level1") {
-        resultData = level1Data;
-        totalCharCount = level1Data.length;
-      } else if (totalCount === "level2") {
-        resultData = level2Data;
-        totalCharCount = level2Data.length;
-      } else if (totalCount === "level3") {
-        resultData = level3Data;
-        totalCharCount = level3Data.length;
-      } else {
+      if (/^\d+$/.test(totalCount)) {
         totalCharCount = Math.min(topData.length, parseInt(totalCount));
+      } else {
+        resultData = data.chars[totalCount];
+        totalCharCount = resultData.length;
       }
 
       totalPages = Math.ceil(totalCharCount / itemsPerPage);

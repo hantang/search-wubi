@@ -17,13 +17,15 @@ search:
     <div class="dropdown">
       <label for="totalCount">查字总数：</label>
       <select id="itemsTotal">
-        <option value="100">前&nbsp;100字</option>
-        <option value="500">前&nbsp;500字</option>
-        <option value="1500">前1500字</option>
-        <option value="4000">前4000字</option>
-        <option value="level1">一级字</option>
-        <option value="level2">二级字</option>
-        <option value="level3">三级字</option>
+        <option value="100">高频 100字</option>
+        <option value="500">高频 500字</option>
+        <option value="1500">高频1500字</option>
+        <option value="4000">高频4000字</option>
+        <option value="level1">规范一级字</option>
+        <option value="level2">规范二级字</option>
+        <option value="level3">规范三级字</option>
+        <option value="fanti">常见繁体字</option>
+        <option value="more">更多表外字</option>
       </select>
     </div>
 

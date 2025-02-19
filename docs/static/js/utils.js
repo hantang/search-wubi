@@ -39,10 +39,10 @@ function plotWubiSegments(target, charData, segments, imgPath) {
     });
   }
   if (unitCount == 0 && imgPath) {
-    const img = document.createElement("img")
+    const img = document.createElement("img");
     img.src = imgPath;
     const parts = imgPath.split("/");
-    img.alt = parts[parts.length - 1].split('.')[0]; // char
+    img.alt = parts[parts.length - 1].split(".")[0]; // char
     target.appendChild(img);
   } else {
     for (let i = unitCount; i < 4; i += 1) {
@@ -87,7 +87,7 @@ function getListData(keys, values, config) {
               .map((item) => `&nbsp;&nbsp;<code>${item}</code>`)
               .join("<br>");
         } else {
-          const ignores = ["笔画", "拼音", "UNICODE", "备注",];
+          const ignores = ["笔画", "拼音", "UNICODE", "备注"];
           val = item.replace(/;(.+)/, "<span>$1</span>");
           if (ignores.includes(keys[index])) {
             val = `&nbsp;&nbsp;${val}`;
@@ -123,15 +123,13 @@ function getListData2(value) {
   return itemList;
 }
 
-
 function getHanziList(sources, config) {
   // console.log(sources);
   const charGroups = config.groups;
   const charLevels = config.levels;
   const container = document.createElement("div");
   sources.forEach((item, index) => {
-    if (item === "")
-      return
+    if (item === "") return;
     const tooltipDiv = document.createElement("div");
     tooltipDiv.className = "tooltip";
     tooltipDiv.textContent = index == 0 ? charGroups[item][0] : item.substr(0, 2);
@@ -142,4 +140,10 @@ function getHanziList(sources, config) {
     container.appendChild(tooltipDiv);
   });
   return container;
+}
+
+function char2hex(char) {
+  const length = 2;
+  const hex = char.codePointAt(0).toString(16);
+  return hex.substr(hex.length - length, length).toLowerCase();
 }

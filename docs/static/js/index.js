@@ -1,13 +1,6 @@
 function initTable(show) {
   // init table
-  const headers = [
-    "序号",
-    "汉字",
-    "基本信息",
-    "五笔全码",
-    "简码/容错码",
-    "五笔字根拆解",
-  ];
+  const headers = ["序号", "汉字", "基本信息", "五笔全码", "简码/容错码", "五笔字根拆解"];
   const tableHead = document.querySelector("#data-table thead");
   tableHead.innerHTML = "";
   if (!show) return;
@@ -55,11 +48,7 @@ function createTableRow(index, char, charInfo, configData, imgPath) {
     )
   );
   extraCell.appendChild(
-    getListData(
-      ["简码", "容错"],
-      [charInfo.shortCode, charInfo.faultCode],
-      configData
-    )
+    getListData(["简码", "容错"], [charInfo.shortCode, charInfo.faultCode], configData)
   );
 
   row.appendChild(indexCell);
@@ -100,18 +89,21 @@ const queryHanzi = async (charData, configData, basedir, maxCount = 50) => {
   const tableBody = document.querySelector("#data-table tbody");
   tableBody.innerHTML = ""; // clean table
 
-  const filteredChars = [...inputChars].filter(char => allChars.includes(char));
+  const filteredChars = [...inputChars].filter((char) => allChars.includes(char));
   const valid = filteredChars.length;
   if (valid === 0) {
-    warningDiv.innerText = inputChars.length > 0 ? "🚫 异体或罕用字，请尝试其他。": "❗ 请输入常用汉字。";
-    return
+    warningDiv.innerText =
+      inputChars.length > 0 ? "🚫 异体或罕用字，请尝试其他。" : "❗ 请输入常用汉字。";
+    return;
   }
 
   warningDiv.innerText = "";
   initTable(valid !== 0);
 
   try {
-    const charFiles = [...filteredChars].map(char => `${charsDir}/${char}.json`);
+    const charFiles = [...filteredChars].map(
+      (char) => `${charsDir}/${char2hex(char)}/${char}.json`
+    );
     const dataPromises = charFiles.map(fetchCharData);
     const results = await Promise.all(dataPromises);
 
@@ -121,9 +113,8 @@ const queryHanzi = async (charData, configData, basedir, maxCount = 50) => {
       const row = createTableRow(index, char, charInfo, configData, imgPath);
       tableBody.appendChild(row);
     });
-
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error("Error fetching data:", error);
   }
 };
 
@@ -155,29 +146,25 @@ document.addEventListener("DOMContentLoaded", async () => {
     </blockquote>`,
     ];
 
-    const note = document.getElementById('note-area');
-    const para = document.getElementById('note-warning');
+    const note = document.getElementById("note-area");
+    const para = document.getElementById("note-warning");
     para.innerHTML = "";
-    paragraphs.forEach(text => {
-      const more = document.createElement('p');
+    paragraphs.forEach((text) => {
+      const more = document.createElement("p");
       more.innerHTML = text;
       note.insertBefore(more, para);
     });
 
     // event
-    document
-      .getElementById("query-button")
-      .addEventListener("click", () => {
+    document.getElementById("query-button").addEventListener("click", () => {
+      queryHanzi(charData, configData, basedir, maxCount);
+    });
+    document.getElementById("query-text").addEventListener("keydown", function (event) {
+      if (event.key === "Enter") {
         queryHanzi(charData, configData, basedir, maxCount);
-      });
-    document
-      .getElementById("query-text")
-      .addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-          queryHanzi(charData, configData, basedir, maxCount);
-        }
-      });
+      }
+    });
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error("Error fetching data:", error);
   }
 });

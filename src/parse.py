@@ -36,6 +36,8 @@ def save_all_to_json_v2(df, valid, chars_dict, data_dir, save_file, save_dir):
     level1_chars = get_level_chars(df, 1)
     level2_chars = get_level_chars(df, 2)
     level3_chars = get_level_chars(df, 3)
+    fanti_chars = get_level_chars(df, 4)
+    more_chars = get_level_chars(df, 5)
 
     result = {
         "stats": stats,
@@ -45,6 +47,8 @@ def save_all_to_json_v2(df, valid, chars_dict, data_dir, save_file, save_dir):
             "level1": level1_chars,
             "level2": level2_chars,
             "level3": level3_chars,
+            "fanti": fanti_chars,
+            "more": more_chars,
             "wb98com": valid["wb98com"]["keep"],
             "hanzi-writer": valid["hanzi-writer"]["keep"],
         },
@@ -62,7 +66,11 @@ def save_all_to_json_v2(df, valid, chars_dict, data_dir, save_file, save_dir):
     # if save_dir:
     logging.info(f"Save to {save_dir}, data = {len(chars_dict)}")
     for char, char_info in chars_dict.items():
-        with open(f"{save_dir}/{char}.json", "w") as f:
+        subdir = Path(save_dir, hex(ord(char))[-2:].lower())
+        char_file = Path(subdir, f"{char}.json")
+        if not subdir.exists():
+            subdir.mkdir(parents=True)
+        with open(char_file, "w") as f:
             json.dump(char_info, f, indent=None, ensure_ascii=False)
 
 
