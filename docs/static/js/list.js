@@ -95,6 +95,17 @@ document.addEventListener("DOMContentLoaded", async () => {
     const configData = data.config;
     const topData = data.chars.top;
 
+    const paragraphs = [""];
+    const note = document.getElementById("note-area");
+    const para = document.getElementById("note-warning");
+  
+    para.innerHTML = "";
+    paragraphs.forEach((text) => {
+      const more = document.createElement("p");
+      more.innerHTML = text;
+      note.insertBefore(more, para);
+    });
+
     let currentPage = 1;
     let totalPages = 1;
     document.getElementById("itemsTotal").addEventListener("change", updateData);
@@ -117,6 +128,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       const startIndex = (currentPage - 1) * itemsPerPage;
       // const endIndex = Math.min(startIndex + itemsPerPage, totalCharCount);
       const inputChars = resultData.substr(startIndex, itemsPerPage);
+
+      const warningDiv = document.getElementById("note-warning");
+      warningDiv.innerText = `共${totalCharCount}个汉字`;
+  
       updateListTableRows(startIndex, inputChars, charData, configData, basedir);
       updatePagination();
     }

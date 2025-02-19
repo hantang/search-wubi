@@ -21,7 +21,8 @@ search:
         <option value="500">高频 500字</option>
         <option value="1500">高频1500字</option>
         <option value="4000">高频4000字</option>
-        <option value="level1">规范一级字</option>
+        <option value="level1a">规范一级字㊤</option>
+        <option value="level1b">规范一级字㊦</option>
         <option value="level2">规范二级字</option>
         <option value="level3">规范三级字</option>
         <option value="fanti">常见繁体字</option>
@@ -43,7 +44,10 @@ search:
       <label for="toggleWubi">隐藏编码：</label>
       <input type="checkbox" id="toggleWubi" onchange="toggleWubiTags()" />
     </div>
+  </section>
 
+  <section id="note-area">
+    <p id="note-warning" class="note">等待加载中……</p>
   </section>
 
   <section>

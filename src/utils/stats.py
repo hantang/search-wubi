@@ -37,16 +37,10 @@ def get_top_chars(df, count=4000):
 
 
 def get_level_chars(df, level):
-    levels = {1: "一级", 2: "二级", 3: "三级"}
-    if 1 <= level <= 3:
-        df_lv = df[(df["level"] == levels[level])]
-    elif level == 4:
-        df_lv = df[(df["group"] == "A4")]
-    elif level == 5:
-        df_lv = df[(df["group"] == "B1")]
-    else:
-        df_lv = None
-
+    # levels = {1: "一级", 2: "二级", 3: "三级"}
+    # df_lv = df[(df["level"] == levels[level])]
+    levels2 = {0: "A1a", 1: "A1b", 2: "A2", 3: "A3", 4: "A4", 5: "B1"}
+    df_lv = df[(df["group"] == levels2[level])]
     chars = df_lv["char"].tolist() if df_lv is not None else []
     logging.info(f"level={level} / chars = {len(chars)}")
     return "".join(chars)
