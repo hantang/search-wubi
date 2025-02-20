@@ -7,7 +7,8 @@ from pathlib import Path
 
 from utils.decode import get_char_df, get_word_df
 from utils.encode import df2dict, read_json_data, read_df_data
-from utils.stats import get_stats3, get_stats2, get_top_chars, get_level_chars
+from utils.stats import get_stats3, get_stats2
+from utils.stats import get_top_chars, get_level_chars, get_special_chars
 
 from utils.config import CHAR_GROUPS, CHAR_LEVELS
 from utils.config import INPUT_PATHS, OUTPUT_PATHS
@@ -16,7 +17,7 @@ from utils.config import OUTPUT_COLS, RENAMED_COLS
 
 def save_all_to_json_v1(df, valid, chars_dict, data_dir, save_file):
     stats = get_stats2(df)
-    top_chars = get_top_chars(df)
+    top_chars = get_top_chars(df, count=4000)
     result = {
         "stats": stats,
         "valid": valid,
@@ -35,12 +36,15 @@ def save_all_to_json_v2(df, data_valid, data_svg, chars_dict, save_file, save_di
 
     top_chars = get_top_chars(df, 0, 1500)
     medium_chars = get_top_chars(df, 1500, 3000)
+
     level1a_chars = get_level_chars(df, 0)
     level1b_chars = get_level_chars(df, 1)
     level2_chars = get_level_chars(df, 2)
     level3_chars = get_level_chars(df, 3)
     fanti_chars = get_level_chars(df, 4)
     more_chars = get_level_chars(df, 5)
+    stroke_chars = get_special_chars(df, 0)
+    unit_chars = get_special_chars(df, 1)
 
     result = {
         "stats": stats,
@@ -54,6 +58,8 @@ def save_all_to_json_v2(df, data_valid, data_svg, chars_dict, save_file, save_di
             "level3": level3_chars,
             "fanti": fanti_chars,
             "more": more_chars,
+            "strokes": stroke_chars,
+            "units": unit_chars,
             "wb98com": data_valid["wb98com"]["keep"],
             "hanzi-writer": data_valid["hanzi-writer"]["keep"],
             "svg": "".join(data_svg["char"]),

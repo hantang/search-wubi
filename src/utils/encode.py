@@ -85,17 +85,9 @@ def _get_groups(x):
     return [new_group.get(x["group"], ""), x["level"]]
 
 
-def df2dict(df, renamed_cols, output_cols):
-    cols = [
-        "code",
-        "code_short",
-        "code_more",
-        "units",
-        "segments",
-        "flag",
-        "strokes",
-        "radical",
-    ]
+def df2dict(df_data, renamed_cols, output_cols):
+    cols = ["code", "code_short", "code_more", "units", "segments", "flag", "strokes", "radical"]
+    df = df_data.copy()
     for col in cols:
         df[col] = df[col].fillna("").astype(str)
     df["groups"] = df[["group", "level"]].fillna("").apply(_get_groups, axis=1)
