@@ -399,7 +399,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 廷	tfpd			0	0	0	〖※※※〗	横·杂合〔一 ⿻〕	
 舌	tdd			0	0	0	〖※※〗	横·杂合〔一 ⿻〕	0-2/3-5
 竹	ttgh	ttg		0	0	1	〖※※※〗		0-5/0/1/5
-迁	tfpk	tfp		0	0	0	〖※※※〗	竖·杂合〔丨 ⿻〕	
+迁	tfpk	tfp		0	0	0	〖※※※〗	竖·杂合〔丨 ⿻〕	0/1-2/3-5
 乔	tdjj	tdj		0	0	0	〖※※※〗	竖·上下〔丨 ⿱〕	0/1-3/4-5
 伟	wfnh	wfn		0	0	0	〖※※※〗		0-1/2-3/4/5
 传	wfny			0	0	0	〖※※※〗		0-1/2-3/4/5
@@ -483,7 +483,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 兴	iwu	iw		0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	0-3/4,5
 宇	pgfj	pgf		0	0	0	〖※※※〗	竖·上下〔丨 ⿱〕	0-2/3/4-5
 守	pfu	pf		0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	0-2/3-5
-宅	ptab	pta		0	0	0	〖※※※〗	折·上下〔乛 ⿱〕	
+宅	ptab	pta		0	0	0	〖※※※〗	折·上下〔乛 ⿱〕	0-2/3/4-5
 字	pbf	pb		0	0	0	〖※※〗	横·上下〔一 ⿱〕	0-2/3-5
 安	pvf	pv		0	0	0	〖※※〗	横·上下〔一 ⿱〕	0-2/3-5
 讲	yfjh	yfj		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-1/2-3/4-5
@@ -536,18 +536,18 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 运	fcpi	fcp		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0-1/2-3/4-6
 扶	rfwy	rfw		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-4/5-6
 抚	rfqn	rfq		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
-坛	ffcy	ffc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
+坛	ffcy	ffc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-4/5-6
 技	rfcy	rfc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-4/5-6
 坏	fgiy	fgi		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3/4-6
 扰	rdnn	rdn		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	0-2/3-4,6/5
 拒	rang	ran		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3,6/4-5
 找	rat	ra	⊙ray	0	0	0	〖※※〗	丿·左右〔丿 ⿰〕	0-2/3-6
 批	rxxn	rx/rxx		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	0-2/3-4/5-6
-址	fhg			0	0	0	〖※※〗	横·左右〔一 ⿰〕	
+址	fhg			0	0	0	〖※※〗	横·左右〔一 ⿰〕	0-2/3-6
 扯	rhg			0	0	0	〖※※〗	横·左右〔一 ⿰〕	
 走	fhu			0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	0-2/3-6
 抄	ritt	rit		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	
-贡	amu	am		0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	
+贡	amu	am		0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	0-2/3-6
 坝	fmy			0	0	0	〖※※〗	捺·左右〔丶 ⿰〕	
 攻	aty	at		0	0	0	〖※※〗	捺·左右〔丶 ⿰〕	0-2/3-6
 赤	fou	fo		0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	0-2/3-6
@@ -573,7 +573,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 声	fnr			0	0	0	〖※※〗	丿·上下〔丿 ⿱〕	0-2/3-6
 把	rcn			0	0	0	〖※※〗	折·左右〔乛 ⿰〕	0-2/3-6
 报	rbcy	rb/rbc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-4/5-6
-拟	rnyw	rny		0	0	0	〖※※※〗		
+拟	rnyw	rny		0	0	0	〖※※※〗		0-2/3/4/5-6
 却	fcbh	fcb		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-2/3-4/5-6
 抒	rcbh	rcb		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
 劫	fcln		⊙fclt	0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
@@ -587,7 +587,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 劳	aplb	apl	⊙aplr	0	0	0	〖※※※〗	折·上下〔乛 ⿱〕	0-2/3-4/5-6
 克	dqb	dq		0	0	0	〖※※〗	折·上下〔乛 ⿱〕	0-4/5,6
 苏	alwu	alw		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-2/3-4/5-6
-杆	sfh			0	0	0	〖※※〗	竖·左右〔丨 ⿰〕	
+杆	sfh			0	0	0	〖※※〗	竖·左右〔丨 ⿰〕	0-3/4-6
 杜	sfg			0	0	0	〖※※〗	横·左右〔一 ⿰〕	0-3/4-6
 材	sftt	sft		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	0-3/4-5/6
 村	sfy	sf		0	0	0	〖※※〗	捺·左右〔丶 ⿰〕	0-3/4-6
@@ -600,11 +600,11 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 更	gjqi	gjq		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0/1-4/5-6
 束	gkii	gki		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0/1-3/4-6
 吾	gkf			0	0	0	〖※※〗	横·上下〔一 ⿱〕	
-豆	gkuf	gku		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	
+豆	gkuf	gku		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0/1-3/4-6
 两	gmww			0	0	0	〖※※※〗		0/1,2/3,4/5,6
 丽	gmyy	gmy		0	0	0	〖※※※〗		0/1-2/3/6
 医	atdi	atd		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0,6/1-2/3-5
-励	ddnl			0	0	0	〖※※※〗		
+励	ddnl			0	0	0	〖※※※〗		0-1/2,4/3/5-6
 否	gikf	gik		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0/1-3/4-6
 还	gipi	gip		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0/1-3/4-6
 来	goi	go		0	0	0	〖※※〗	捺·杂合〔丶 ⿻〕	0/1-6
@@ -613,7 +613,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 坚	jcff	jcf		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0-1/2-3/4-6
 旱	jfj			0	0	0	〖※※〗	竖·上下〔丨 ⿱〕	
 盯	hsh	hs		0	0	0	〖※※〗	竖·左右〔丨 ⿰〕	
-呈	kgf	kg		0	0	0	〖※※〗	横·上下〔一 ⿱〕	
+呈	kgf	kg		0	0	0	〖※※〗	横·上下〔一 ⿱〕	0-2/3-6
 时	jfy	jf		0	0	0	〖※※〗	捺·左右〔丶 ⿰〕	0-3/4-6
 吴	kgdu	kgd		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-2/3/4-6
 助	egln	egl	⊙eglt	0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	0-3/4/5-6
@@ -623,9 +623,9 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 园	lfqv	lfq		0	0	0	〖※※※〗	折·杂合〔乛 ⿻〕	0-1,6/2-3/4-5
 围	lfnh			0	0	0	〖※※※〗		0-1,6/2-3/4/5
 呀	kaht	ka/kah		0	0	0	〖※※※〗		0-2/3-4/5/6
-吨	kgbn	kgb		0	0	0	〖※※※〗		
+吨	kgbn	kgb		0	0	0	〖※※※〗		0-2/3/4-5/6
 足	khu			0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	0-2/3-6
-邮	mbh	mb		0	0	0	〖※※〗	竖·左右〔丨 ⿰〕	
+邮	mbh	mb		0	0	0	〖※※〗	竖·左右〔丨 ⿰〕	0-4/5-6
 男	llb	ll	⊙llr	0	0	0	〖※※〗	折·上下〔乛 ⿱〕	0-4/5,6
 困	lsi	ls		0	0	0	〖※※〗	捺·杂合〔丶 ⿻〕	0,1,6/2-5
 吵	kitt	ki/kit		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	
@@ -638,7 +638,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 吧	kcn	kc		0	0	0	〖※※〗	折·左右〔乛 ⿰〕	0-2/3-6
 吼	kbnn			0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
 别	kljh	klj		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-2/3-4/5-6
-岗	mmqu	mmq		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	
+岗	mmqu	mmq		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-2/3-4/5-6
 帐	mhty	mht		0	0	0	〖※※※〗		0-1/2/3/6
 财	mftt	mf/mft		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	0-3/4-5/6
 针	qfh	qf		0	0	0	〖※※〗	竖·左右〔丨 ⿰〕	0-4/5,6
@@ -652,7 +652,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 私	tcy			0	0	0	〖※※〗	捺·左右〔丶 ⿰〕	0-4/5,6
 每	txgu	txy	⊙txyy	0	0	0	〖※※※〗		0-1/2-3/5/4,6
 兵	rgwu	rgw		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-3/4/5-6
-估	wdg	wd		0	0	0	〖※※〗	横·左右〔一 ⿰〕	
+估	wdg	wd		0	0	0	〖※※〗	横·左右〔一 ⿰〕	0-1/2-6
 体	wsgg	wsg		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-1/2-5/6
 何	wskg	wsk		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-1/2,6/3-5
 但	wjgg	wjg		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-1/2-5/6
@@ -700,7 +700,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 况	ukqn	ukq		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	0-1/2-4/5-6
 床	ysi			0	0	0	〖※※〗	捺·杂合〔丶 ⿻〕	0-2/3-6
 库	ylk			0	0	0	〖※※〗	竖·杂合〔丨 ⿻〕	0-2/3-6
-疗	ubk			0	0	0	〖※※〗	竖·杂合〔丨 ⿻〕	
+疗	ubk			0	0	0	〖※※〗	竖·杂合〔丨 ⿻〕	0-4/5-6
 应	yid			0	0	0	〖※※〗	横·杂合〔一 ⿻〕	0-2/3-6
 这	ypi	p/yp		0	0	0	〖※※〗	捺·杂合〔丶 ⿻〕	0-3/4-6
 冷	uwyc			0	0	0	〖※※※〗		0-1/2-3/4/5-6
@@ -718,18 +718,18 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 弟	uxht	uxh		0	0	0	〖※※※〗		0-1/2-4/5/6
 汪	igg	ig		0	0	0	〖※※〗	横·左右〔一 ⿰〕	
 沙	iitt	iit		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	0-2/3-5/6
-汽	irnn	irn		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
-沃	itdy			0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
+汽	irnn	irn		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	0-2/3-5/6
+沃	itdy			0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3/4-6
 泛	itpy	itp		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3/4-6
 没	imcy	im/imc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3,4/5,6
-沟	iqcy	iqc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
+沟	iqcy	iqc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-4/5-6
 沉	ipmn	ipm		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	0-2/3-4/5-6
 怀	ngiy	ng/ngi		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3/4-6
 忧	ndnn	ndn		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	0-2/3-4,6/5
 快	nnwy	nnw		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-4/5-6
 完	pfqb	pfq		0	0	0	〖※※※〗	折·上下〔乛 ⿱〕	0-2/3-4/5-6
 宋	psu			0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	0-2/3-6
-宏	pdcu	pdc		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	
+宏	pdcu	pdc		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-2/3-4/5-6
 牢	prhj	prh		0	0	0	〖※※※〗	竖·上下〔丨 ⿱〕	
 究	pwvb	pwv		0	0	0	〖※※※〗	折·上下〔乛 ⿱〕	0-2/3-4/5-6
 穷	pwlb	pwl	⊙pwlr	0	0	0	〖※※※〗	折·上下〔乛 ⿱〕	0-2/3-4/5-6
@@ -744,7 +744,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 识	ykwy	ykw		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-1/2-4/5-6
 诉	yryy	yr/yry		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-1/2-5/6
 罕	pwfj	pwf		0	0	0	〖※※※〗	竖·上下〔丨 ⿱〕	
-诊	ywet	ywe		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	
+诊	ywet	ywe		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	0-1/2-3/4-6
 词	yngk			0	0	0	〖※※※〗		0-1/2/3/4-6
 译	ycfh	ycf		0	0	0	〖※※※〗		
 君	vtkd			0	0	0	〖※※※〗	横·杂合〔一 ⿻〕	0-2/3/4-6
@@ -785,7 +785,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 纹	xyy			0	0	0	〖※※〗	捺·左右〔丶 ⿰〕	
 纺	xyn	xy	⊙xyt	0	0	0	〖※※〗	折·左右〔乛 ⿰〕	
 驴	cynt	cyn		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	
-纽	xnfg		⊙xnhf	0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
+纽	xnfg		⊙xnhf	0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3/4-6
 奉	dwfh	dwf		0	0	0	〖※※※〗		0-2/3-4/5-6/7
 玩	gfqn	gfq		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	0-3/4-5/6-7
 环	ggiy	ggi		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-3/4/5-7
@@ -797,7 +797,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 表	geu	ge		0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	0-3/4-7
 规	fwmq	fwm		0	0	0	〖※※※〗		0-1/2-3/4-5/6-7
 抹	rgsy	rgs		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
-拓	rdg	rd		0	0	0	〖※※〗	横·左右〔一 ⿰〕	
+拓	rdg	rd		0	0	0	〖※※〗	横·左右〔一 ⿰〕	0-2/3-7
 拢	rdxn	rdx	⊙rdxt	0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
 拔	rdcy	rdc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-4,7/5-6
 坦	fjgg	fjg		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-6/7
@@ -808,19 +808,19 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 者	ftjf	ftj		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0-2/3/4-7
 拍	rrg			0	0	0	〖※※〗	横·左右〔一 ⿰〕	0-2/3-7
 顶	sdmy	sdm		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-1/2-3/4-7
-拆	rryy	rry		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
+拆	rryy	rry		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-6/7
 拥	reh			0	0	0	〖※※〗	竖·左右〔丨 ⿰〕	0-2/3-7
 抵	rqay	rqa		0	0	0	〖※※※〗		0-2/3-4/5-6/7
 势	rvyl			0	0	0	〖※※※〗		0-2/3-4/5/6-7
 抱	rqnn	rqn		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	0-2/3-4/5-7
-垃	fug			0	0	0	〖※※〗	横·左右〔一 ⿰〕	
+垃	fug			0	0	0	〖※※〗	横·左右〔一 ⿰〕	0-2/3-7
 拉	rug	ru		0	0	0	〖※※〗	横·左右〔一 ⿰〕	0-2/3-7
 拦	rufg	ruf		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 幸	fufj	fuf		0	0	0	〖※※※〗	竖·上下〔丨 ⿱〕	0-2/3-5/6-7
 招	rvkg	rvk		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-4/5-7
-坡	fhcy	fhc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
-披	rhcy	rhc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
-拨	rnty	rnt		0	0	0	〖※※※〗		
+坡	fhcy	fhc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-5/6-7
+披	rhcy	rhc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-5/6-7
+拨	rnty	rnt		0	0	0	〖※※※〗		0-2/3/4/7
 择	rcfh	rcf		0	0	0	〖※※※〗		0-2/3-4/5-6/7
 抬	rckg	rck		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-4/5-7
 拇	rxgu	rxy	⊙rxyy	0	0	0	〖※※※〗		
@@ -829,8 +829,8 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 苦	adf			0	0	0	〖※※〗	横·上下〔一 ⿱〕	0-2/3-7
 若	adkf	adk		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0-2/3-4/5-7
 茂	adnt	adn	⊙adny	0	0	0	〖※※※〗		0-2/3-4/5/6
-苹	aguh	agu		0	0	0	〖※※※〗		
-苗	alf			0	0	0	〖※※〗	横·上下〔一 ⿱〕	
+苹	aguh	agu		0	0	0	〖※※※〗		0-2/3/4-6/7
+苗	alf			0	0	0	〖※※〗	横·上下〔一 ⿱〕	0-2/3-7
 英	amdu	amd		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-2/3-4/5-7
 范	aibb	aib		0	0	0	〖※※※〗	折·上下〔乛 ⿱〕	0-2/3-5/6-7
 直	fhf	fh		0	0	0	〖※※〗	横·上下〔一 ⿱〕	0,1/2-7
@@ -849,7 +849,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 枪	swbn	swb		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	0-3/4-5/6-7
 枫	smqy	smq		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
 构	sqcy	sq/sqc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-3/4-5/6-7
-杭	symn	sym		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
+杭	symn	sym		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	0-3/4-5/6-7
 杰	sou	so		0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	0-3/4-7
 述	sypi	syp		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0-3/4/5-7
 枕	spqn	spq		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
@@ -863,7 +863,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 雨	fghy			0	0	1	〖※※※〗		0-7/0/1/7
 卖	fnud			0	0	0	〖※※※〗		0-1/2/3-4/5-7
 郁	debh	deb		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
-矿	dyt			0	0	0	〖※※〗	丿·左右〔丿 ⿰〕	
+矿	dyt			0	0	0	〖※※〗	丿·左右〔丿 ⿰〕	0-4/5-7
 码	dcg			0	0	0	〖※※〗	横·左右〔一 ⿰〕	0-4/5-7
 奈	dfiu	dfi		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-2/3-4/5-7
 奔	dfaj	dfa		0	0	0	〖※※※〗	竖·上下〔丨 ⿱〕	0-2/3-4/5-7
@@ -897,13 +897,13 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 国	lgyi	l/lgy		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0,1,7/2-5/6
 哎	kaqy	kaq		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
 咕	kdg			0	0	0	〖※※〗	横·左右〔一 ⿰〕	
-昌	jjf	jj		0	0	0	〖※※〗	横·上下〔一 ⿱〕	
+昌	jjf	jj		0	0	0	〖※※〗	横·上下〔一 ⿱〕	0-3/4-7
 呵	kskg	ksk		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
-畅	jhnr			0	0	0	〖※※※〗		
+畅	jhnr			0	0	0	〖※※※〗		0-3/4/5/6-7
 明	jeg	je		0	0	0	〖※※〗	横·左右〔一 ⿰〕	0-3/4-7
 易	jqrr	jqr		0	0	0	〖※※※〗	丿·上下〔丿 ⿱〕	0-3/4-5/6-7
 昂	jqbj	jqb		0	0	0	〖※※※〗	竖·上下〔丨 ⿱〕	
-迪	mpd	mp		0	0	0	〖※※〗	横·杂合〔一 ⿻〕	
+迪	mpd	mp		0	0	0	〖※※〗	横·杂合〔一 ⿻〕	0-4/5-7
 典	mawu	maw		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-1/2-5/6-7
 固	ldd			0	0	0	〖※※〗	横·杂合〔一 ⿻〕	0,1,7/2-6
 忠	khnu	khn		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-2/3/4-7
@@ -915,11 +915,11 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 罗	lqu	lq		0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	0-4/5-7
 帕	mhrg	mhr		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 岭	mwyc			0	0	0	〖※※※〗		
-凯	mnmn	mnm		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
+凯	mnmn	mnm		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	0-2/3-5/6-7
 败	mty			0	0	0	〖※※〗	捺·左右〔丶 ⿰〕	0-3/4-7
-账	mtay	mta		0	0	0	〖※※※〗		
+账	mtay	mta		0	0	0	〖※※※〗		0-3/4/5-6/7
 贩	mrcy	mr/mrc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
-购	mqcy	mqc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
+购	mqcy	mqc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-3/4-5/6-7
 贮	mpgg	mpg		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 图	ltui	ltu		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0-1,7/2-4/5-6
 钓	qqyy			0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
@@ -960,7 +960,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 金	qqqq			1	0	1	〖※※※〗		0-7/0-7/0-7/0-7
 刹	qsjh	qsj		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
 命	wgkb			0	0	0	〖※※※〗		0-1/2/3-5/6-7
-爸	wqcb	wqc		0	0	0	〖※※※〗	折·上下〔乛 ⿱〕	
+爸	wqcb	wqc		0	0	0	〖※※※〗	折·上下〔乛 ⿱〕	0-1/2-3/4-7
 采	esu	es		0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	0-3/4-7
 受	epcu	epc		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-3/4-5/6-7
 乳	ebnn	ebn		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
@@ -998,7 +998,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 庙	ymd			0	0	0	〖※※〗	横·杂合〔一 ⿻〕	
 府	ywfi	ywf		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0-2/3-4/5-7
 底	yqay	yqa		0	0	0	〖※※※〗		0-2/3-4/5-6/7
-剂	yjjh			0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
+剂	yjjh			0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-3/4-5/6-7
 郊	uqbh	uqb		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
 废	ynty			0	0	0	〖※※※〗		0-2/3/4/7
 净	uqvh	uqv		0	0	0	〖※※※〗		0-1/2-3/4-6/7
@@ -1008,12 +1008,12 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 育	ycef	yce		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0-1/2-3/4-7
 闹	uymh	uym		0	0	0	〖※※※〗		0-2/3-4/5-6/7
 郑	udbh	udb		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-2/3-5/6-7
-券	udvb	udv	⊙udvr	0	0	0	〖※※※〗	折·上下〔乛 ⿱〕	
+券	udvb	udv	⊙udvr	0	0	0	〖※※※〗	折·上下〔乛 ⿱〕	0-2/3-5/6-7
 卷	udbb			0	0	0	〖※※※〗	折·上下〔乛 ⿱〕	0-2/3-5/6-7
 单	ujfj			0	0	0	〖※※※〗	竖·上下〔丨 ⿱〕	0-1/2-5/6-7
 炒	oitt	oi/oit		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	
 炕	oymn	oym		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
-炎	oou	oo		0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	
+炎	oou	oo		0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	0-3/4-7
 炉	oynt	oyn		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	
 沫	igsy	igs		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
 浅	igt		⊙igy	0	0	0	〖※※〗	丿·左右〔丿 ⿰〕	
@@ -1070,7 +1070,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 录	viu	vi		0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	0-2/3-7
 隶	vii			0	0	0	〖※※〗	捺·杂合〔丶 ⿻〕	0-2/3-7
 居	ndd	nd		0	0	0	〖※※〗	横·杂合〔一 ⿻〕	0-2/3-7
-届	nmd	nm		0	0	0	〖※※〗	横·杂合〔一 ⿻〕	
+届	nmd	nm		0	0	0	〖※※〗	横·杂合〔一 ⿻〕	0-2/3-7
 刷	nmhj	nmh		0	0	0	〖※※※〗		
 屈	nbmk	nbm		0	0	0	〖※※※〗	竖·杂合〔丨 ⿻〕	0-2/3-4/5-7
 弥	xqiy	xqi		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
@@ -1088,18 +1088,18 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 姐	vegg	veg		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-6/7
 姓	vtgg	vtg		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3/4-7
 始	vckg	vck		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-4/5-7
-姆	vxgu	vx/vxy	⊙vxyy	0	0	0	〖※※※〗		
-驾	lkcf	lkc		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	
+姆	vxgu	vx/vxy	⊙vxyy	0	0	0	〖※※※〗		0-2/3-4/6/5,7
+驾	lkcf	lkc		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0-1/2-4/5-7
 参	cder	cd/cde		0	0	0	〖※※※〗	丿·上下〔丿 ⿱〕	0-1/2-4/5-7
 艰	cvey	cv/cve		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
 线	xgt	xg	⊙xgy	0	0	0	〖※※〗	丿·左右〔丿 ⿰〕	0-2/3-7
 练	xanw	xan		0	0	0	〖※※※〗		0-2/3-4/5/6-7
 组	xegg	xeg		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-6/7
 细	xlg	xl		0	0	0	〖※※〗	横·左右〔一 ⿰〕	0-2/3-7
-驶	ckqy	ckq		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
+驶	ckqy	ckq		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-5/6-7
 织	xkwy	xkw		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-5/6-7
 终	xtuy	xtu		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-5/6-7
-驻	cygg	cy/cyg		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
+驻	cygg	cy/cyg		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3/4-7
 驼	cpxn	cp/cpx		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
 绍	xvkg	xvk		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-4/5-7
 经	xcag	x/xc/xca		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3,4/5-7
@@ -1121,7 +1121,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 项	admy	adm		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-4/5-8
 城	fdnt	fd/fdn	⊙fdny	0	0	0	〖※※※〗		0-2/3-4/5/7
 政	ghty	ght		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0/1-4/5-8
-赴	fhhi	fhh		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	
+赴	fhhi	fhh		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0-2/3-6/7-8
 赵	fhqi	fhq		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0-2/3-6/7-8
 挡	rivg	riv		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 挺	rtfp			0	0	0	〖※※※〗		0-2/3/4-6/7-8
@@ -1132,7 +1132,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 垫	rvyf			0	0	0	〖※※※〗		
 挣	rqvh			0	0	0	〖※※※〗		
 挤	ryjh	ryj		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-2/3-6/7-8
-拼	ruah	rua		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
+拼	ruah	rua		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-2/3-5/6-8
 挖	rpwn			0	0	0	〖※※※〗		
 按	rpvg	rpv		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-5/6-8
 挥	rplh	rpl		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-2/3-4/5-8
@@ -1160,7 +1160,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 柏	srg			0	0	0	〖※※〗	横·左右〔一 ⿰〕	
 柳	sqtb	sqt		0	0	0	〖※※※〗		0-3/4-5/6/7-8
 柱	sygg	syg		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
-栏	sufg	suf		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
+栏	sufg	suf		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-3/4-6/7-8
 树	scfy	scf		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-3/4-5/6-8
 勃	fpbl	fpb		0	0	0	〖※※※〗		
 要	svf	s/sv		0	0	0	〖※※〗	横·上下〔一 ⿱〕	0-5/6-8
@@ -1187,7 +1187,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 战	hkat	hka	⊙hkay	0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	*0-1/2-4/5-8
 点	hkou	hko		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0,1/2-4/5-8
 临	jtyj	jty		0	0	0	〖※※※〗		0-1/2-3/4/5-8
-览	jtyq			0	0	0	〖※※※〗		
+览	jtyq			0	0	0	〖※※※〗		0-1/2-3/4/7-8
 竖	jcuf	jcu		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	
 省	ithf	ith		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0-2/3/4-8
 削	iejh	iej		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
@@ -1245,7 +1245,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 牲	trtg			0	0	0	〖※※※〗		
 选	tfqp			0	0	0	〖※※※〗		0/1-3/4-5/6-8
 适	tdpd	tdp		0	0	0	〖※※※〗	横·杂合〔一 ⿻〕	0/1-5/6-8
-秒	titt	ti/tit		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	
+秒	titt	ti/tit		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	0-4/5-7/8
 香	tjf			0	0	0	〖※※〗	横·上下〔一 ⿱〕	0-4/5-8
 种	tkhh	tkh		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-4/5-7/8
 秋	toy	to		0	0	0	〖※※〗	捺·左右〔丶 ⿰〕	0-4/5-8
@@ -1259,7 +1259,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 修	whte	wht		0	0	0	〖※※※〗		0-1/2/3-5/6-8
 保	wksy	wk/wks		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-1/2-4/5-8
 促	wkhy	wkh		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-1/2-4/5-8
-俄	wtrt	wtr	⊙wtry	0	0	0	〖※※※〗		
+俄	wtrt	wtr	⊙wtry	0	0	0	〖※※※〗		0-1/2/3-5/7
 俗	wwwk			0	0	0	〖※※※〗		0-1/2-3/4-5/6-8
 信	wyg	wy		0	0	0	〖※※〗	横·左右〔一 ⿰〕	0,1/2-8
 皇	rgf			0	0	0	〖※※〗	横·上下〔一 ⿱〕	0-4/5-8
@@ -1269,7 +1269,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 侯	wntd	wnt		0	0	0	〖※※※〗		0-1/2-3/4-5/6-8
 追	wnnp			0	0	0	〖※※※〗		0-1/2-3/4-5/6-8
 俊	wcwt	wcw		0	0	0	〖※※※〗		0-1/2-3/4-5/6-8
-盾	rfhd	rfh		0	0	0	〖※※※〗	横·杂合〔一 ⿻〕	
+盾	rfhd	rfh		0	0	0	〖※※※〗	横·杂合〔一 ⿻〕	0-1/2-3/4-8
 待	tffy			0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-5/6-8
 衍	tifh	tif		0	0	0	〖※※※〗		
 律	tvfh			0	0	0	〖※※※〗		0-2/3-5/6-7/8
@@ -1293,7 +1293,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 独	qtjy	qtj		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-1/2/3-8
 狱	qtyd			0	0	0	〖※※※〗		
 狠	qtve	qtv		0	0	0	〖※※※〗		
-贸	qyvm	qyv		0	0	0	〖※※※〗		
+贸	qyvm	qyv		0	0	0	〖※※※〗		0-1/2/3-4/5-8
 怨	qbnu	qbn		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-2/3-4/5-8
 急	qvnu	qvn		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-1/2-4/5-8
 饶	qnaq	qna		0	0	0	〖※※※〗		
@@ -1309,7 +1309,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 迹	yopi	yop		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0-1/2-5/6-7
 庭	ytfp			0	0	0	〖※※※〗		0-2/3/4-6/7-8
 疯	umqi	umq		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	
-疫	umci	umc		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	
+疫	umci	umc		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0-4/5-6/7-8
 姿	uqwv			0	0	0	〖※※※〗		
 亲	usu	us		0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	0-4/5-8
 音	ujf			0	0	0	〖※※〗	横·上下〔一 ⿱〕	0-4/5-8
@@ -1333,7 +1333,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 兹	uxxu	uxx		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	
 总	uknu	ukn		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-1/2-4/5-8
 炼	oanw			0	0	0	〖※※※〗		
-炸	othf	oth		0	0	0	〖※※※〗		
+炸	othf	oth		0	0	0	〖※※※〗		0-3/4-5/6/7-8
 炮	oqnn	oq/oqn		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
 烂	oufg			0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 洁	ifkg	ifk		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-5/6-8
@@ -1353,7 +1353,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 浑	iplh	ipl		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
 浓	ipey	ipe		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-4/5-8
 津	ivfh			0	0	0	〖※※※〗		0-2/3-5/6-7/8
-恒	ngjg	ngj		0	0	0	〖※※※〗		
+恒	ngjg	ngj		0	0	0	〖※※※〗		0-2/3/4-7/8
 恢	ndoy	ndo		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-4/5-8
 恰	nwgk	nwg		0	0	0	〖※※※〗		0-2/3-4/5/6-8
 恼	nybh	nyb		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-2/3-6/7-8
@@ -1380,7 +1380,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 退	vepi	vep		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0-2/3-5/6-8
 既	vcaq	vca		0	0	0	〖※※※〗		0-2/3-4/5-6/7-8
 屋	ngcf	ngc		0	0	0	〖※※※〗		0-2/3/4-5/6-8
-屏	nuak	nua		0	0	0	〖※※※〗	竖·杂合〔丨 ⿻〕	
+屏	nuak	nua		0	0	0	〖※※※〗	竖·杂合〔丨 ⿻〕	0-2/3-5/6-8
 费	xjmu	xjm		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-2/3-4/5-8
 陡	bfhy	bfh		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
 眉	nhd			0	0	0	〖※※〗	横·杂合〔一 ⿻〕	0-3/4-8
@@ -1391,11 +1391,11 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 娃	vffg	vff		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 姨	vgxw	vg/vgx		0	0	0	〖※※※〗		
 娇	vtdj			0	0	0	〖※※※〗		
-娜	vvfb	vvf		0	0	0	〖※※※〗		
+娜	vvfb	vvf		0	0	0	〖※※※〗		0-2/3,6/4-5/7-8
 怒	vcnu	vcn		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-2/3-4/5-8
 架	lksu	lks		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-1/2-4/5-8
 贺	lkmu	lkm		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	
-盈	eclf	ecl		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	
+盈	eclf	ecl		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0-1/2-3/4-8
 勇	celb	cel	⊙celr	0	0	0	〖※※※〗	折·上下〔乛 ⿱〕	0-1/2-6/7-8
 柔	cbts			0	0	0	〖※※※〗		0-1/2-3/4/5-8
 绒	xadt	xad		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	0-2/3,6-7/4-5
@@ -1439,10 +1439,10 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 热	rvyo			0	0	0	〖※※※〗		0-2/3-4/5/6-9
 恐	amyn			0	0	0	〖※※※〗		0-2/3-4/5/6-9
 壶	fpog	fpo		0	0	0	〖※※※〗		
-埃	fctd	fct		0	0	0	〖※※※〗		
+埃	fctd	fct		0	0	0	〖※※※〗		0-2/3-4/5-6/7-9
 挨	rctd	rct		0	0	0	〖※※※〗		
 恭	awnu			0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	
-莱	agou	ago		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	
+莱	agou	ago		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-2/3/4-9
 莲	alpu	alp		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-2/3-6/7-9
 莫	ajdu	ajd		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-2/3-6/7-9
 莉	atjj	atj		0	0	0	〖※※※〗	竖·上下〔丨 ⿱〕	
@@ -1461,7 +1461,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 格	stkg	st/stk		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-3/4-6/7-9
 桩	syfg	syf		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 校	suqy	suq		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-3/4-7/8-9
-核	synw			0	0	0	〖※※※〗		
+核	synw			0	0	0	〖※※※〗		0-3/4-5/6/8-9
 样	sudh	su/sud		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-3/4-5/6-9
 根	svey	sve		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-3/4-6/7-9
 索	fpxi	fpx		0	0	0	〖※※※〗		0-1/2-3/4-6/7-9
@@ -1474,7 +1474,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 唇	dfek			0	0	0	〖※※※〗		
 夏	dhtu	dht		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-1/2-6/7-9
 砸	damh			0	0	0	〖※※※〗		
-础	dbmh	dbm		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
+础	dbmh	dbm		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-4/5-6/7-9
 破	dhcy	dhc		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-4/5-7/8-9
 原	drii	dr/dri		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0-1/2-6/7-9
 套	ddu			0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	0-2/3-9
@@ -1528,7 +1528,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 造	tfkp			0	0	0	〖※※※〗		0/1-3/4-6/7-9
 乘	tuxv	tux		0	0	0	〖※※※〗	折·杂合〔乛 ⿻〕	*0-2,8-9/3-5/6-7
 敌	tdty	tdt		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0/1-5/6-9
-租	tegg	teg		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
+租	tegg	teg		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-4/5-8/9
 积	tkwy	tkw		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-4/5-7/8-9
 称	tqiy	tq/tqi		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-4/5-6/7-9
 秘	tntt	tn/tnt		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	0-4/5-7,9/8
@@ -1536,7 +1536,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 笔	ttfn	tt/ttf		0	0	0	〖※※※〗		0-5/6/7-8/9
 笑	ttdu	ttd		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-5/6/7-9
 笋	tvtr	tvt		0	0	0	〖※※※〗	丿·上下〔丿 ⿱〕	
-债	wgmy			0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
+债	wgmy			0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-1/2-5/6-9
 借	wajg	waj		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-1/2-5/6-9
 值	wfhg			0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-1/2-3/4-9
 俺	wdjn			0	0	0	〖※※※〗		
@@ -1556,7 +1556,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 舰	temq			0	0	0	〖※※※〗		
 舱	tewb	tew		0	0	0	〖※※※〗		
 般	temc	tem		0	0	0	〖※※※〗		0/1-5/6-7/8-9
-航	teym	tey		0	0	0	〖※※※〗		
+航	teym	tey		0	0	0	〖※※※〗		0/1-5/6-7/8-9
 途	wtpi	wtp		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0-1/2-6/7-9
 拿	wgkr			0	0	0	〖※※※〗		0-1/2/3-5/6-9
 耸	wwbf	wwb		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	
@@ -1583,11 +1583,11 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 浆	uqiu	uqi		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	
 衰	ykge			0	0	0	〖※※※〗		
 高	ymkf	ym/ymk		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0-4/5,6/7-9
-郭	ybbh	ybb		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
+郭	ybbh	ybb		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-4/5-7/8-9
 席	yamh	yam		0	0	0	〖※※※〗		0-2/3-6/7-8/9
 准	uwyg	uwy		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-1/2-3/4-9
 座	ywwf	yww		0	0	0	〖※※※〗		0-2/3-4/5-6/7-9
-症	ughd	ugh		0	0	0	〖※※※〗	横·杂合〔一 ⿻〕	
+症	ughd	ugh		0	0	0	〖※※※〗	横·杂合〔一 ⿻〕	0-4/5/6-9
 病	ugmw	ugm		0	0	0	〖※※※〗		0-4/5/6-7/8-9
 疾	utdi	utd		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	0-4/5-6/7-9
 疼	utui	utu		0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	
@@ -1606,7 +1606,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 旁	upyb	upy	⊙upyr	0	0	0	〖※※※〗	折·上下〔乛 ⿱〕	0-3/4-5/6-9
 旅	ytey			0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-3/4-5/6-9
 畜	yxlf	yxl		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	
-阅	uukq	uuk		0	0	0	〖※※※〗		
+阅	uukq	uuk		0	0	0	〖※※※〗		0-2/3-4/5-7/8-9
 羞	udnf	udn		0	0	0	〖※※※〗		
 瓶	uagn	uag	⊙uagy	0	0	0	〖※※※〗		*0-2/3-5/6/8
 拳	udrj			0	0	0	〖※※※〗	竖·上下〔丨 ⿱〕	
@@ -1620,9 +1620,9 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 烛	ojy	oj		0	0	0	〖※※〗	捺·左右〔丶 ⿰〕	0-3/4-9
 烟	oldy	ol/old		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-3/4-5,9/6-8
 递	uxhp			0	0	0	〖※※※〗		0-1/2-4/5/7-9
-涛	idtf	idt		0	0	0	〖※※※〗		
-浙	irrh	irr		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
-浦	igey			0	0	0	〖※※※〗		
+涛	idtf	idt		0	0	0	〖※※※〗		0-2/3-5/6/7-9
+浙	irrh	irr		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-2/3-5/6-9
+浦	igey			0	0	0	〖※※※〗		0-2/3/4-7/9
 酒	isgg			0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-7,9/8
 涉	ihit	ihi		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	0-2/3-6/7-9
 消	iieg	iie		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-5/6-9
@@ -1632,10 +1632,10 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 浴	iwwk	iww		0	0	0	〖※※※〗		
 浮	iebg	ieb		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-6/7-9
 流	iycq	iyc		0	0	0	〖※※※〗		0-2/3-4/5-6/7-9
-润	iugg			0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
+润	iugg			0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-5/6-9
 浪	iyve	iyv		0	0	0	〖※※※〗		0-2/3/4-6/7-9
 浸	ivpc	ivp		0	0	0	〖※※※〗		
-涨	ixty	ix/ixt		0	0	0	〖※※※〗		
+涨	ixty	ix/ixt		0	0	0	〖※※※〗		0-2/3-5/6/9
 涌	iceh	ice		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-2/3-4/5-9
 悟	ngkg			0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 悄	nieg	ni/nie		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-5/6-9
@@ -1673,7 +1673,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 陶	bqrm	bqr		0	0	0	〖※※※〗		0-1/2-3/4-6/7-9
 陷	bqvg	bqv		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-1/2-3/4-9
 陪	bukg	buk		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-1/2-6/7-9
-娱	vkgd			0	0	0	〖※※※〗		
+娱	vkgd			0	0	0	〖※※※〗		0-2/3-5/6/7-9
 娘	vyve	vyv		0	0	0	〖※※※〗		0-2/3/4-6/7-9
 通	cepk	cep		0	0	0	〖※※※〗	竖·杂合〔丨 ⿻〕	0-1/2-6/7-9
 能	cexx	ce/cex		0	0	0	〖※※※〗		0,1/2-5/6,7/8,9
@@ -1709,7 +1709,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 掘	rnbm			0	0	0	〖※※※〗		
 职	bkwy	bk/bkw		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-5/6-8/9-10
 基	adwf	ad		0	0	0	〖※※※〗		0-2/3-5/6-7/8-10
-聊	bqtb	bqt		0	0	0	〖※※※〗		
+聊	bqtb	bqt		0	0	0	〖※※※〗		0-5/6-7/8/9-10
 娶	bcvf	bcv		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	
 著	aftj			0	0	0	〖※※※〗		0-2/3-5/6/7-10
 勒	afln	afl	⊙aflt	0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	0-3/4-8/9-10
@@ -1742,7 +1742,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 戚	dhit		⊙dhiy	0	0	0	〖※※※〗		
 硅	dffg	dff		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 爽	dqqq	dqq		0	0	0	〖※※※〗		0,9-10/1-2/3-4/7-8
-袭	dxye	dxy		0	0	0	〖※※※〗		
+袭	dxye	dxy		0	0	0	〖※※※〗		0-1,4/2-3/5-6/7-10
 盛	dnnl			0	0	0	〖※※※〗		0-1/2/3/6-10
 雪	fvf	fv		0	0	0	〖※※〗	横·上下〔一 ⿱〕	0-7/8-10
 辅	lgey			0	0	0	〖※※※〗		
@@ -1758,7 +1758,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 悬	egcn			0	0	0	〖※※※〗		
 野	jfcb	jfc		0	0	0	〖※※※〗		0-3/4-6/7-8/9-10
 啦	krug	kru		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-5/6-10
-曼	jlcu	jlc		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	
+曼	jlcu	jlc		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-3/4-8/9-10
 晚	jqkq	jq/jqk		0	0	0	〖※※※〗		0-3/4-5/6-8/9-10
 啡	kdjd		⊙khdd	0	0	0	〖※※※〗		
 距	khan	kha		0	0	0	〖※※※〗		0-2/3-6/7,10/8-9
@@ -1769,7 +1769,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 蛇	jpxn	jpx		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
 累	lxiu	lx/lxi		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-4/5-7/8-10
 唱	kjjg	kjj		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-6/7-10
-患	kkhn			0	0	0	〖※※※〗		
+患	kkhn			0	0	0	〖※※※〗		0-2/3-5/6/7-10
 唾	ktgf	ktf	⊙ktfg	0	0	0	〖※※※〗		
 唯	kwyg			0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-4/5-10
 啥	kwfk			0	0	0	〖※※※〗		
@@ -1794,11 +1794,11 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 做	wdty	wdt		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-1/2-6/7-11
 袋	waye			0	0	0	〖※※※〗		0-1/2-4/5-6/7-10
 悠	whtn			0	0	0	〖※※※〗		
-偿	wipc	wi/wip		0	0	0	〖※※※〗		
+偿	wipc	wi/wip		0	0	0	〖※※※〗		0-1/2-4/5-6/9-10
 偶	wjmy	wjm		0	0	0	〖※※※〗		0-1/2-5/6-7/10
 偷	wwgj			0	0	0	〖※※※〗		0-1/2-3/4/9-10
 您	wqin			0	0	0	〖※※※〗		0-1/2-3/4-6/7-10
-售	wykf	wyk		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	
+售	wykf	wyk		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0-1/2-7/8-10
 停	wyps	wyp		0	0	0	〖※※※〗		0-1/2-6/7-8/9-10
 偏	wyna			0	0	0	〖※※※〗		0-1/2/3-5/8-10
 躯	tmdq			0	0	0	〖※※※〗		
@@ -1822,7 +1822,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 够	qkqq			0	0	0	〖※※※〗		0-1/2-4/5-7/8-10
 逸	qkqp			0	0	0	〖※※※〗		
 猜	qtge			0	0	0	〖※※※〗		
-猪	qtfj			0	0	0	〖※※※〗		
+猪	qtfj			0	0	0	〖※※※〗		0-1/2/3-5/7-10
 猎	qtaj	qta		0	0	0	〖※※※〗		
 猫	qtal			0	0	0	〖※※※〗		
 猛	qtbl			0	0	0	〖※※※〗		0-1/2/3-5/6-10
@@ -1863,8 +1863,8 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 混	ijxx	ijx		0	0	0	〖※※※〗		0-2/3-6/7-8/9-10
 淮	iwyg	iwy		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 渔	iqgg			0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
-淘	iqrm	iqr		0	0	0	〖※※※〗		
-液	iywy	iyw		0	0	0	〖※※※〗		
+淘	iqrm	iqr		0	0	0	〖※※※〗		0-2/3-4/5-7/8-10
+液	iywy	iyw		0	0	0	〖※※※〗		0-2/3-4/5-6/9
 淡	iooy	io/ioo		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-6/7-10
 淀	ipgh			0	0	0	〖※※※〗		
 深	ipws	ipw		0	0	0	〖※※※〗		0-2/3-4/5-6/7-10
@@ -1899,7 +1899,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 婶	vpjh	vpj		0	0	0	〖※※※〗		
 颇	hcdm	hcd		0	0	0	〖※※※〗		0-2/3-4/5-6/7-10
 颈	cadm	cad		0	0	0	〖※※※〗		
-绩	xgmy	xgm		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
+绩	xgmy	xgm		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-6/7-10
 绪	xftj	xft		0	0	0	〖※※※〗		0-2/3-5/6/7-10
 续	xfnd	xfn		0	0	0	〖※※※〗		0-2/3-4/5/8-10
 骑	cdsk	cds		0	0	0	〖※※※〗		0-2/3-5/6,10/7-9
@@ -1907,7 +1907,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 维	xwyg	xwy		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-4/5-10
 绵	xrmh	xr/xrm		0	0	0	〖※※※〗		
 绸	xmfk	xmf		0	0	0	〖※※※〗		
-综	xpfi	xp/xpf		0	0	0	〖※※※〗		
+综	xpfi	xp/xpf		0	0	0	〖※※※〗		0-2/3-5/6-7/8-10
 绿	xviy	xv/xvi		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-5/6-10
 巢	vjsu	vjs		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-2/3-6/7-10
 琴	ggwn	ggw		0	0	0	〖※※※〗		0-3/4-7/8-9/11
@@ -1919,7 +1919,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 搭	rawk			0	0	0	〖※※※〗		0-2/3-5/6-7/9-11
 越	fhat	fha	⊙fhay	0	0	0	〖※※※〗		0-2/3-6/7-8/10
 趁	fhwe			0	0	0	〖※※※〗		
-趋	fhqv			0	0	0	〖※※※〗		
+趋	fhqv			0	0	0	〖※※※〗		0-2/3-6/7-8/9-11
 超	fhvk	fhv		0	0	0	〖※※※〗		0-2/3-6/7-8/9-11
 堤	fjgh			0	0	0	〖※※※〗		
 提	rjgh	rj		0	0	0	〖※※※〗		0-2/3-6/7/8-11
@@ -1927,9 +1927,9 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 揭	rjqn	rjq		0	0	0	〖※※※〗		
 喜	fkuk	fku		0	0	0	〖※※※〗		0-2/3-5/6-8/9-11
 插	rtfv	rtf		0	0	0	〖※※※〗		0-2/3/4-5/6-11
-搜	rvhc	rvh		0	0	0	〖※※※〗		
+搜	rvhc	rvh		0	0	0	〖※※※〗		0-2/3-8/9/10-11
 煮	ftjo			0	0	0	〖※※※〗		
-援	refc	ref		0	0	0	〖※※※〗		
+援	refc	ref		0	0	0	〖※※※〗		0-2/3-6/7-8/10-11
 裁	faye	fay		0	0	0	〖※※※〗		0-1/2,9-11/3-4/5-8
 搅	ripq			0	0	0	〖※※※〗		
 握	rngf	rng		0	0	0	〖※※※〗		0-2/3-5/6/9-11
@@ -1951,8 +1951,8 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 朝	fjeg	fje		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-1/2-7/8-11
 葵	awgd	awg		0	0	0	〖※※※〗		
 棒	sdwh	sdw		0	0	0	〖※※※〗		
-棋	sadw	sad		0	0	0	〖※※※〗		
-植	sfhg			0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
+棋	sadw	sad		0	0	0	〖※※※〗		0-3/4-6/7-9/10-11
+植	sfhg			0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-3/4-5/6-11
 森	sssu	sss		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-3/4-7/8-11
 椅	sdsk	sds		0	0	0	〖※※※〗		
 棵	sjsy	sjs		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
@@ -1992,8 +1992,8 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 遇	jmhp	jm		0	0	0	〖※※※〗		0-3/4-5/6/9-11
 喊	kdgt		⊙kdgy	0	0	0	〖※※※〗		0-2/3-4/5/10
 景	jyiu	jy/jyi		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-3/4-8/9-11
-践	khgt	khg	⊙khgy	0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	
-跌	khrw	khr		0	0	0	〖※※※〗		
+践	khgt	khg	⊙khgy	0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	0-2/3-6/7-11
+跌	khrw	khr		0	0	0	〖※※※〗		0-2/3-6/7-9/10-11
 跑	khqn	khq		0	0	0	〖※※※〗		0-2/3-6/7-8/9-11
 遗	khgp			0	0	0	〖※※※〗		0-2/3/4/9-11
 蛙	jffg	jff		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
@@ -2009,10 +2009,10 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 帽	mhjh	mhj		0	0	0	〖※※※〗		
 赋	mgah	mga		0	0	0	〖※※※〗		
 赌	mftj			0	0	0	〖※※※〗		
-赔	mukg	muk		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
+赔	mukg	muk		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-3/4-8/9-11
 黑	lfou	lfo		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-4/5-7/8-11
 铺	qgey	qge		0	0	0	〖※※※〗		0-4/5/6-9/11
-链	qlpy	qlp		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
+链	qlpy	qlp		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-4/5-8/9-11
 销	qieg	qie		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-4/5-7/8-11
 锁	qimy	qim		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-4/5-7/8-11
 锅	qkmw	qkm		0	0	0	〖※※※〗		
@@ -2027,7 +2027,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 稍	tieg	tie		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-4/5-7/8-11
 程	tkgg			0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-4/5-7/8-11
 稀	tqdh	tqd		0	0	0	〖※※※〗		
-税	tukq	tuk		0	0	0	〖※※※〗		
+税	tukq	tuk		0	0	0	〖※※※〗		0-4/5-6/7-9/10-11
 等	tffu			0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-5/6-8/9-11
 筑	tamy	tam		0	0	0	〖※※※〗		0-5/6-8/9-10/11
 策	tgmi	tgm		0	0	0	〖※※※〗		0-5/6/7-8/9-11
@@ -2041,7 +2041,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 集	wysu	wys		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-1/2-7/8-11
 焦	wyou	wyo		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-1/2-7/8-11
 傍	wupy	wup		0	0	0	〖※※※〗		
-储	wyfj	wyf		0	0	0	〖※※※〗		
+储	wyfj	wyf		0	0	0	〖※※※〗		0-1/2-3/4-6/8-11
 奥	tmod	tmo		0	0	0	〖※※※〗		0/1-2/3-8/9-11
 街	tffh			0	0	0	〖※※※〗		0-2/3-5/6-8/11
 惩	tghn			0	0	0	〖※※※〗		
@@ -2062,7 +2062,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 装	ufye	ufy		0	0	0	〖※※※〗		0-2/3-5/6-7/8-11
 蛮	yoju	yoj		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	
 就	yidn	yi		0	0	0	〖※※※〗		0-4/5-7/8,9,11/10
-敦	ybty	ybt		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
+敦	ybty	ybt		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-4/5-7/8-11
 痛	ucek	uce		0	0	0	〖※※※〗	竖·杂合〔丨 ⿻〕	0-4/5-6/7-11
 童	ujff			0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0-4/5-8/9-11
 阔	uitd	uit		0	0	0	〖※※※〗		
@@ -2084,7 +2084,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 渴	ijqn	ijq		0	0	0	〖※※※〗		
 溃	ikhm	ikh		0	0	0	〖※※※〗		
 滑	imeg	ime		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-7/8-11
-湾	iyox	iyo		0	0	0	〖※※※〗		
+湾	iyox	iyo		0	0	0	〖※※※〗		0-2/3-4/5-8/9-11
 渡	iyac	iya		0	0	0	〖※※※〗		0-2/3-5/6-9/10-11
 游	iytb			0	0	0	〖※※※〗		0-2/3-6/7-8/9-11
 滋	iuxx	iux		0	0	0	〖※※※〗		
@@ -2112,7 +2112,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 疏	nhyq	nhy		0	0	0	〖※※※〗		0/1-4/5-6/9-11
 隔	bgkh	bgk		0	0	0	〖※※※〗		0-1/2/3-5/11
 隙	biji	bij		0	0	0	〖※※※〗		
-媒	vafs	vaf		0	0	0	〖※※※〗		
+媒	vafs	vaf		0	0	0	〖※※※〗		0-2/3-5/6-7/8-11
 嫂	vvhc	vvh		0	0	0	〖※※※〗		
 登	wgku			0	0	0	〖※※※〗		0-4/5/6-8/9-11
 缓	xefc	xef		0	0	0	〖※※※〗		0-2/3-6/7-8/10-11
@@ -2121,14 +2121,14 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 缘	xxey	xxe		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-4/5-11
 瑞	gmdj	gmd		0	0	0	〖※※※〗		0-3/4-6/7-8/11-12
 魂	fcrc	fcr		0	0	0	〖※※※〗		0-1/2-3/4-8/11-12
-摄	rbcc			0	0	0	〖※※※〗		
+摄	rbcc			0	0	0	〖※※※〗		0-2/3-8/9-10/11-12
 摸	rajd			0	0	0	〖※※※〗		0-2/3-5/6-9/10-12
 填	ffhw	ffh		0	0	0	〖※※※〗		
 搏	rgef			0	0	0	〖※※※〗		
 塌	fjng	fjn		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-6/7-12
 鼓	fkuc			0	0	0	〖※※※〗		0-2/3-5/6-8/11-12
 摆	rlfc	rlf		0	0	0	〖※※※〗		0-2/3-7/8-10/11-12
-携	rwye			0	0	0	〖※※※〗		
+携	rwye			0	0	0	〖※※※〗		0-2/3-4/5-10/11-12
 搬	rtec	rte		0	0	0	〖※※※〗		
 摇	rerm	rer		0	0	0	〖※※※〗		0-2/3-6/7-9/10-12
 搞	rymk	rym		0	0	0	〖※※※〗		0-2/3-7/8-9/10-12
@@ -2164,17 +2164,17 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 零	fwyc			0	0	0	〖※※※〗		0-7/8-9/10/11-12
 雾	ftlb	ftl	⊙ftlr	0	0	0	〖※※※〗	折·上下〔乛 ⿱〕	
 辐	lgkl	lgk		0	0	0	〖※※※〗		
-辑	lkbg	lkb		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
+辑	lkbg	lkb		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-3/4-6/7-12
 输	lwgj	lwg		0	0	0	〖※※※〗		0-3/4-5/6/11-12
 督	hich			0	0	0	〖※※※〗		0-2/3-5/6-7/8-12
-频	hidm	hid		0	0	0	〖※※※〗		
+频	hidm	hid		0	0	0	〖※※※〗		0-3/4-6/7-8/9-12
 龄	hwbc			0	0	0	〖※※※〗		0-3/4-5/6-7/11-12
-鉴	jtyq			0	0	0	〖※※※〗		
+鉴	jtyq			0	0	0	〖※※※〗		0-1/2-3/4/5-12
 睛	hgeg	hg/hge		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-4/5-8/9-12
 睡	htgf	ht/htf	⊙htfg	0	0	0	〖※※※〗		0-4/5/6/7,11-12
 愚	jmhn			0	0	0	〖※※※〗		0-3/4-5/6-8/9-12
-暖	jefc	jef		0	0	0	〖※※※〗		
-盟	jelf	jel		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	
+暖	jefc	jef		0	0	0	〖※※※〗		0-3/4-7/8-9/11-12
+盟	jelf	jel		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0-3/4-7/8-12
 歇	jqww	jqw		0	0	0	〖※※※〗		
 暗	jujg	ju/juj		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-3/4-8/9-12
 照	jvko			0	0	0	〖※※※〗		0-3/4-5/6-8/9-12
@@ -2186,7 +2186,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 蜂	jtdh	jtd		0	0	0	〖※※※〗		
 嗅	kthd			0	0	0	〖※※※〗		
 嗓	kccs	kcc		0	0	0	〖※※※〗		
-署	lftj			0	0	0	〖※※※〗		
+署	lftj			0	0	0	〖※※※〗		0-4/5-7/8/9-12
 置	lfhf			0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0-4/5-6/7-12
 罪	ldjd	lhd	⊙lhdd	0	0	0	〖※※※〗		0-4/6-8/5,9/10-12
 罩	lhjj	lhj		0	0	0	〖※※※〗	竖·上下〔丨 ⿱〕	
@@ -2194,11 +2194,11 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 锡	qjqr	qjq		0	0	0	〖※※※〗		
 锤	qtgf		⊙qtfg	0	0	0	〖※※※〗		
 锦	qrmh	qrm		0	0	0	〖※※※〗		0-4/5-9/10-11/12
-键	qvfp			0	0	0	〖※※※〗		
+键	qvfp			0	0	0	〖※※※〗		0-4/5-7/8-9/11-12
 矮	tdtv			0	0	0	〖※※※〗		
 辞	tduh			0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0/1-5/6-12
 愁	tonu			0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	
-筹	tdtf			0	0	0	〖※※※〗		
+筹	tdtf			0	0	0	〖※※※〗		0-5/6-8/9/10-12
 签	twgi			0	0	0	〖※※※〗		0-5/6-7/8/9-12
 简	tujf	tuj		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0-5/6-8/9-12
 毁	vamc	va/vam		0	0	0	〖※※※〗		0-5/6-8/9-10/11-12
@@ -2214,20 +2214,20 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 腰	esvg	esv		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-3/4-9/10-12
 腹	etjt	etj		0	0	0	〖※※※〗		
 腺	eriy	eri		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
-鹏	eeqg	eeq		0	0	0	〖※※※〗		
+鹏	eeqg	eeq		0	0	0	〖※※※〗		0-3/4-7/8-9/10/12
 腾	eudc	eud		0	0	0	〖※※※〗		0-3/4-6/7-9/10-12
 腿	evep	eve		0	0	0	〖※※※〗		0-3/4-6/7-9/10-12
 触	qejy			0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-1/2-6/7-12
 解	qevh	qev		0	0	0	〖※※※〗		0-1/2-6/7-8/12
-廉	yuvo			0	0	0	〖※※※〗		
+廉	yuvo			0	0	0	〖※※※〗		0-2/3-5/6-8/9-12
 新	usrh	usr		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-4/5-8/9-12
 韵	ujqu			0	0	0	〖※※※〗		
 意	ujnu	ujn		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-4/5-8/9-12
-粮	oyve	oyv		0	0	0	〖※※※〗		
+粮	oyve	oyv		0	0	0	〖※※※〗		0-5/6/7-9/10-12
 数	ovty	ovt		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-5/6-8/9-12
-塑	ubtf			0	0	0	〖※※※〗		
+塑	ubtf			0	0	0	〖※※※〗		0-2/3-4/5/10-12
 慈	uxxn			0	0	0	〖※※※〗		
-煤	oafs	oa/oaf		0	0	0	〖※※※〗		
+煤	oafs	oa/oaf		0	0	0	〖※※※〗		0-3/4-6/7-8/9-12
 煌	orgg	or		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 满	iagw			0	0	0	〖※※※〗		0-2/3-5/6/11-12
 漠	iajd	iaj		0	0	0	〖※※※〗		
@@ -2238,7 +2238,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 溜	iqyl			0	0	0	〖※※※〗		
 滚	iuce	iuc		0	0	0	〖※※※〗		0-2/3-6/7-8/9-12
 溢	iuwl	iuw		0	0	0	〖※※※〗		
-滨	iprw	ipr		0	0	0	〖※※※〗		
+滨	iprw	ipr		0	0	0	〖※※※〗		0-2/3-5/6-9/11-12
 溶	ipwk			0	0	0	〖※※※〗		
 滩	icwy	icw		0	0	0	〖※※※〗		
 慎	nfhw	nfh		0	0	0	〖※※※〗		
@@ -2249,9 +2249,9 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 群	vtkd	vtk		0	0	0	〖※※※〗		0-2/3/4-6/9-12
 殿	nawc	naw		0	0	0	〖※※※〗		
 辟	nkuh	nku		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
-障	bujh	buj		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
+障	bujh	buj		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	0-1/2-6/7-12
 媳	vthn	vth		0	0	0	〖※※※〗		
-嫌	vuvo	vu/vuv		0	0	0	〖※※※〗		
+嫌	vuvo	vu/vuv		0	0	0	〖※※※〗		0-2/3-5/6-8/9-12
 嫁	vpey	vpe		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
 叠	cccg			0	0	0	〖※※※〗		
 缝	xtdp			0	0	0	〖※※※〗		
@@ -2277,7 +2277,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 遭	gmap			0	0	0	〖※※※〗		0/1-2/3-6/11-13
 酷	sgtk			0	0	0	〖※※※〗		
 酿	sgye		pfiu	0	0	0	〖※※※〗		
-酸	sgct	sgc		0	0	0	〖※※※〗		
+酸	sgct	sgc		0	0	0	〖※※※〗		0-4,6/5/7-8/11-13
 碱	ddgt	ddg	⊙ddgy	0	0	0	〖※※※〗		
 碳	dmdo	dmd		0	0	0	〖※※※〗		
 磁	duxx	du/dux		0	0	0	〖※※※〗		
@@ -2311,7 +2311,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 敲	ymkc			0	0	0	〖※※※〗		
 豪	ypeu			0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-4/5-6/7-13
 遮	yaop			0	0	0	〖※※※〗		
-腐	ywfw			0	0	0	〖※※※〗		
+腐	ywfw			0	0	0	〖※※※〗		0-2/3-4/5-7/12-13
 瘦	uvhc	uvh		0	0	0	〖※※※〗		
 辣	ugki	ugk		0	0	0	〖※※※〗		
 竭	ujqn			0	0	0	〖※※※〗		
@@ -2324,7 +2324,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 漫	ijlc			0	0	0	〖※※※〗		0-2/3-6/7-11/12-13
 滴	iumd	ium		0	0	0	〖※※※〗		
 演	ipgw	ipg		0	0	0	〖※※※〗		0-2/3-5/6/12-13
-漏	infy			0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
+漏	infy			0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	0-2/3-5/6-13
 慢	njlc	nj/njl		0	0	0	〖※※※〗		0-2/3-6/7-11/12-13
 赛	pfjm			0	0	0	〖※※※〗		0-2/3-4/5-6/10-13
 察	pwfi			0	0	0	〖※※※〗		0-2/3-8/9-10/11-13
@@ -2341,7 +2341,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 撒	raet	rae		0	0	0	〖※※※〗		
 趣	fhbc	fhb		0	0	0	〖※※※〗		0-2/3-6/7-12/13-14
 趟	fhik	fhi		0	0	0	〖※※※〗		
-撑	ripr	rip		0	0	0	〖※※※〗		
+撑	ripr	rip		0	0	0	〖※※※〗		0-2/3-5/6-7/11-14
 播	rtol			0	0	0	〖※※※〗		0-2/3/4-9/10-14
 撞	rujf	ruj		0	0	0	〖※※※〗		0-2/3-7/8-11/12-14
 撤	ryct	ryc		0	0	0	〖※※※〗		
@@ -2378,7 +2378,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 靠	tfkd			0	0	0	〖※※※〗		0/1-3/4-6/12-14
 稻	tevg	tev		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 黎	tqti	tqt		0	0	0	〖※※※〗		0-4/5-6/7/10-14
-稿	tymk	tym		0	0	0	〖※※※〗		
+稿	tymk	tym		0	0	0	〖※※※〗		0-4/5-9/10-11/12-14
 稼	tpey	tpe		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
 箱	tshf	tsh		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0-5/6-9/10-14
 箭	tuej	tue		0	0	0	〖※※※〗		
@@ -2399,7 +2399,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 潜	ifwj	ifw		0	0	0	〖※※※〗		0-2/3-4/5-6/11-14
 潮	ifje	ifj		0	0	0	〖※※※〗		0-2/3-4/5-10/11-14
 潭	isjh	isj		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
-澳	itmd	itm		0	0	0	〖※※※〗		
+澳	itmd	itm		0	0	0	〖※※※〗		0-2/3/4-5/12-14
 懂	natf	nat		0	0	0	〖※※※〗		0-2/3-5/6/12-14
 额	ptkm			0	0	0	〖※※※〗		0-2/3-5/6-8/11-14
 鹤	pwyg	pwy		0	0	0	〖※※※〗		0-1/2-3/4-9/14
@@ -2424,14 +2424,14 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 蹄	khuh			0	0	0	〖※※※〗		
 器	kkdk	kkd		0	0	0	〖※※※〗		0-2/3-5/6-9/13-15
 噪	kkks			0	0	0	〖※※※〗		
-赠	mulj	mu/mul		0	0	0	〖※※※〗		
+赠	mulj	mu/mul		0	0	0	〖※※※〗		0-3/4-5/6-11/12-15
 默	lfod			0	0	0	〖※※※〗		0-4/5-7/8-11/12-15
 镜	qujq	quj		0	0	0	〖※※※〗		0-4/5-9/10-13/14,15
 赞	tfqm			0	0	0	〖※※※〗		0/1-3/4,5/12-15
 穆	trie	tri		0	0	0	〖※※※〗		
-篮	tjtl			0	0	0	〖※※※〗		
+篮	tjtl			0	0	0	〖※※※〗		0-5/6-7/8-9/11-15
 儒	wfdj	wfd		0	0	0	〖※※※〗		
-邀	rytp			0	0	0	〖※※※〗		
+邀	rytp			0	0	0	〖※※※〗		0-4/5-8/9-12/13-15
 衡	tqdh			0	0	0	〖※※※〗		0-2/3-9/10-12/15
 膨	efke	efk		0	0	0	〖※※※〗		
 雕	mfky			0	0	0	〖※※※〗		
@@ -2441,7 +2441,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 辨	uytu	uyt		0	0	0	〖※※※〗		
 辩	uyuh	uyu		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
 糖	oyvk			0	0	0	〖※※※〗		
-燃	oqdo	oqd		0	0	0	〖※※※〗		
+燃	oqdo	oqd		0	0	0	〖※※※〗		0-3/4-7/8-11/12-15
 激	iryt	iry		0	0	0	〖※※※〗		0-2/3-7/8-11/12-15
 懒	ngkm			0	0	0	〖※※※〗		
 壁	nkuf			0	0	0	〖※※※〗		0-2/3-5/6-12/13-15
@@ -2483,14 +2483,14 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 蟹	qevj			0	0	0	〖※※※〗		
 颤	ylkm			0	0	0	〖※※※〗		
 瓣	urcu	ur/urc		0	0	0	〖※※※〗		
-爆	ojai	oja		0	0	0	〖※※※〗		
-疆	xfgg	xfg		0	0	0	〖※※※〗		
+爆	ojai	oja		0	0	0	〖※※※〗		0-3/4-7/8-11/15-18
+疆	xfgg	xfg		0	0	0	〖※※※〗		0-2/3-5/6/18
 壤	fyke	fyk		0	0	0	〖※※※〗		
 耀	iqny			0	0	0	〖※※※〗		
 躁	khks			0	0	0	〖※※※〗		
 嚼	kelf	kel		0	0	0	〖※※※〗		
 嚷	kyke	kyk		0	0	0	〖※※※〗		
-籍	tdij			0	0	0	〖※※※〗		
+籍	tdij			0	0	0	〖※※※〗		0-5/6-8/9-11/16-19
 魔	yssc			0	0	0	〖※※※〗		0-2/3-6/7-10/18,19
 灌	iaky	iak		0	0	0	〖※※※〗		
 譬	nkuy			0	0	0	〖※※※〗		
@@ -2643,7 +2643,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 沦	iwxn	iwx		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
 汹	iqbh			0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
 沧	iwbn	iwb		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
-沪	iynt	iyn		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	
+沪	iynt	iyn		0	0	0	〖※※※〗	丿·左右〔丿 ⿰〕	0-2/3/4-6
 沈	ipqn	ipq		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	0-2/3-4/5-6
 沁	iny	in		0	0	0	〖※※〗	捺·左右〔丶 ⿰〕	
 忱	npqn	np/npq		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
@@ -2762,7 +2762,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 荆	agaj	aga		0	0	0	〖※※※〗		
 茸	abf			0	0	0	〖※※〗	横·上下〔一 ⿱〕	
 茬	adhf			0	0	0	〖※※※〗		
-荐	adhb	adh		0	0	0	〖※※※〗		
+荐	adhb	adh		0	0	0	〖※※※〗		0-2/3-4/5/6-8
 茧	aju			0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	
 茵	aldu	ald		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	
 荤	aplj			0	0	0	〖※※※〗	竖·上下〔丨 ⿱〕	
@@ -2800,7 +2800,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 钮	qnfg	qnh	⊙qnhf	0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 毡	tfnk			0	0	0	〖※※※〗		
 竿	tfj			0	0	0	〖※※〗	竖·上下〔丨 ⿱〕	
-贷	wamu	wam		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	
+贷	wamu	wam		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-1/2-4/5-8
 俏	wieg	wie		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 俐	wtjh	wtj		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
 侮	wtxu	wtx	⊙wtxy	0	0	0	〖※※※〗		
@@ -2816,7 +2816,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 峦	yomj	yom		0	0	0	〖※※※〗	竖·上下〔丨 ⿱〕	
 疮	uwbv	uwb		0	0	0	〖※※※〗	折·杂合〔乛 ⿻〕	
 疤	ucv			0	0	0	〖※※〗	折·杂合〔乛 ⿻〕	
-咨	uqwk			0	0	0	〖※※※〗		
+咨	uqwk			0	0	0	〖※※※〗		0-1/2-3/4-5/6-8
 闺	uffd			0	0	0	〖※※※〗	横·杂合〔一 ⿻〕	
 闽	uji			0	0	0	〖※※〗	捺·杂合〔丶 ⿻〕	
 娄	ovf	ov		0	0	0	〖※※〗	横·上下〔一 ⿱〕	0-5/6-8
@@ -2865,7 +2865,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 捎	rieg	rie		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 捍	rjfh	rjf		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
 捆	rlsy	rls		0	0	0	〖※※※〗	捺·左右〔丶 ⿰〕	
-捐	rkeg	rke		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
+捐	rkeg	rke		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-2/3-5/6-9
 捌	rklj			0	0	0	〖※※※〗		
 捡	rwgi			0	0	0	〖※※※〗		
 挫	rwwf	rww		0	0	0	〖※※※〗		
@@ -2882,7 +2882,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 框	sagg			0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 梆	sdtb	sdt		0	0	0	〖※※※〗		
 桔	sfkg	sfk		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
-档	sivg	si/siv		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
+档	sivg	si/siv		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	0-3/4-6/7-9
 栓	swgg	swg		0	0	0	〖※※※〗	横·左右〔一 ⿰〕	
 逗	gkup			0	0	0	〖※※※〗		
 栗	ssu			0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	
@@ -3054,7 +3054,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 焊	ojfh	ojf		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
 焕	oqmd	oqm		0	0	0	〖※※※〗		
 涯	idff	idf		0	0	0	〖※※※〗		
-渠	ians			0	0	0	〖※※※〗		
+渠	ians			0	0	0	〖※※※〗		0-2/3,6/4-5/7-10
 淑	ihic			0	0	0	〖※※※〗		
 淌	iimk	iim		0	0	0	〖※※※〗		
 淆	iqde	iqd		0	0	0	〖※※※〗		
@@ -3105,9 +3105,9 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 壹	fpgu	fpg		0	0	0	〖※※※〗		
 搔	rcyj			0	0	0	〖※※※〗		
 揉	rcbs			0	0	0	〖※※※〗		
-募	ajdl			0	0	0	〖※※※〗		
+募	ajdl			0	0	0	〖※※※〗		0-2/3-6/7-9/10-11
 董	atgf	atg		0	0	0	〖※※※〗		0-2/3/4/9-11
-蒂	auph	aup		0	0	0	〖※※※〗		
+蒂	auph	aup		0	0	0	〖※※※〗		0-2/3-6/7-8/11
 辜	duj			0	0	0	〖※※〗	竖·上下〔丨 ⿱〕	0-4/5-11
 棱	sfwt	sfw		0	0	0	〖※※※〗		
 椰	sbbh	sbb		0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
@@ -3208,7 +3208,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 瑰	grqc	grq		0	0	0	〖※※※〗		0-3/4-8/9-10/11-12
 瑙	gvtq			0	0	0	〖※※※〗		
 肆	dvfh	dv/dvf		0	0	0	〖※※※〗		0-6/7-9/10-11/12
-聘	bmgn	bmg		0	0	0	〖※※※〗		
+聘	bmgn	bmg		0	0	0	〖※※※〗		0-5/6-10/11/12
 斟	adwf			0	0	0	〖※※※〗		
 靴	afwx			0	0	0	〖※※※〗		
 靶	afcn	afc		0	0	0	〖※※※〗	折·左右〔乛 ⿰〕	
@@ -3305,7 +3305,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 兢	dqdq	dqd		0	0	0	〖※※※〗		
 槛	sjtl	sjt		0	0	0	〖※※※〗		
 榴	sqyl	sqy		0	0	0	〖※※※〗		
-榜	supy	sup		0	0	0	〖※※※〗		
+榜	supy	sup		0	0	0	〖※※※〗		0-3/4-7/8-9/10-13
 榨	spwf	spw		0	0	0	〖※※※〗		
 榕	spwk			0	0	0	〖※※※〗		
 酵	sgfb			0	0	0	〖※※※〗		
@@ -3412,7 +3412,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 薛	awnu			0	0	0	〖※※※〗		
 薇	atmt			0	0	0	〖※※※〗		
 擎	aqkr			0	0	0	〖※※※〗		
-薪	ausr	aus		0	0	0	〖※※※〗		
+薪	ausr	aus		0	0	0	〖※※※〗		0-2/3-7/8-11/12-15
 翰	fjwn	fjw		0	0	0	〖※※※〗		
 噩	gkkk			0	0	0	〖※※※〗		
 橱	sdgf			0	0	0	〖※※※〗		
@@ -3438,7 +3438,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 懈	nqeh	nq/nqe		0	0	0	〖※※※〗		
 窿	pwbg	pwb		0	0	0	〖※※※〗		
 缰	xglg			0	0	0	〖※※※〗		
-缴	xryt	xry		0	0	0	〖※※※〗		
+缴	xryt	xry		0	0	0	〖※※※〗		0-2/3-7/8-11/12-15
 藉	adij	adi		0	0	0	〖※※※〗		
 鞠	afqo	afq		0	0	0	〖※※※〗		
 藐	aeeq	aee		0	0	0	〖※※※〗		
