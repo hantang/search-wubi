@@ -22,7 +22,7 @@ def read_json_data(data_dir: str, name: str) -> dict:
     if not data_file.exists():
         logging.warning(f"No data {data_file}")
         return dict()
-    with open(data_file) as f:
+    with open(data_file, encoding="utf-8", newline="\n") as f:
         data = json.load(f)
     return data
 

@@ -25,7 +25,7 @@ def save_all_to_json_v1(df, valid, chars_dict, data_dir, save_file):
     }
 
     logging.info(f"save to = {save_file}")
-    with open(save_file, "w") as f:
+    with open(save_file, "w", encoding="utf-8", newline="\n") as f:
         json.dump(result, f, indent=None, ensure_ascii=False)
 
 
@@ -66,7 +66,7 @@ def save_all_to_json_v2(df, data_valid, data_svg, chars_dict, save_file, save_di
     }
 
     logging.info(f"save to = {save_file}")
-    with open(save_file, "w") as f:
+    with open(save_file, "w", encoding="utf-8", newline="\n") as f:
         json.dump(result, f, indent=None, ensure_ascii=False)
 
     # if save_dir:
@@ -76,7 +76,7 @@ def save_all_to_json_v2(df, data_valid, data_svg, chars_dict, save_file, save_di
         char_file = Path(subdir, f"{char}.json")
         if not subdir.exists():
             subdir.mkdir(parents=True)
-        with open(char_file, "w") as f:
+        with open(char_file, "w", encoding="utf-8", newline="\n") as f:
             json.dump(char_info, f, indent=None, ensure_ascii=False)
 
 
@@ -119,7 +119,7 @@ def save_decode_to_json(data_dir: str, save_path: str) -> None:
     for k, v in out2.items():
         save_file = Path(save_dir, f"{k}.json")
         logging.debug(f"Save to {save_file}, data={len(v)}")
-        with open(save_file, "w") as f:
+        with open(save_file, "w", encoding="utf-8", newline="\n") as f:
             json.dump(v, f, indent=None, ensure_ascii=False)
 
 
@@ -135,7 +135,7 @@ def save_svg_to_json(data_svg: dict, save_path: str) -> None:
     for k, v in fontData.items():
         save_file = Path(save_dir, f"{k}.json")
         logging.debug(f"Save to {save_file}, data={len(v)}")
-        with open(save_file, "w") as f:
+        with open(save_file, "w", encoding="utf-8", newline="\n") as f:
             v2 = {"path": v}
             json.dump(v2, f, indent=None, ensure_ascii=False)
 
