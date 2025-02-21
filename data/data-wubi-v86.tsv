@@ -8148,7 +8148,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 見	hqb			0	0	0	〖※※〗	折·上下〔乛 ⿱〕	
 貝	mhny			0	0	1	〖※※※〗		0-6/0/1/6
 禿	tqb			0	0	0	〖※※〗	折·上下〔乛 ⿱〕	
-訁	yygg			0	0	0			
+訁	yygg			0	0	1			
 呂	ktkf			0	0	0	〖※※※〗	横·上下〔一 ⿱〕	
 車	lghh			0	0	1	〖※※※〗		0-6/0/1/6
 夾	dwwi			0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	
@@ -11386,12 +11386,12 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 乛	nnll			0	1	1			0/0
 亅	hhll			0	1	1			0/0
 阝	bnh			0	0	1	〖※※〗		0,1/0/1
-㔾	bnn			0	0	0			
+㔾	bnn			0	0	1			
 勹	qtn			0	0	1	〖※※〗		0,1/0/1
 刂	jhh			0	0	1	〖※※〗		0,1/0/1
 冂	mhn			0	0	1	〖※※〗		0,1/0/1
 卩	bnh			0	0	1	〖※※〗		0,1/0/1
-丷	uyt			0	0	0			
+丷	uyt			0	0	1			
 冖	pyn			0	0	1	〖※※〗		0,1/0/1
 凵	bnh			0	0	1	〖※※〗		0,1/0/1
 厶	cny			0	0	1	〖※※〗		0,1/0/1
@@ -11426,14 +11426,14 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 廴	pny			0	0	1	〖※※〗		0,1/0/1
 屮	bhk			0	0	0	〖※※〗	竖·杂合〔丨 ⿻〕	0,1/2
 扌	rghg			0	0	1	〖※※※〗		0-2/0/1/2
-⺼	etng			0	0	0			
+⺼	etng			0	0	1			
 邒	sbh			0	0	0			
 㣺	nyi			0	0	0			
 乢	mnn			0	0	0	〖※※〗	折·左右〔乛 ⿰〕	
 攴	hcu			0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	0,1/2,3
 礻	pyi			0	0	0	〖※※〗	捺·杂合〔丶 ⿻〕	0-2/3
 帀	gmhk			0	0	0			
-爫	etyt			0	0	0			
+爫	etyt			0	0	1			
 尣	wqb			0	0	0			
 龷	aghg			0	0	0			
 㞢	bhgd			0	0	0			
@@ -11445,10 +11445,10 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 龶	gggg		gghg	0	0	1			0-3/0/1/3
 肀	vhk			0	0	0	〖※※〗	竖·杂合〔丨 ⿻〕	0-2/3
 牜	trd			0	0	0			
-龵	rtgt			0	0	0			
+龵	rtgt			0	0	1			
 耂	fte			0	0	0			
 旡	aqv			0	0	0			
-癶	wnyt		⊙wnyy	0	0	0			
+癶	wnyt		⊙wnyy	0	0	1			
 玍	tff			0	0	0	〖※※〗	横·上下〔一 ⿱〕	
 疒	uygg			0	0	1	〖※※※〗		0-4/0/1/4
 汃	iwy			0	0	0	〖※※〗	捺·左右〔丶 ⿰〕	
@@ -11461,9 +11461,9 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 龸	ipb			0	0	0			
 屴	mlb		⊙mlr	0	0	0	〖※※〗	折·上下〔乛 ⿱〕	
 艻	alb		⊙alr	0	0	0	〖※※〗	折·上下〔乛 ⿱〕	
-氺	ihyy			0	0	0			
+氺	ihyy			0	0	1			
 钅	qtgn			0	0	1	〖※※※〗		0-4/0/1/4
-罒	lhng			0	0	0			
+罒	lhng			0	0	1			
 庀	yxv			0	0	0	〖※※〗	折·杂合〔乛 ⿻〕	0-2/3,4
 ⺻	vhgd			0	0	0			
 艸	btbh			0	0	0			
@@ -11479,12 +11479,12 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 饦	qnta			0	0	0	〖※※※〗		
 虍	hav			0	0	1	〖※※〗	折·杂合〔乛 ⿻〕	0-3/4,5
 甶	tld			0	0	0	〖※※〗	横·杂合〔一 ⿻〕	
-覀	sghg			0	0	0			
+覀	sghg			0	0	1			
 㡯	ytav			0	0	0			
 龹	udi		ufw	0	0	0			
 朶	esu			0	0	0	〖※※〗	捺·上下〔丶 ⿱〕	
 岀	mmj			0	0	0			
-糹	xnny			0	0	0			
+糹	xnny			0	0	1			
 闬	ufk			0	0	0			
 朿	gmii			0	0	0			
 㑈	waiy			0	0	0			
@@ -11502,7 +11502,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 玔	gkh			0	0	0			
 矴	dsh			0	0	0	〖※※〗	竖·左右〔丨 ⿰〕	
 呉	kngw			0	0	0			
-镸	dghy			0	0	0			
+镸	dghy			0	0	1			
 釆	toi			0	0	0			
 庒	yfyi			0	0	0	〖※※※〗	捺·杂合〔丶 ⿻〕	
 夿	dcb			0	0	0	〖※※〗	折·上下〔乛 ⿱〕	
@@ -11556,7 +11556,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 厓	dffd			0	0	0			
 厔	dgcf			0	0	0			
 匋	qrmk			0	0	0			
-釒	qtyg			0	0	0			
+釒	qtyg			0	0	1			
 咹	kpvg			0	0	0			
 哜	kyjh			0	0	0	〖※※※〗	竖·左右〔丨 ⿰〕	
 垰	fhgh			0	0	0			
@@ -12012,13 +12012,13 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 𫜵	qtyt			0	0	1			0-3/0/1/3
 𫩏	jhng			0	0	0			
 𠁣	vhk			0	0	0			
-𠃜	nnht			0	0	0			
+𠃜	nnht			0	0	1			
 𦉫	mjk			0	0	0			
 冃	mfd			0	0	0			
 𦉪	mqv			0	0	0			
 圡	fyi			0	0	0			
 冘	pqv			0	0	0			
-𧘇	etny			0	0	0			
+𧘇	etny			0	0	1			
 𠬝	bci			0	0	0			
 丮	nfhk			0	0	0			
 𠂔	tnht			0	0	0			
@@ -12062,7 +12062,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 𡗗	dwi			0	0	0			
 𡗜	due			0	0	0			
 𦘒	vfk			0	0	0			
-𥫗	ttgy			0	0	0			
+𥫗	ttgy			0	0	1			
 㓞	dhvn		⊙dhvt	0	0	0			
 冴	uaht			0	0	0			
 吅	kkg			0	0	0			
