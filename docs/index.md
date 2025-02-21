@@ -30,5 +30,7 @@ search:
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.7.2/dist/hanzi-writer.min.js"></script>
+<script src="https://cdn.jsdmirror.com/npm/hanzi-writer@3.7.2/dist/hanzi-writer.min.js"></script>
+<!-- <script src="static/js/hanzi-writer.min.js"></script> -->
 <script src="static/js/utils.js"></script>
 <script src="static/js/index.js"></script>
