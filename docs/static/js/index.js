@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       "<p>📝 注意这里五笔版本是<strong>1986</strong>版（王码4.5版）五笔（10830版编码〈 <code>⊙</code>标注〉作为兼容码补充）。</p>",
       `<blockquote class="note">
         当前收录汉字共${statsData.total}字（囊括通用规范汉字及其繁体，港台地区和其他常用字）。<br>
-      （五笔全码：${statsData.code}，字根拆解：${statsData.units}，图解：${statsData.segments}）
+      （五笔全码：${statsData.code}，字根拆解：${statsData.units}，字根图解：${statsData.segments}）
         </blockquote>`,
       `<blockquote class="note">
     ⚠️ 标识表示全码和容错码存在一定争议（比如起笔或末笔笔画顺序）。

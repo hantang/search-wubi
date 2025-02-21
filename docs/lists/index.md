@@ -27,7 +27,10 @@ search:
         <option value="level3">规范三级字</option>
         <option value="fanti">常见繁/异体字</option>
         <option value="strokes">笔画/键名字</option>
-        <option value="units">成根字</option>
+        <option value="units">五笔成根字</option>
+        <option value="monochar">独体字</option>
+        <option value="component">合体字部件</option>
+        <option value="surname">新百家姓</option>
         <option value="more">更多表外字</option>
       </select>
     </div>
