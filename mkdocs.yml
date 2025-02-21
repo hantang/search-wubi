@@ -176,8 +176,9 @@ nav:
           - wiki/roots.md
           - wiki/roots-example.md
       - 码表:
-          - wiki/shortcodes.md
-          - wiki/shortcodes-level2.md
+          - wiki/codes-short.md
+          - wiki/codes-short2.md
+          - wiki/codes-duplicates.md
       - 探微:
           - wiki/essays/note0.md
           - wiki/essays/note1.md
