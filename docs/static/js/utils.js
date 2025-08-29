@@ -1,5 +1,6 @@
 const fetchCharData = async (filePath) => {
   // const filePath = `data/${char}.json`;
+  console.log("load data file", filePath)
   const response = await fetch(filePath);
   if (!response.ok) throw new Error(`Failed to load ${filePath}`);
   return response.json();

@@ -1,5 +1,48 @@
+const OPTION_CHAR_TABLE = [
+  { value: "100", name: "高频&nbsp;&nbsp;100字" },
+  { value: "500", name: "高频&nbsp;&nbsp;500字" },
+  { value: "1500", name: "高频1500字" },
+  { value: "medium", name: "中频3000字" },
+  { value: "level1a", name: "规范一级字㊤" },
+  { value: "level1b", name: "规范一级字㊦" },
+  { value: "level2", name: "规范二级字" },
+  { value: "level3", name: "规范三级字" },
+  { value: "fanti", name: "常见繁/异体字" },
+  { value: "strokes", name: "笔画/键名字" },
+  { value: "units", name: "五笔成根字" },
+  { value: "monochar", name: "独体字" },
+  { value: "component", name: "合体字部件" },
+  { value: "surname", name: "新百家姓" },
+  { value: "more", name: "更多表外字" }
+]
+
+const OPTION_ITEM_PAGE = [10, 20, 50, 100]
+
 function initListTable() {
-  // init table
+  // Initialize itemsTotal select
+  const itemsTotalSelect = document.getElementById('itemsTotal');
+  const itemsPerPageSelect = document.getElementById('itemsPerPage');
+  if (itemsTotalSelect) {
+    itemsTotalSelect.innerHTML = ''; // Clear existing options
+    OPTION_CHAR_TABLE.forEach(option => {
+      const optionElement = document.createElement('option');
+      optionElement.value = option.value;
+      optionElement.innerHTML = option.name; // Using innerHTML to preserve &nbsp;
+      itemsTotalSelect.appendChild(optionElement);
+    });
+
+    if (itemsPerPageSelect) {
+      itemsPerPageSelect.innerHTML = '';
+      OPTION_ITEM_PAGE.forEach(option => {
+        const optionElement = document.createElement('option');
+        optionElement.value = String(option);
+        optionElement.innerHTML = option;
+        itemsPerPageSelect.appendChild(optionElement);
+      });
+    }
+  }
+
+  // Initialize table
   const headers = [
     "序号",
     "汉字",
@@ -98,7 +141,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const paragraphs = [""];
     const note = document.getElementById("note-area");
     const para = document.getElementById("note-warning");
-  
+
     para.innerHTML = "";
     paragraphs.forEach((text) => {
       const more = document.createElement("p");
@@ -131,7 +174,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       const warningDiv = document.getElementById("note-warning");
       warningDiv.innerText = `🗃️ 共${totalCharCount}个汉字`;
-  
+
       updateListTableRows(startIndex, inputChars, charData, configData, basedir);
       updatePagination();
     }

@@ -1,6 +1,7 @@
 ---
 icon: material/table-search
 title: ""
+draft: true
 hide:
   - navigation
   - toc

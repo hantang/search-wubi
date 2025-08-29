@@ -1,3 +1,5 @@
+const PARAM = "code";
+
 function initCodeTable(show) {
   // init table
   const headers = [
@@ -46,12 +48,12 @@ function createCodeTableRow(index, code, codeResult) {
   return row;
 }
 
-const queryCode = async (configData, basedir, maxCount) => {
+async function queryCode(configData, basedir, maxCount) {
   const codeDir = `${basedir}/${configData.path.codes}`;
 
   // only top N chars
   const input = document.getElementById("query-text").value.trim();
-  const regex = new RegExp('^[a-y]{1,4}$');
+  const regex = new RegExp("^[a-y]{1,4}$");
   const inputCodes = input.toLowerCase().split(/[ ,;]/).filter(c => regex.test(c)).slice(0, maxCount)
 
   const warningDiv = document.getElementById("note-warning");
@@ -92,50 +94,45 @@ const queryCode = async (configData, basedir, maxCount) => {
     .catch(error => {
       console.error(error);
     });
-};
+}
+
 
 document.addEventListener("DOMContentLoaded", async () => {
   const maxCount = 10;
   const basedir = "..";
   const datafile = `${basedir}/data/data.json`;
+  const note = document.getElementById("note-area");
+  const para = document.getElementById("note-warning");
+  para.innerHTML = "等待加载数据中……";
 
-  try {
     // init data
-    const response = await fetch(datafile);
-    if (!response.ok) {
-      throw new Error("Network response error");
-    }
-
-    const data = await response.json();
+    const data = await fetchCharData(datafile);
     const configData = data.config;
 
     const paragraphs = [
       "<p>📝 注意这里五笔版本是<strong>1986</strong>版（王码4.5版）五笔（支持全码、简码查询单个汉字或常见词组）。</p>",
     ];
 
-    const note = document.getElementById('note-area');
-    const para = document.getElementById('note-warning');
     para.innerHTML = "";
     paragraphs.forEach(text => {
-      const more = document.createElement('p');
+      const more = document.createElement("p");
       more.innerHTML = text;
       note.insertBefore(more, para);
     });
 
-    // event
-    document
-      .getElementById("query-button")
-      .addEventListener("click", () => {
-        queryCode(configData, basedir, maxCount);
-      });
-    document
-      .getElementById("query-text")
-      .addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-          queryCode(configData, basedir, maxCount);
-        }
-      });
-  } catch (error) {
-    console.error('Error fetching data:', error);
-  }
+    const form = document.getElementById("search-form");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      queryCode(configData, basedir, maxCount);
+    });
+
+    // 支持参数跳转
+    const urlParams = new URLSearchParams(window.location.search);
+    const keyword = urlParams.get(PARAM);
+    if (keyword) {
+      document.getElementById("query-text").value = keyword;
+      // queryCode(configData, basedir, maxCount);
+      form.dispatchEvent(new Event("submit", { bubbles: true }));
+    }
+
 });

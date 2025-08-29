@@ -1,6 +1,15 @@
+const PARAM = "char";
+
 function initTable(show) {
   // init table
-  const headers = ["序号", "汉字", "基本信息", "五笔全码", "简码/容错码", "五笔字根拆解"];
+  const headers = [
+    "序号",
+    "汉字",
+    "基本信息",
+    "五笔全码",
+    "简码/容错码",
+    "五笔字根拆解",
+  ];
   const tableHead = document.querySelector("#data-table thead");
   tableHead.innerHTML = "";
   if (!show) return;
@@ -14,7 +23,16 @@ function initTable(show) {
   tableHead.append(headRow);
 }
 
-function createTableRow(index, char, charInfo, configData, imgPath, svgData, available) {
+
+function createTableRow(
+  index,
+  char,
+  charInfo,
+  configData,
+  imgPath,
+  svgData,
+  available
+) {
   const row = document.createElement("tr");
 
   const indexCell = document.createElement("td");
@@ -56,7 +74,11 @@ function createTableRow(index, char, charInfo, configData, imgPath, svgData, ava
     )
   );
   extraCell.appendChild(
-    getListData(["简码", "容错"], [charInfo.shortCode, charInfo.faultCode], configData)
+    getListData(
+      ["简码", "容错"],
+      [charInfo.shortCode, charInfo.faultCode],
+      configData
+    )
   );
 
   row.appendChild(indexCell);
@@ -83,12 +105,14 @@ function createTableRow(index, char, charInfo, configData, imgPath, svgData, ava
   return row;
 }
 
-const queryHanzi = async (charData, configData, basedir, maxCount = 50) => {
+async function queryHanzi(charData, configData, basedir, maxCount = 50) {
   const allChars = charData.all;
 
   // only top N chars
-  const input = document.getElementById("query-text").value.trim();
-  const inputChars = Array.from(input.replace(/[a-zA-Z\d\s]/g, "").slice(0, maxCount));
+  const inputQuery = document.getElementById("query-text").value.trim();
+  const inputChars = Array.from(
+    inputQuery.replace(/[a-zA-Z\d\s]/g, "").slice(0, maxCount)
+  );
 
   const warningDiv = document.getElementById("note-warning");
   warningDiv.innerText = "";
@@ -100,63 +124,77 @@ const queryHanzi = async (charData, configData, basedir, maxCount = 50) => {
   const valid = filteredChars.length;
   if (valid === 0) {
     warningDiv.innerText =
-      inputChars.length > 0 ? "🚫 异体或罕用字，请尝试其他。" : "❗ 请输入常用汉字。";
+      inputChars.length > 0
+        ? "🚫 异体或罕用字，请尝试其他。"
+        : "❗ 请输入常用汉字。";
     return;
   }
 
   warningDiv.innerText = "";
   initTable(valid !== 0);
 
-  renderCharList(filteredChars, 0, false, basedir, charData, configData, tableBody, createTableRow);
-};
+  renderCharList(
+    filteredChars,
+    0,
+    false,
+    basedir,
+    charData,
+    configData,
+    tableBody,
+    createTableRow
+  );
+}
+
 
 document.addEventListener("DOMContentLoaded", async () => {
   const maxCount = 50;
   const basedir = ".";
   const datafile = `${basedir}/data/data.json`;
+  const note = document.getElementById("note-area");
+  const para = document.getElementById("note-warning");
+  para.innerHTML = "等待加载数据中……";
 
-  try {
-    // init data
-    const response = await fetch(datafile);
-    if (!response.ok) {
-      throw new Error("Network response error");
-    }
+  const data = await fetchCharData(datafile);
+  const statsData = data.stats;
+  const charData = data.chars;
+  const configData = data.config;
 
-    const data = await response.json();
-    const statsData = data.stats;
-    const charData = data.chars;
-    const configData = data.config;
-
-    const paragraphs = [
-      "<p>📝 注意这里五笔版本是<strong>1986</strong>版（王码4.5版）五笔（10830版编码〈 <code>⊙</code>标注〉作为兼容码补充）。</p>",
-      `<blockquote class="note">
-        当前收录汉字共${statsData.total}字（囊括通用规范汉字及其繁体，港台地区和其他常用字）。<br>
+  const paragraphs = [
+    "<p>📝 注意这里五笔版本是<strong>1986</strong>版（王码4.5版）五笔（10830版编码〈 <code>⊙</code>标注〉作为兼容码补充）。</p>",
+    `<blockquote class="note">
+        当前收录汉字共${statsData.total}个（囊括通用规范汉字及其繁体，港台地区和其他常用字）。<br>
       （五笔全码：${statsData.code}，字根拆解：${statsData.units}，字根图解：${statsData.segments}）
         </blockquote>`,
-      `<blockquote class="note">
+    `<blockquote class="note">
     ⚠️ 标识表示全码和容错码存在一定争议（比如起笔或末笔笔画顺序）。
     </blockquote>`,
-    ];
+  ];
 
-    const note = document.getElementById("note-area");
-    const para = document.getElementById("note-warning");
-    para.innerHTML = "";
-    paragraphs.forEach((text) => {
-      const more = document.createElement("p");
-      more.innerHTML = text;
-      note.insertBefore(more, para);
-    });
+  para.innerHTML = "";
+  const details = document.createElement("details");
+  const summary = document.createElement("summary");
+  summary.textContent = `说明：支持汉字共${statsData.total}个`;
+  details.appendChild(summary);
 
-    // event
-    document.getElementById("query-button").addEventListener("click", () => {
-      queryHanzi(charData, configData, basedir, maxCount);
-    });
-    document.getElementById("query-text").addEventListener("keydown", function (event) {
-      if (event.key === "Enter") {
-        queryHanzi(charData, configData, basedir, maxCount);
-      }
-    });
-  } catch (error) {
-    console.error("Error fetching data:", error);
+  paragraphs.forEach(text => {
+    const more = document.createElement("p");
+    more.innerHTML = text;
+    details.appendChild(more);
+  });
+  note.insertBefore(details, para);
+
+  const form = document.getElementById("search-form");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    queryHanzi(charData, configData, basedir, maxCount);
+  });
+
+  // 支持参数跳转
+  const urlParams = new URLSearchParams(window.location.search);
+  const keyword = urlParams.get(PARAM); // q是文档搜索框
+  if (keyword) {
+    document.getElementById("query-text").value = keyword;
+    // 触发事件
+    form.dispatchEvent(new Event("submit", { bubbles: true }));
   }
 });

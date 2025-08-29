@@ -18,13 +18,15 @@ search:
 </style>
 
 <main>
-  <section class="search-container">
-    <input type="text" id="query-text" placeholder="请输入五笔编码，空格或英文逗号、分号分隔..." />
-    <button type="submit" id="query-button">🔍️</button>
+  <section>
+    <form id="search-form" class="search-container">
+    <input type="text" id="query-text" placeholder="请输入五笔编码（空格或英文逗号等分隔）..." />
+      <button type="submit" id="query-button">🔍️</button>
+    </form>
   </section>
 
   <section id="note-area">
-    <p id="note-warning" class="note">等待加载中……</p>
+    <p id="note-warning" class="note"></p>
   </section>
 
   <section>
