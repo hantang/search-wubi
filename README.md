@@ -4,9 +4,9 @@
 
 提供更加直观的五笔拆字图解。
 
-![](images/snapshot.png)
+![](images/snapshot2.png)
 
-参数查询：
+带参数查询：
 
 - `/search-wubi/?char=汉字`：查询汉字对应五笔图解
 - `/search-wubi/code/?code=编码`：查询五笔编码对应的汉字、词组
