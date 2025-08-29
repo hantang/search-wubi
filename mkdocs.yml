@@ -143,11 +143,11 @@ markdown_extensions:
 #   - static/css/extra.css
 
 plugins:
-  - search
-    # lang:
-    #   - en
-    #   - zh
-    # separator: '[\s\-,:!=\[\]()"/\u200b]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+  - search:
+      lang:
+        - en
+        - zh
+      separator: '[\s\-,:!=\[\]()"/\u200b]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
   - table-reader
   # - awesome-pages:
   #     collapse_single_pages: true
@@ -164,7 +164,7 @@ plugins:
 
 nav:
   - 搜码: index.md
-  - 字表: lists/index.md
+  - 字表: list/index.md
   - 反查: code/index.md
   # - 打字: type/index.md
   - 文档:

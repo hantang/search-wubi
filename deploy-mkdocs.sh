@@ -23,6 +23,7 @@ python src/parse.py -i data -o $SOURCE -v v2 --decode >/dev/null 2>&1
 
 echo "Copy assets"
 cp -r data/assets $SOURCE/data/
+cp -r data/hanzi-writer-data $SOURCE/data/
 
 echo "Build site"
 mkdocs build

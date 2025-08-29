@@ -34,7 +34,7 @@ jobs:
           python-version: "3.x"
       # - run: pip install -r requirements.txt
       - name: Build Data
-        run: bash deploy2.sh ${{ env.OUT }}
+        run: bash deploy-mkdocs.sh ${{ env.OUT }}
       - name: Setup pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
