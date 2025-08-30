@@ -10,7 +10,7 @@ search:
 ---
 
 <link rel="stylesheet" type="text/css" href="../static/css/styles2.css" />
-<script src="../static/js/hanzi-writer.min.js"></script>
+<script src="../static/js/lib/hanzi-writer.min.js"></script>
 
 <main>
   <section id="option-area">
@@ -29,7 +29,7 @@ search:
 
     <div class="dropdown">
       <label for="toggleWubi">隐藏编码：</label>
-      <input type="checkbox" id="toggleWubi" onchange="toggleWubiTags()" />
+      <input type="checkbox" id="toggleWubi"/>
     </div>
   </section>
 
@@ -48,5 +48,4 @@ search:
   </div>
 </main>
 
-<script src="../static/js/utils.js"></script>
-<script src="../static/js/list.js"></script>
+<script type="module" src="../static/js/list.js"></script>

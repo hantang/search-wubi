@@ -1,3 +1,5 @@
+import { fetchCharData, getListData, renderCharList, plotWubiSegments, renderFontSVG } from "./core/utils.js";
+
 const PARAM = "char";
 
 function initTable(show) {
@@ -123,15 +125,13 @@ async function queryHanzi(charData, configData, basedir, maxCount = 50) {
   const filteredChars = inputChars.filter((char) => allChars.includes(char));
   const valid = filteredChars.length;
   if (valid === 0) {
-    warningDiv.innerText =
-      inputChars.length > 0
-        ? "🚫 异体或罕用字，请尝试其他。"
-        : "❗ 请输入常用汉字。";
+    warningDiv.innerText = inputChars.length > 0 ? "🚫 异体或罕用字，请尝试其他。" : "❗ 请输入常用汉字。";
+    initTable(false);
     return;
   }
 
   warningDiv.innerText = "";
-  initTable(valid !== 0);
+  initTable(true);
 
   renderCharList(
     filteredChars,

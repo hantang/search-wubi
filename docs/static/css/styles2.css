@@ -112,6 +112,15 @@
   font-size: smaller;
 }
 
+#note-area details {
+  width: 70%;
+  margin: 0 auto;
+}
+
+#note-warning {
+  color: #FC5185;
+}
+
 .tooltip {
   position: relative;
   display: inline-block;
@@ -211,4 +220,8 @@
 .md-typeset__scrollwrap {
   margin: 2rem auto;
   text-align: center;
+}
+
+.md-typeset__table table {
+  display: block;
 }

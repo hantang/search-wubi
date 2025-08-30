@@ -37,5 +37,4 @@ search:
   </section>
 </main>
 
-<script src="../static/js/utils.js"></script>
-<script src="../static/js/code.js"></script>
+<script type="module" src="../static/js/code.js"></script>

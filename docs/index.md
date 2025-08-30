@@ -12,7 +12,7 @@ search:
 <link rel="stylesheet" type="text/css" href="static/css/styles2.css" />
 <!-- <script src="https://cdn.jsdmirror.com/npm/hanzi-writer@3.7.2/dist/hanzi-writer.min.js"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/npm/hanzi-writer@3.7.2/dist/hanzi-writer.min.js"></script> -->
-<script src="static/js/hanzi-writer.min.js"></script>
+<script src="static/js/lib/hanzi-writer.min.js"></script>
 
 <main>
   <section>
@@ -34,5 +34,4 @@ search:
   </section>
 </main>
 
-<script src="static/js/utils.js"></script>
-<script src="static/js/index.js"></script>
+<script type="module" src="static/js/index.js"></script>

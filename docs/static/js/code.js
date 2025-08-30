@@ -1,3 +1,5 @@
+import { fetchCharData, getListData2 } from "./core/utils.js";
+
 const PARAM = "code";
 
 function initCodeTable(show) {
@@ -66,11 +68,11 @@ async function queryCode(configData, basedir, maxCount) {
   const valid = filteredCodes.length;
   if (valid === 0) {
     warningDiv.innerText = "输入1-4位五笔编码，空格或英文逗号、分号分隔多个编码";
+    initCodeTable(false);
     return
   }
 
   initCodeTable(true);
-
   const names = filteredCodes.map((code) => (code + code).substr(0, 2));
   const uniqueNames = Array.from(new Set(names));
   const fetchPromises = uniqueNames.map((name) =>
@@ -105,34 +107,34 @@ document.addEventListener("DOMContentLoaded", async () => {
   const para = document.getElementById("note-warning");
   para.innerHTML = "等待加载数据中……";
 
-    // init data
-    const data = await fetchCharData(datafile);
-    const configData = data.config;
+  // init data
+  const data = await fetchCharData(datafile);
+  const configData = data.config;
 
-    const paragraphs = [
-      "<p>📝 注意这里五笔版本是<strong>1986</strong>版（王码4.5版）五笔（支持全码、简码查询单个汉字或常见词组）。</p>",
-    ];
+  const paragraphs = [
+    "<p>📝 注意这里五笔版本是<strong>1986</strong>版（王码4.5版）五笔（支持全码、简码查询单个汉字或常见词组）。</p>",
+  ];
 
-    para.innerHTML = "";
-    paragraphs.forEach(text => {
-      const more = document.createElement("p");
-      more.innerHTML = text;
-      note.insertBefore(more, para);
-    });
+  para.innerHTML = "";
+  paragraphs.forEach(text => {
+    const more = document.createElement("p");
+    more.innerHTML = text;
+    note.insertBefore(more, para);
+  });
 
-    const form = document.getElementById("search-form");
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      queryCode(configData, basedir, maxCount);
-    });
+  const form = document.getElementById("search-form");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    queryCode(configData, basedir, maxCount);
+  });
 
-    // 支持参数跳转
-    const urlParams = new URLSearchParams(window.location.search);
-    const keyword = urlParams.get(PARAM);
-    if (keyword) {
-      document.getElementById("query-text").value = keyword;
-      // queryCode(configData, basedir, maxCount);
-      form.dispatchEvent(new Event("submit", { bubbles: true }));
-    }
+  // 支持参数跳转
+  const urlParams = new URLSearchParams(window.location.search);
+  const keyword = urlParams.get(PARAM);
+  if (keyword) {
+    document.getElementById("query-text").value = keyword;
+    // queryCode(configData, basedir, maxCount);
+    form.dispatchEvent(new Event("submit", { bubbles: true }));
+  }
 
 });

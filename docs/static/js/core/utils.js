@@ -1,34 +1,36 @@
-const fetchCharData = async (filePath) => {
+async function fetchCharData(filePath) {
   // const filePath = `data/${char}.json`;
-  console.log("load data file", filePath)
+  // console.log("load data file", filePath);
   const response = await fetch(filePath);
   if (!response.ok) throw new Error(`Failed to load ${filePath}`);
   return response.json();
-};
+}
 
-function renderFanningStrokes(target, strokes, unitData, plot) {
-  // refer: https://hanziwriter.org/docs.html#raw-character-svg
-  const url = "http://www.w3.org/2000/svg";
-  var svg = document.createElementNS(url, "svg");
-  // svg.style.width = "75px";
-  // svg.style.height = "75px";
-  // svg.style.border = "1px solid #EEE";
-  // svg.style.marginRight = "3px";
-  target.appendChild(svg);
-  var group = document.createElementNS(url, "g");
+function renderFanningStrokes(target, strokes, unitData = [], plot = true) {
+  const SVG_NS = "http://www.w3.org/2000/svg";
+  const width = 75, height = 75;
+  const STROKE_COLORS = {
+    active: "#F00",  // 高亮笔画颜色
+    normal: "#555"   // 普通笔画颜色
+  };
 
-  // set the transform property on the g element so the character renders at 75x75
-  var transformData = HanziWriter.getScalingTransform(75, 75);
-  group.setAttributeNS(null, "transform", transformData.transform);
+  const svg = document.createElementNS(SVG_NS, "svg");
+  const group = document.createElementNS(SVG_NS, "g");
+  const transformData = HanziWriter.getScalingTransform(width, height);
+  group.setAttribute("transform", transformData.transform);
   svg.appendChild(group);
+  target.appendChild(svg);
+
   if (!plot) return;
+
+  const fragment = document.createDocumentFragment();
   strokes.forEach((strokePath, index) => {
-    var path = document.createElementNS(url, "path");
-    path.setAttributeNS(null, "d", strokePath);
-    // style the character paths
-    path.style.fill = unitData.includes(index) ? "#F00" : "#555";
-    group.appendChild(path);
+    const path = document.createElementNS(SVG_NS, "path");
+    path.setAttribute("d", strokePath);
+    path.style.fill = unitData.includes(index) ? STROKE_COLORS.active : STROKE_COLORS.normal;
+    fragment.appendChild(path);
   });
+  group.appendChild(fragment);
 }
 
 function renderFontSVG(char, svgPathData) {
@@ -229,3 +231,5 @@ async function renderCharList(
     console.error("Error fetching data:", error);
   }
 }
+
+export { fetchCharData, getListData2, getListData, renderCharList, plotWubiSegments, renderFontSVG, toggleWubiTags };
