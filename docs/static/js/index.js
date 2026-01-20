@@ -143,6 +143,12 @@ async function queryHanzi(charData, configData, basedir, maxCount = 50) {
     tableBody,
     createTableRow
   );
+
+  history.replaceState(
+    null,
+    "",
+    `?${PARAM}=${encodeURIComponent(inputQuery)}`
+  );
 }
 
 

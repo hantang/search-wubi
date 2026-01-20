@@ -96,6 +96,12 @@ async function queryCode(configData, basedir, maxCount) {
     .catch(error => {
       console.error(error);
     });
+
+  history.replaceState(
+    null,
+    "",
+    `?${PARAM}=${encodeURIComponent(input)}`
+  );
 }
 
 
