@@ -9,24 +9,24 @@ pip install -r requirements.txt >/dev/null 2>&1
 
 if [[ -d $TARGET ]]; then
     echo "Clean $TARGET"
-    rm -rf $TARGET
+    rm -rf "$TARGET"
 fi
 
 if [[ -d $SOURCE/data ]]; then
     echo "Clean $SOURCE/data"
-    rm -rf $SOURCE/data
+    rm -rf "$SOURCE/data"
     mkdir -p "$SOURCE/data"
 fi
 
 echo "Create data"
-python src/parse.py -i data -o $SOURCE -v v2 --decode >/dev/null 2>&1
+python src/parse.py -i data -o "$SOURCE" -v v2 --decode >/dev/null 2>&1
 
 echo "Copy assets"
-cp -r data/assets $SOURCE/data/
-cp -r data/hanzi-writer-data $SOURCE/data/
+cp -r data/assets "$SOURCE"/data/
+cp -r data/hanzi-writer-data "$SOURCE"/data/
 
 echo "Build site"
 mkdocs build
-rm -rf $TARGET/wiki/data/*.tsv
+rm -rf "$TARGET"/wiki/data/*.tsv
 
 echo "Done"
