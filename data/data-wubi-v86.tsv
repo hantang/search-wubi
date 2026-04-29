@@ -1328,7 +1328,7 @@ char	code	code_short	code_more	key_unit	stroke_unit	char_unit	units	flag	segment
 迷	opi	op		0	0	0	〖※※〗	捺·杂合〔丶 ⿻〕	0-5/6-8
 籽	obg	ob		0	0	0	〖※※〗	横·左右〔一 ⿰〕	0-5/6-8
 前	uejj	ue/uej		0	0	0	〖※※※〗	竖·上下〔丨 ⿱〕	0-2/3-6/7,8
-首	uthf	uth		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0-1/2-3/4-8
+首	uthf	uth		0	0	0	〖※※※〗	横·上下〔一 ⿱〕	0-2/3/4-8
 逆	ubtp	ubt		0	0	0	〖※※※〗		
 兹	uxxu	uxx		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-2/3-5/6-8
 总	uknu	ukn		0	0	0	〖※※※〗	捺·上下〔丶 ⿱〕	0-1/2-4/5-8
